@@ -7,7 +7,7 @@
     <meta name="description" content="Más de 60 años formando conductores en Rota. Permisos AM y B, clases teóricas presenciales y online, y prácticas con vehículos actuales.">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome para iconos -->
+    <!-- FontAwesome para iconos (Actualizado a v6 para que cargue bien la X de Twitter) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -41,7 +41,7 @@
             width: 100%;
         }
 
-        /* HEADER MEJORADO Y AMPLIADO */
+        /* HEADER */
         header {
             position: sticky;
             top: 0;
@@ -104,7 +104,6 @@
             margin-top: 2px;
         }
 
-        /* BOTONES EN LA CABECERA (LLAMAR + CÓMO LLEGAR) */
         .header-actions {
             display: flex;
             flex-direction: column;
@@ -125,7 +124,6 @@
             justify-content: center;
             gap: 6px;
             box-shadow: 0 2px 6px rgba(230, 57, 70, 0.3);
-            transition: background 0.2s;
         }
 
         .btn-header-map {
@@ -141,7 +139,6 @@
             justify-content: center;
             gap: 6px;
             box-shadow: 0 2px 6px rgba(43, 82, 182, 0.3);
-            transition: background 0.2s;
         }
 
         /* Hero Section */
@@ -227,7 +224,7 @@
             margin: 0;
         }
 
-        /* General Section Layout */
+        /* General Layout */
         section {
             padding: 35px 1rem;
             max-width: 1200px;
@@ -264,7 +261,7 @@
             color: var(--gray);
         }
 
-        /* BLOQUES INTERCALADOS TEXTO + FOTO */
+        /* Bloques Contenido */
         .content-block {
             display: grid;
             grid-template-columns: 1fr;
@@ -441,7 +438,7 @@
             word-break: break-word;
         }
 
-        /* REDES SOCIALES AMPLIADAS Y MÁS GRANDES */
+        /* Redes Sociales Grandes y Unificadas (Sin colores corporativos) */
         .social-links {
             display: flex;
             gap: 14px;
@@ -538,59 +535,27 @@
             margin-top: 5px;
         }
 
-        /* Responsive Desktop */
+        /* Desktop media queries */
         @media(min-width: 968px) {
-            .nav-container {
-                padding: 0.8rem 2rem;
-            }
-            .header-actions {
-                flex-direction: row;
-                gap: 10px;
-            }
-            .btn-header-call, .btn-header-map {
-                font-size: 0.85rem;
-                padding: 8px 18px;
-            }
-            .hero-container {
-                grid-template-columns: 1.1fr 0.9fr;
-                padding: 60px 2rem;
-            }
+            .nav-container { padding: 0.8rem 2rem; }
+            .header-actions { flex-direction: row; gap: 10px; }
+            .btn-header-call, .btn-header-map { font-size: 0.85rem; padding: 8px 18px; }
+            .hero-container { grid-template-columns: 1.1fr 0.9fr; padding: 60px 2rem; }
             .hero h2 { font-size: 2.8rem; }
-            .content-block {
-                grid-template-columns: 1fr 1fr;
-                padding: 40px;
-                gap: 40px;
-                margin-bottom: 35px;
-            }
-            .content-block.reverse {
-                direction: rtl;
-            }
-            .content-block.reverse > * {
-                direction: ltr;
-            }
-            .block-img-container {
-                height: 300px;
-            }
-            .permisos-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .contact-container {
-                grid-template-columns: 1fr 1.1fr;
-                padding: 40px;
-            }
-            .contact-visuals {
-                grid-template-columns: 1fr 1fr;
-                height: 300px;
-            }
-            .fachada-box, .map-box {
-                height: 100%;
-            }
+            .content-block { grid-template-columns: 1fr 1fr; padding: 40px; gap: 40px; margin-bottom: 35px; }
+            .content-block.reverse { direction: rtl; }
+            .content-block.reverse > * { direction: ltr; }
+            .block-img-container { height: 300px; }
+            .permisos-grid { grid-template-columns: repeat(3, 1fr); }
+            .contact-container { grid-template-columns: 1fr 1.1fr; padding: 40px; }
+            .contact-visuals { grid-template-columns: 1fr 1fr; height: 300px; }
+            .fachada-box, .map-box { height: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header con Logo Grande y Botones Ordenados -->
+    <!-- Header -->
     <header>
         <div class="nav-container">
             <a href="#inicio" class="logo-area">
@@ -644,7 +609,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 1: TRAYECTORIA (Coche Clásico) -->
+    <!-- Historia -->
     <section id="experiencia" style="padding-bottom: 10px;">
         <div class="content-block">
             <div class="block-text">
@@ -658,12 +623,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" alt="Autoescuela Paco - Historia y tradición en Rota">
+                <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" alt="Historia Autoescuela Paco">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 2: TEORÍA (Aula) -->
+    <!-- Teoría -->
     <section id="teoria" style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
@@ -677,12 +642,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-41-11-133_com.opera.browser-edit.jpg" alt="Aula teórica de Autoescuela Paco en Rota">
+                <img src="Screenshot_2026-08-26-18-41-11-133_com.opera.browser-edit.jpg" alt="Aula teórica">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 3: PRÁCTICAS (Coches) -->
+    <!-- Prácticas -->
     <section id="practicas" style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block">
             <div class="block-text">
@@ -696,12 +661,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-43-34-002_com.opera.browser-edit.jpg" alt="Flota de vehículos de Autoescuela Paco en Rota">
+                <img src="Screenshot_2026-08-26-18-43-34-002_com.opera.browser-edit.jpg" alt="Vehículos prácticas">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 4: INSTALACIONES (Zona de ordenadores) -->
+    <!-- Instalaciones -->
     <section style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
@@ -715,12 +680,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-40-53-003_com.opera.browser-edit.jpg" alt="Zona de ordenadores y pantallas en Autoescuela Paco">
+                <img src="Screenshot_2026-08-26-18-40-53-003_com.opera.browser-edit.jpg" alt="Zona de ordenadores">
             </div>
         </div>
     </section>
 
-    <!-- Permisos (¿Qué carnet quieres sacarte?) -->
+    <!-- Permisos -->
     <section id="permisos" style="background: #f1f5f9; padding: 35px 1rem;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div class="section-header">
@@ -732,7 +697,7 @@
                 <div class="permiso-card">
                     <div class="permiso-badge">B</div>
                     <h3>Permiso B</h3>
-                    <p>Formación completa para turismos y automóviles. Clases dinámicas y prácticas reales en Rota y Jerez.</p>
+                    <p>Formación completa para turismos y automóviles. Clases dinámicas y prácticas reales en Rota.</p>
                     <a href="#contacto" class="btn-primary" style="background: var(--primary);">Más información</a>
                 </div>
                 <div class="permiso-card" style="border-top-color: var(--accent);">
@@ -751,8 +716,8 @@
         </div>
     </section>
 
-    <!-- REVISTA (Justo después de los permisos) -->
-    <section style="padding-bottom: 10px; padding-top: 30px;">
+    <!-- Revista Digital (Con la foto arreglada y sin descuadre) -->
+    <section style="padding-bottom: 20px; padding-top: 30px;">
         <div class="content-block">
             <div class="block-text">
                 <span class="section-tag">Nuestra Revista</span>
@@ -774,30 +739,7 @@
         </div>
     </section>
 
-    <!-- BLOG (Justo después de la revista) -->
-    <section style="padding-bottom: 20px; padding-top: 10px;">
-        <div class="content-block reverse">
-            <div class="block-text">
-                <span class="section-tag">Nuestro Blog</span>
-                <h3>Consejos viales, novedades y noticias de la autoescuela</h3>
-                <p>Publicamos artículos periódicamente con trucos para aprobar el carnet a la primera, cambios en la normativa de tráfico y actualidad de nuestra autoescuela en Rota.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Consejos prácticos para el examen de conducir</li>
-                    <li><i class="fa-solid fa-check"></i> Actualidad y avisos importantes para alumnos</li>
-                </ul>
-                <div style="margin-top: 15px;">
-                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="btn-primary">
-                        <i class="fa-solid fa-blog"></i> Visitar nuestro Blog
-                    </a>
-                </div>
-            </div>
-            <div class="block-img-container">
-                <img src="copilot_image_1789428777874.jpeg" alt="Blog de Autoescuela Paco">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto con Fachada, Mapa y Redes Sociales Grandes -->
+    <!-- Contacto, Dirección, Mapa y Redes Sociales Grandes -->
     <section id="contacto">
         <div class="section-header">
             <span class="section-tag">Estamos en Rota</span>
@@ -840,20 +782,18 @@
                     </div>
                 </div>
 
-                <!-- REDES SOCIALES MÁS GRANDES -->
+                <!-- Redes sociales grandes y unificadas -->
                 <div class="social-links">
                     <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100063371431221" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://x.com/A_PacoRota" target="_blank" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://www.tiktok.com/@autoescuelapaco" target="_blank" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="social-btn" title="Blog"><i class="fa-solid fa-blog"></i></a>
                 </div>
             </div>
 
-            <!-- Columna visual: Fachada y Mapa -->
             <div class="contact-visuals">
                 <div class="fachada-box">
-                    <img src="Screenshot_2026-08-26-18-36-46-738_com.opera.browser-edit.jpg" alt="Fachada de Autoescuela Paco en Rota">
+                    <img src="Screenshot_2026-08-26-18-36-46-738_com.opera.browser-edit.jpg" alt="Fachada Autoescuela Paco">
                 </div>
                 <div class="map-box">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.1!2d-6.363!3d36.623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd123456789:0x123456789!2sAv.+San+Fernando,+63,+11520+Rota,+C%C3%A1diz!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -862,7 +802,7 @@
         </div>
     </section>
 
-    <!-- Botón Flotante de WhatsApp -->
+    <!-- Botón Flotante WhatsApp -->
     <a href="https://wa.me/34672046418?text=Hola,%20me%20gustaría%20información%20sobre%2520los%20cursos%20y%20precios%20de%20la%20autoescuela." class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
