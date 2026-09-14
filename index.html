@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta name="google-site-verification" content="5SHed6dA5MELUeot1nV_cULT9oZNw3VtTKcjA1AIHuY" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Autoescuela Paco Rota | Carnet B y AM desde 1965</title>
+  <title>Autoescuela Paco Rota | Más de 60 años formando conductores</title>
 
-  <meta name="description" content="Autoescuela Paco en Rota (Cádiz), fundada en 1965. Formación para los permisos B y AM, clases teóricas y prácticas y atención profesional. Más de 60 años formando conductores en Rota.">
+  <meta name="description" content="Autoescuela Paco en Rota (Cádiz), fundada en 1965. Más de 60 años formando conductores. Permisos B y AM, formación teórica y práctica, profesores titulados y atención profesional.">
 
   <meta name="author" content="Autoescuela Paco Rota">
 
@@ -15,301 +15,1332 @@
 
   <link rel="canonical" href="https://autoescuelapaco.github.io/autoescuela-paco-rota/">
 
-  <meta property="og:title" content="Autoescuela Paco Rota | Desde 1965">
-  <meta property="og:description" content="Autoescuela Paco, la autoescuela de Rota con más de 60 años de experiencia. Permisos B y AM y formación profesional.">
+  <meta property="og:title" content="Autoescuela Paco Rota | Más de 60 años formando conductores">
+
+  <meta property="og:description" content="Autoescuela Paco, fundada en Rota en 1965. Formación para los permisos B y AM con profesores titulados y atención profesional.">
+
   <meta property="og:type" content="website">
 
+  <meta property="og:url" content="https://autoescuelapaco.github.io/autoescuela-paco-rota/">
+
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #222;
+      color: #202124;
       background: #ffffff;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 45px 20px;
-      text-align: center;
+    a {
+      color: inherit;
     }
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 38px;
+    .contenedor {
+      width: min(1120px, 92%);
+      margin: 0 auto;
     }
 
-    header p {
-      margin: 0;
-      font-size: 19px;
-    }
+    /* NAVEGACIÓN */
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background: #ffffff;
-      border-bottom: 1px solid #ddd;
-      padding: 15px;
-      text-align: center;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 0;
     }
 
-    nav a {
-      color: #111827;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    section {
-      margin-bottom: 45px;
-    }
-
-    h2 {
-      font-size: 28px;
-      color: #111827;
-      margin-bottom: 15px;
-    }
-
-    .destacado {
-      background: #f3f4f6;
-      padding: 25px;
-      border-radius: 10px;
-      margin: 25px 0;
-    }
-
-    .datos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    nav .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
       gap: 18px;
     }
 
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: #111827;
+      color: #ffffff;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.1;
+      margin: 0 0 20px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 21px;
+    }
+
+    .botones {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #ffffff;
+      color: #111827;
+    }
+
+    .boton.secundario {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 75px 0;
+    }
+
+    section:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 0 0 22px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    .intro {
+      max-width: 780px;
+      font-size: 18px;
+    }
+
+    /* BLOQUE HISTORIA */
+
+    .historia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .numero {
+      font-size: 70px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .frase {
+      border-left: 5px solid #111827;
+      padding-left: 22px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* TARJETAS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .tarjeta {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .tarjeta strong {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    /* BLOQUES DESTACADOS */
+
+    .destacados {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .destacado {
+      text-align: center;
+      padding: 28px 18px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .destacado .numero {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    /* FOTO PLACEHOLDER */
+
+    .foto-placeholder {
+      min-height: 280px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      background: #f8fafc;
+    }
+
+    /* LISTAS */
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    /* CITA */
+
+    .cita {
+      background: #111827;
+      color: #ffffff;
+      padding: 55px 30px;
+      text-align: center;
+      border-radius: 14px;
+      margin-top: 30px;
+    }
+
+    .cita p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    /* REVISTA */
+
+    .revista {
+      border: 2px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 35px;
+      background: #ffffff;
+    }
+
+    /* CONTACTO */
+
+    .contacto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
     .dato {
-      border: 1px solid #ddd;
+      border: 1px solid #e5e7eb;
       border-radius: 10px;
-      padding: 20px;
+      padding: 22px;
+      background: #ffffff;
     }
 
     .dato strong {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
-    .redes a {
-      display: block;
-      margin: 12px 0;
-      color: #111827;
-      font-weight: bold;
+    .dato a {
+      text-decoration: none;
     }
+
+    .dato a:hover {
+      text-decoration: underline;
+    }
+
+    /* REDES */
+
+    .redes {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .red {
+      padding: 18px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      background: #ffffff;
+    }
+
+    .red:hover {
+      text-decoration: underline;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      background: #111827;
+      color: #ffffff;
+      padding: 75px 20px;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
 
     footer {
-      background: #111827;
-      color: white;
+      background: #0b1120;
+      color: #ffffff;
+      padding: 40px 20px;
       text-align: center;
-      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
     }
 
     footer a {
-      color: white;
+      color: #ffffff;
     }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+
+      .historia,
+      .contacto {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .destacados {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .redes {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      nav .contenedor {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 65px 15px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .grid,
+      .destacados,
+      .redes {
+        grid-template-columns: 1fr;
+      }
+
+      .cita p {
+        font-size: 21px;
+      }
+    }
+
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <h1>Autoescuela Paco Rota</h1>
-  <p>Más de 60 años formando conductores en Rota</p>
-</header>
+<!-- NAVEGACIÓN -->
 
 <nav>
-  <a href="#quienes-somos">Quiénes somos</a>
-  <a href="#permisos">Permisos</a>
-  <a href="#formacion">Formación</a>
-  <a href="#contacto">Contacto</a>
+  <div class="contenedor">
+
+    <a href="#historia">Historia</a>
+    <a href="#como-trabajamos">Cómo trabajamos</a>
+    <a href="#permisos">Permisos</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#revista">60 años</a>
+    <a href="#contacto">Contacto</a>
+
+  </div>
 </nav>
+
+
+<!-- PORTADA -->
+
+<header class="hero">
+
+  <div class="contenedor">
+
+    <h1>Autoescuela Paco Rota</h1>
+
+    <p>
+      Más de 60 años formando conductores en Rota.
+      Una autoescuela de toda la vida, con una forma de trabajar adaptada a los tiempos actuales.
+    </p>
+
+    <div class="botones">
+
+      <a class="boton" href="#contacto">
+        Contactar
+      </a>
+
+      <a class="boton secundario" href="#como-trabajamos">
+        Cómo trabajamos
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
 
 <main>
 
-  <section id="quienes-somos">
-    <h2>Autoescuela Paco: una autoescuela de Rota desde 1965</h2>
 
-    <p>
-      <strong>Autoescuela Paco</strong> es una autoescuela de
-      <strong>Rota (Cádiz)</strong>, fundada en <strong>1965</strong>.
-      Desde entonces hemos acompañado a generaciones de alumnos en su
-      formación como conductores.
-    </p>
+<!-- INTRODUCCIÓN -->
 
-    <p>
-      Somos una autoescuela de toda la vida, con una trayectoria de
-      <strong>más de 60 años</strong>, pero con una forma de trabajar
-      adaptada a las necesidades actuales de los alumnos.
-    </p>
+<section>
 
-    <div class="destacado">
-      <strong>Experiencia, atención profesional y formación actualizada.</strong>
-      <br>
-      Nuestro objetivo es ofrecer una formación seria y de calidad,
-      tanto en la preparación teórica como en las clases prácticas.
+  <div class="contenedor">
+
+    <div class="historia">
+
+      <div>
+
+        <h2>Una autoescuela de Rota desde 1965</h2>
+
+        <p class="intro">
+          Autoescuela Paco nació en Rota en 1965. Desde entonces,
+          varias generaciones de alumnos han pasado por nuestras aulas
+          y vehículos para aprender a conducir.
+        </p>
+
+        <p>
+          Más de seis décadas después seguimos manteniendo esa experiencia,
+          pero incorporando nuevas herramientas, tecnología y formas de
+          aprendizaje para responder a las necesidades de los alumnos actuales.
+        </p>
+
+        <p>
+          Para nosotros, formar a un conductor no consiste únicamente
+          en prepararlo para superar un examen. Se trata de enseñarle
+          a desenvolverse después con seguridad, responsabilidad y autonomía.
+        </p>
+
+      </div>
+
+      <div class="foto-placeholder">
+
+        <strong>
+          Aquí irá una fotografía real de Autoescuela Paco,
+          del equipo o de sus instalaciones.
+        </strong>
+
+      </div>
+
     </div>
-  </section>
 
-  <section id="permisos">
-    <h2>Permisos de conducción</h2>
+  </div>
 
-    <div class="datos">
+</section>
 
-      <div class="dato">
+
+<!-- DATOS DESTACADOS -->
+
+<section>
+
+  <div class="contenedor">
+
+    <h2>Autoescuela Paco, en algunos datos</h2>
+
+    <div class="destacados">
+
+      <div class="destacado">
+        <div class="numero">1965</div>
+        <strong>Desde</strong>
+        <p>Formando conductores en Rota.</p>
+      </div>
+
+      <div class="destacado">
+        <div class="numero">60+</div>
+        <strong>Años</strong>
+        <p>De experiencia y trayectoria.</p>
+      </div>
+
+      <div class="destacado">
+        <div class="numero">4</div>
+        <strong>Profesores titulados</strong>
+        <p>Un equipo dedicado a la formación.</p>
+      </div>
+
+      <div class="destacado">
+        <div class="numero">B · AM</div>
+        <strong>Permisos</strong>
+        <p>Formación teórica y práctica.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HISTORIA -->
+
+<section id="historia">
+
+  <div class="contenedor">
+
+    <h2>Más de seis décadas formando conductores</h2>
+
+    <p class="intro">
+      La historia de Autoescuela Paco forma parte de nuestra identidad.
+      Comenzamos nuestra actividad en 1965 y desde entonces hemos acompañado
+      a generaciones de personas de Rota durante su aprendizaje.
+    </p>
+
+    <p>
+      Ser una autoescuela de toda la vida no significa trabajar como hace
+      décadas. Nuestra experiencia nos ha enseñado que cada generación
+      tiene necesidades diferentes y que la formación debe evolucionar.
+    </p>
+
+    <p>
+      Por eso combinamos la experiencia acumulada durante todos estos años
+      con recursos digitales, nuevas herramientas de aprendizaje y una
+      atención cercana al alumno.
+    </p>
+
+    <div class="cita">
+
+      <p>
+        “El examen termina después de unos minutos.
+        La conducción, en cambio, continuará durante muchos años.”
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CÓMO TRABAJAMOS -->
+
+<section id="como-trabajamos">
+
+  <div class="contenedor">
+
+    <h2>Cómo trabajamos</h2>
+
+    <p class="intro">
+      Nuestra forma de trabajar busca que el alumno avance de manera
+      progresiva y llegue al examen cuando realmente está preparado.
+    </p>
+
+    <div class="grid">
+
+      <div class="tarjeta">
+
+        <strong>Seguimiento individual</strong>
+
+        <p>
+          Cada alumno evoluciona de una manera diferente. Por eso,
+          observamos sus avances, detectamos los aspectos que necesita
+          reforzar y adaptamos la formación a su evolución.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Formación más allá del examen</strong>
+
+        <p>
+          El objetivo no es simplemente superar una prueba.
+          Queremos que el alumno adquiera los conocimientos y habilidades
+          necesarios para conducir después con seguridad y autonomía.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Profesionales de la formación vial</strong>
+
+        <p>
+          Contamos con cuatro profesores titulados que forman parte
+          de un mismo equipo y participan en las diferentes etapas
+          del aprendizaje.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TEORÍA -->
+
+<section>
+
+  <div class="contenedor">
+
+    <div class="historia">
+
+      <div>
+
+        <h2>Formación teórica</h2>
+
+        <p>
+          La preparación teórica combina la formación presencial con
+          herramientas digitales para que el alumno pueda continuar
+          trabajando también desde casa.
+        </p>
+
+        <ul>
+
+          <li>Clases teóricas presenciales.</li>
+
+          <li>Plataforma online.</li>
+
+          <li>Vídeos y contenidos audiovisuales.</li>
+
+          <li>Test online.</li>
+
+          <li>Test en papel.</li>
+
+          <li>Corrección y seguimiento de errores.</li>
+
+          <li>Refuerzo de los contenidos que cada alumno necesita mejorar.</li>
+
+        </ul>
+
+        <p>
+          La tecnología nos ayuda, pero no sustituye al profesor.
+          El seguimiento profesional permite saber qué necesita reforzar
+          cada alumno y orientar su preparación.
+        </p>
+
+      </div>
+
+      <div class="foto-placeholder">
+
+        <strong>
+          Espacio reservado para una fotografía del aula,
+          profesor o material de formación.
+        </strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRÁCTICAS -->
+
+<section>
+
+  <div class="contenedor">
+
+    <h2>Clases prácticas de conducir</h2>
+
+    <p class="intro">
+      Las prácticas están planteadas como un proceso progresivo:
+      el alumno aprende, practica, recibe indicaciones sobre sus errores
+      y continúa trabajando aquello que necesita mejorar.
+    </p>
+
+    <div class="grid">
+
+      <div class="tarjeta">
+
+        <strong>Una hora de conducción</strong>
+
+        <p>
+          Cada práctica tiene una duración de una hora de conducción
+          por alumno.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Progresión individual</strong>
+
+        <p>
+          No todos los alumnos necesitan el mismo número de clases.
+          La preparación se adapta a la evolución de cada persona.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Continuidad</strong>
+
+        <p>
+          Procuramos mantener la continuidad con el profesor y el vehículo
+          durante la formación para favorecer el aprendizaje.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Seguimiento de errores</strong>
+
+        <p>
+          El profesor analiza las dificultades del alumno y explica
+          qué debe seguir trabajando después de cada práctica.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Situaciones reales de circulación</strong>
+
+        <p>
+          Se trabajan incorporaciones, glorietas, STOP, ceda el paso,
+          maniobras, aparcamiento, observación, velocidad y otras
+          situaciones necesarias para conducir con seguridad.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Preparación para conducir</strong>
+
+        <p>
+          El objetivo es alcanzar una autonomía real, no aprender
+          simplemente un recorrido de examen.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VEHÍCULOS -->
+
+<section>
+
+  <div class="contenedor">
+
+    <div class="historia">
+
+      <div class="foto-placeholder">
+
+        <strong>
+          Espacio reservado para fotografías de los vehículos.
+        </strong>
+
+      </div>
+
+      <div>
+
+        <h2>Vehículos preparados para la formación</h2>
+
+        <p>
+          Según nuestra información actual, contamos con tres Renault Clio
+          manuales de menos de tres años, con doble mando.
+        </p>
+
+        <p>
+          Dos vehículos se utilizan habitualmente para las clases y contamos
+          con un tercero como vehículo de reserva.
+        </p>
+
+        <p>
+          El objetivo es que el vehículo sea una herramienta de aprendizaje
+          y proporcione al alumno un entorno adecuado para desarrollar
+          progresivamente sus habilidades.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXAMEN -->
+
+<section>
+
+  <div class="contenedor">
+
+    <h2>Preparación para el examen</h2>
+
+    <p class="intro">
+      Presentarse al examen no debería depender simplemente de haber
+      realizado un número determinado de clases. La decisión se toma
+      cuando profesor y alumno consideran que existe un nivel suficiente
+      de autonomía y preparación.
+    </p>
+
+    <div class="grid">
+
+      <div class="tarjeta">
+
+        <strong>Simulacros</strong>
+
+        <p>
+          Utilizamos situaciones similares a las que pueden aparecer
+          durante la prueba para valorar el nivel de preparación.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Preparación específica</strong>
+
+        <p>
+          Trabajamos maniobras, circulación, observación, comprobaciones
+          del vehículo y diferentes situaciones que el alumno debe dominar.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Nervios y presión</strong>
+
+        <p>
+          También trabajamos la parte psicológica del examen para ayudar
+          al alumno a afrontar la prueba con mayor seguridad.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXAMEN EN JEREZ -->
+
+<section>
+
+  <div class="contenedor">
+
+    <div class="historia">
+
+      <div>
+
+        <h2>Del aprendizaje en Rota al examen en Jerez</h2>
+
+        <p>
+          Los alumnos de Rota realizan los exámenes en el centro de examen
+          de Jerez de la Frontera.
+        </p>
+
+        <p>
+          Autoescuela Paco organiza el desplazamiento de los alumnos desde
+          Rota hasta Jerez y asume el coste del traslado dentro del servicio
+          ofrecido por la autoescuela.
+        </p>
+
+        <p>
+          El acompañamiento continúa durante el proceso del examen.
+          El profesor está pendiente del alumno y, posteriormente,
+          se analiza cómo ha transcurrido la prueba para detectar
+          posibles aspectos que seguir trabajando.
+        </p>
+
+      </div>
+
+      <div class="foto-placeholder">
+
+        <strong>
+          Espacio reservado para fotografía relacionada
+          con el acompañamiento al examen.
+        </strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EQUIPO E INSTALACIONES -->
+
+<section id="equipo">
+
+  <div class="contenedor">
+
+    <h2>Un equipo profesional y unas instalaciones preparadas</h2>
+
+    <p class="intro">
+      La formación también depende del entorno en el que se desarrolla.
+      Por eso nuestras instalaciones han sido reformadas pensando en
+      ofrecer un espacio cómodo y adecuado para el aprendizaje.
+    </p>
+
+    <div class="grid">
+
+      <div class="tarjeta">
+
+        <strong>Cuatro profesores titulados</strong>
+
+        <p>
+          Un equipo profesional que participa en las diferentes etapas
+          de la formación teórica y práctica.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Espacio de formación</strong>
+
+        <p>
+          Un espacio amplio y luminoso preparado para desarrollar
+          la formación teórica con herramientas actuales.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Recepción y zona de espera</strong>
+
+        <p>
+          Un espacio pensado para que los alumnos puedan esperar
+          cómodamente antes o después de sus clases.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div style="margin-top:35px;" class="foto-placeholder">
+
+      <strong>
+        Aquí podremos colocar posteriormente una galería de fotografías
+        reales de las instalaciones y del equipo.
+      </strong>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PERMISOS -->
+
+<section id="permisos">
+
+  <div class="contenedor">
+
+    <h2>Permisos de conducción B y AM</h2>
+
+    <p class="intro">
+      En Autoescuela Paco ofrecemos formación para los permisos
+      AM y B, combinando preparación teórica y práctica.
+    </p>
+
+    <div class="grid">
+
+      <div class="tarjeta">
+
         <strong>Permiso B</strong>
-        Formación para obtener el permiso de conducción de turismos.
+
+        <p>
+          Formación teórica y práctica para obtener el permiso
+          de conducción de turismos.
+        </p>
+
       </div>
 
-      <div class="dato">
+      <div class="tarjeta">
+
         <strong>Permiso AM</strong>
-        Formación para obtener el permiso AM.
+
+        <p>
+          Preparación para obtener el permiso AM con el acompañamiento
+          del equipo de formación vial.
+        </p>
+
+      </div>
+
+      <div class="tarjeta">
+
+        <strong>Formación adaptada</strong>
+
+        <p>
+          La evolución del alumno determina el ritmo de aprendizaje
+          y la preparación necesaria antes de presentarse al examen.
+        </p>
+
       </div>
 
     </div>
-  </section>
 
-  <section id="formacion">
-    <h2>Formación teórica y práctica</h2>
+  </div>
 
-    <p>
-      En Autoescuela Paco trabajamos tanto la preparación teórica como
-      la formación práctica para que nuestros alumnos lleguen al examen
-      con una preparación adecuada.
+</section>
+
+
+<!-- HISTORIA / REVISTA -->
+
+<section id="revista">
+
+  <div class="contenedor">
+
+    <h2>60 años de historia</h2>
+
+    <div class="revista">
+
+      <h3>Revista del 60.º aniversario</h3>
+
+      <p>
+        En 2025 celebramos seis décadas de historia de Autoescuela Paco.
+        Una trayectoria que comenzó en 1965 y que forma parte de varias
+        generaciones de conductores de Rota.
+      </p>
+
+      <p>
+        Hemos preparado un espacio para nuestra revista especial del
+        60.º aniversario, donde podremos compartir nuestra historia,
+        recuerdos y evolución.
+      </p>
+
+      <!--
+      CUANDO TENGAMOS EL ENLACE DEFINITIVO DE LA REVISTA,
+      AÑADIREMOS AQUÍ EL BOTÓN.
+
+      <a class="boton" href="ENLACE-DE-LA-REVISTA">
+        Leer la revista del 60.º aniversario
+      </a>
+      -->
+
+      <p>
+        <strong>
+          Revista del 60.º aniversario: enlace pendiente de incorporar.
+        </strong>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BLOG -->
+
+<section>
+
+  <div class="contenedor">
+
+    <h2>Consejos y contenidos sobre formación vial</h2>
+
+    <p class="intro">
+      En nuestro blog explicamos con más detalle cómo trabajamos,
+      cómo son las clases, qué debe tener en cuenta un alumno y
+      diferentes aspectos relacionados con la formación vial.
     </p>
 
-    <p>
-      La formación teórica incluye el estudio de los contenidos necesarios
-      para superar el examen y el trabajo con test y material de apoyo.
+    <div style="margin-top:25px;">
+
+      <a
+        class="boton"
+        style="background:#111827;color:#ffffff;"
+        href="https://autoescuelapacorota.blogspot.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        Visitar el blog de Autoescuela Paco
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+  <div class="contenedor">
+
+    <h2>Contacta con Autoescuela Paco</h2>
+
+    <p class="intro">
+      Si quieres conocer nuestra formación, condiciones o resolver
+      cualquier duda, puedes contactar directamente con nosotros
+      o visitarnos en nuestra autoescuela de Rota.
     </p>
 
-    <p>
-      Las clases prácticas permiten aplicar los conocimientos adquiridos
-      y desarrollar progresivamente las habilidades necesarias para
-      conducir con seguridad y autonomía.
-    </p>
-
-    <p>
-      La planificación de las clases se adapta a las necesidades y
-      evolución de cada alumno.
-    </p>
-  </section>
-
-  <section>
-    <h2>Una autoescuela profesional en Rota</h2>
-
-    <p>
-      Autoescuela Paco cuenta con un equipo de profesionales dedicados
-      a la formación vial y con instalaciones preparadas para ofrecer
-      una atención cómoda y profesional a los alumnos.
-    </p>
-
-    <p>
-      Nuestra trayectoria desde 1965 forma parte de nuestra identidad:
-      conocemos la formación vial, conocemos Rota y seguimos trabajando
-      para ofrecer a cada generación de alumnos una preparación acorde
-      con los tiempos actuales.
-    </p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto y ubicación</h2>
-
-    <div class="datos">
+    <div class="contacto">
 
       <div class="dato">
+
         <strong>Dirección</strong>
-        Avenida San Fernando<br>
-        Rota, Cádiz
+
+        Avenida San Fernando, 63<br>
+        11520 Rota, Cádiz
+
       </div>
 
       <div class="dato">
+
         <strong>Teléfono</strong>
-        956 811 540
+
+        <a href="tel:+34956811540">
+          956 811 540
+        </a>
+
       </div>
 
       <div class="dato">
+
         <strong>Teléfono móvil</strong>
-        672 046 418
+
+        <a href="tel:+34672046418">
+          672 046 418
+        </a>
+
       </div>
 
       <div class="dato">
+
         <strong>Email</strong>
-        autoescuela.paco@hotmail.com
+
+        <a href="mailto:pacoescuela@hotmail.com">
+          pacoescuela@hotmail.com
+        </a>
+
+      </div>
+
+      <div class="dato">
+
+        <strong>Horario de atención</strong>
+
+        Lunes a viernes:<br>
+        09:30–13:30<br>
+        17:00–20:00
+
+      </div>
+
+      <div class="dato">
+
+        <strong>Horario de clases prácticas</strong>
+
+        Lunes a viernes:<br>
+        07:30–14:30<br>
+        15:30–20:30
+
       </div>
 
     </div>
-  </section>
 
-  <section>
-    <h2>Horario de atención</h2>
+  </div>
 
-    <p>
-      <strong>De lunes a viernes:</strong><br>
-      9:30–13:30 y 17:00–21:00
-    </p>
+</section>
 
-    <p>
-      Las clases prácticas tienen una planificación independiente
-      del horario de atención de la oficina.
-    </p>
-  </section>
 
-  <section class="redes">
+<!-- REDES -->
+
+<section>
+
+  <div class="contenedor">
+
     <h2>Autoescuela Paco en Internet</h2>
 
     <p>
-      Puedes conocer más sobre Autoescuela Paco de Rota a través de
-      nuestros canales oficiales y nuestro blog.
+      Puedes seguir nuestra actividad y conocer más sobre Autoescuela Paco
+      a través de nuestros canales oficiales.
     </p>
 
-    <a href="https://www.instagram.com/autoescuelapaco"
-       target="_blank"
-       rel="noopener noreferrer">
-      Instagram de Autoescuela Paco
+    <div class="redes">
+
+      <a
+        class="red"
+        href="https://www.instagram.com/autoescuelapaco"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a
+        class="red"
+        href="https://www.facebook.com/profile.php?id=100063371431221"
+        target="_blank"
+        rel="noopener noreferrer">
+        Facebook
+      </a>
+
+      <a
+        class="red"
+        href="https://www.tiktok.com/@autoescuelapaco"
+        target="_blank"
+        rel="noopener noreferrer">
+        TikTok
+      </a>
+
+      <a
+        class="red"
+        href="https://x.com/A_PacoRota"
+        target="_blank"
+        rel="noopener noreferrer">
+        X
+      </a>
+
+      <a
+        class="red"
+        href="https://autoescuelapacorota.blogspot.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Blog
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LLAMADA FINAL -->
+
+<section class="cta">
+
+  <div class="contenedor">
+
+    <h2>Más de 60 años formando conductores en Rota</h2>
+
+    <p>
+      Experiencia, formación profesional y acompañamiento durante todo
+      el proceso de aprendizaje.
+    </p>
+
+    <a class="boton" href="#contacto">
+      Contactar con Autoescuela Paco
     </a>
 
-    <a href="https://www.facebook.com/profile.php?id=100063371431221"
-       target="_blank"
-       rel="noopener noreferrer">
-      Facebook de Autoescuela Paco
-    </a>
+  </div>
 
-    <a href="https://www.tiktok.com/@autoescuelapaco"
-       target="_blank"
-       rel="noopener noreferrer">
-      TikTok de Autoescuela Paco
-    </a>
+</section>
 
-    <a href="https://x.com/A_PacoRota"
-       target="_blank"
-       rel="noopener noreferrer">
-      X de Autoescuela Paco
-    </a>
-
-    <a href="https://autoescuelapacorota.blogspot.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      Blog de Autoescuela Paco Rota
-    </a>
-
-  </section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <p><strong>Autoescuela Paco Rota</strong></p>
-  <p>Fundada en 1965 · Rota (Cádiz)</p>
-  <p>Más de 60 años formando conductores</p>
+
+  <p>
+    <strong>Autoescuela Paco Rota</strong>
+  </p>
+
+  <p>
+    Fundada en 1965 · Rota (Cádiz)
+  </p>
+
+  <p>
+    Más de 60 años formando conductores
+  </p>
+
+  <p>
+    Avenida San Fernando, 63 · 11520 Rota, Cádiz
+  </p>
+
 </footer>
+
 
 </body>
 </html>
