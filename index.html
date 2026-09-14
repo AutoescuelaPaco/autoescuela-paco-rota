@@ -6,19 +6,17 @@
 
   <title>Autoescuela Paco Rota | Más de 60 años formando conductores</title>
 
-  <meta name="description" content="Autoescuela Paco en Rota, Cádiz. Desde 1965 formando conductores. Permisos B y AM, formación teórica y práctica, profesores titulados y acompañamiento durante todo el proceso.">
-  <meta name="author" content="Autoescuela Paco Rota">
+  <meta name="description" content="Autoescuela Paco en Rota, Cádiz. Desde 1965 y con más de 60 años de experiencia. Formación teórica y práctica para los permisos B y AM.">
 
   <style>
     :root {
       --azul: #536f89;
       --azul-oscuro: #40586d;
-      --azul-claro: #edf2f6;
-      --texto: #24313d;
-      --gris: #66727d;
-      --blanco: #ffffff;
-      --fondo: #f7f8fa;
-      --borde: #e2e7eb;
+      --texto: #27343f;
+      --gris: #65717c;
+      --fondo: #ffffff;
+      --fondo-suave: #f5f7f9;
+      --borde: #e1e6ea;
     }
 
     * {
@@ -34,223 +32,210 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--texto);
-      background: var(--blanco);
+      background: var(--fondo);
       line-height: 1.65;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     .contenedor {
-      width: min(1120px, 92%);
+      width: min(1080px, 92%);
       margin: 0 auto;
     }
 
-    /* =========================
-       CABECERA + HERO
-       ========================= */
+    /* ==========================================
+       ENTRADA PRINCIPAL
+       ========================================== */
 
-    .zona-superior {
+    .entrada {
       background: var(--azul);
-      color: var(--blanco);
-    }
-
-    header {
-      background: var(--azul);
-      border-bottom: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .barra {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      font-weight: 400;
-      opacity: 0.9;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 22px;
-    }
-
-    nav a {
-      color: var(--blanco);
-      font-size: 0.92rem;
-      opacity: 0.94;
-      transition: opacity 0.2s ease;
-    }
-
-    nav a:hover {
-      opacity: 0.65;
-    }
-
-    .hero {
-      background: var(--azul);
+      color: #ffffff;
       text-align: center;
-      padding: 92px 20px 105px;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 20px;
     }
 
-    .hero-contenido {
-      max-width: 850px;
-      margin: 0 auto;
+    .entrada-contenido {
+      max-width: 900px;
+      margin: auto;
     }
 
-    .hero-superior {
-      font-size: 0.9rem;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      opacity: 0.86;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.7rem, 7vw, 5.3rem);
-      line-height: 1.05;
+    .marca {
+      font-size: clamp(3.2rem, 9vw, 6.5rem);
+      line-height: 1;
       font-weight: 700;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
+      letter-spacing: -3px;
+      margin-bottom: 30px;
     }
 
-    .hero h2 {
-      font-size: clamp(1.35rem, 3vw, 2rem);
+    .entrada h2 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
       font-weight: 400;
-      line-height: 1.3;
+      line-height: 1.25;
       margin-bottom: 22px;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 34px;
-      font-size: 1.08rem;
-      opacity: 0.93;
+    .desde {
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 25px;
+      opacity: 0.95;
+    }
+
+    .entrada-descripcion {
+      max-width: 720px;
+      margin: 0 auto 38px;
+      font-size: 1.12rem;
+      line-height: 1.7;
+      opacity: 0.95;
     }
 
     .botones {
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 14px;
       flex-wrap: wrap;
     }
 
     .boton {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-width: 145px;
-      padding: 13px 23px;
+      padding: 13px 25px;
       border-radius: 5px;
       font-weight: 700;
-      font-size: 0.95rem;
-      transition: all 0.2s ease;
+      transition: 0.2s ease;
     }
 
     .boton-blanco {
-      background: var(--blanco);
+      background: #ffffff;
       color: var(--azul-oscuro);
     }
 
     .boton-blanco:hover {
+      background: #f0f3f5;
       transform: translateY(-1px);
-      background: #f2f4f6;
     }
 
-    .boton-borde {
-      border: 1px solid rgba(255,255,255,0.7);
-      color: var(--blanco);
-      background: transparent;
+    .boton-transparente {
+      border: 1px solid rgba(255,255,255,0.75);
+      color: #ffffff;
     }
 
-    .boton-borde:hover {
-      background: rgba(255,255,255,0.1);
+    .boton-transparente:hover {
+      background: rgba(255,255,255,0.10);
     }
 
-    /* =========================
+    /* ==========================================
+       MENU DISCRETO
+       ========================================== */
+
+    .menu {
+      border-bottom: 1px solid var(--borde);
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .menu-interior {
+      min-height: 58px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--azul);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .menu a:hover {
+      color: var(--azul-oscuro);
+    }
+
+    /* ==========================================
        SECCIONES
-       ========================= */
+       ========================================== */
 
     section {
-      padding: 82px 0;
+      padding: 85px 0;
     }
 
-    section:nth-of-type(even) {
-      background: var(--fondo);
+    section:nth-child(even) {
+      background: var(--fondo-suave);
     }
 
-    .cabecera-seccion {
+    .encabezado {
       max-width: 760px;
       margin: 0 auto 48px;
       text-align: center;
     }
 
-    .etiqueta {
+    .encabezado .etiqueta {
       display: block;
       color: var(--azul);
       text-transform: uppercase;
-      letter-spacing: 1.6px;
-      font-size: 0.78rem;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
-    h2.titulo {
-      font-size: clamp(1.9rem, 4vw, 2.7rem);
+    .encabezado h2 {
+      color: var(--azul);
+      font-size: clamp(2rem, 4vw, 2.8rem);
       line-height: 1.2;
       margin-bottom: 16px;
-      color: var(--texto);
     }
 
-    .cabecera-seccion p {
+    .encabezado p {
       color: var(--gris);
       font-size: 1.02rem;
     }
 
-    .texto-ancho {
+    .texto {
       max-width: 820px;
-      margin: 0 auto;
+      margin: auto;
     }
 
-    .texto-ancho p {
+    .texto p {
       margin-bottom: 18px;
     }
 
-    /* =========================
+    /* ==========================================
        HISTORIA
-       ========================= */
+       ========================================== */
 
-    .historia-destacada {
-      margin-top: 40px;
-      padding: 30px;
+    .destacado {
+      margin-top: 35px;
+      padding: 28px 30px;
+      background: var(--fondo-suave);
       border-left: 4px solid var(--azul);
-      background: var(--azul-claro);
     }
 
-    .historia-destacada strong {
+    .destacado strong {
       display: block;
+      color: var(--azul);
       font-size: 1.2rem;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
-    /* =========================
+    /* ==========================================
        TARJETAS
-       ========================= */
+       ========================================== */
 
     .rejilla {
       display: grid;
@@ -259,35 +244,35 @@
     }
 
     .tarjeta {
-      background: var(--blanco);
+      background: #ffffff;
       border: 1px solid var(--borde);
+      border-radius: 7px;
       padding: 30px;
-      border-radius: 8px;
     }
 
     .tarjeta h3 {
-      font-size: 1.2rem;
+      color: var(--azul);
+      font-size: 1.25rem;
       margin-bottom: 12px;
     }
 
     .tarjeta p {
       color: var(--gris);
-      font-size: 0.96rem;
     }
 
-    /* =========================
+    /* ==========================================
        COMO TRABAJAMOS
-       ========================= */
+       ========================================== */
 
-    .lista-profesional {
-      max-width: 850px;
-      margin: 0 auto;
+    .pasos {
+      max-width: 820px;
+      margin: auto;
     }
 
     .paso {
       display: grid;
-      grid-template-columns: 55px 1fr;
-      gap: 22px;
+      grid-template-columns: 48px 1fr;
+      gap: 20px;
       padding: 25px 0;
       border-bottom: 1px solid var(--borde);
     }
@@ -297,55 +282,54 @@
     }
 
     .numero {
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--azul);
-      color: var(--blanco);
-      border-radius: 50%;
       font-weight: 700;
     }
 
     .paso h3 {
+      color: var(--azul);
       margin-bottom: 6px;
-      font-size: 1.15rem;
     }
 
     .paso p {
       color: var(--gris);
     }
 
-    /* =========================
-       BLOQUES INFORMATIVOS
-       ========================= */
+    /* ==========================================
+       BLOQUE DOS COLUMNAS
+       ========================================== */
 
-    .bloque-doble {
+    .dos-columnas {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 55px;
-      align-items: start;
     }
 
-    .bloque-doble h3 {
-      font-size: 1.45rem;
-      margin-bottom: 16px;
+    .dos-columnas h3 {
+      color: var(--azul);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
     }
 
-    .bloque-doble p {
+    .dos-columnas p {
       color: var(--gris);
       margin-bottom: 15px;
     }
 
     .lista {
       list-style: none;
-      margin-top: 20px;
     }
 
     .lista li {
       position: relative;
-      padding-left: 24px;
+      padding-left: 23px;
       margin-bottom: 12px;
     }
 
@@ -354,44 +338,44 @@
       position: absolute;
       left: 0;
       color: var(--azul);
-      font-weight: 700;
+      font-weight: bold;
     }
 
-    /* =========================
-       FRASE DESTACADA
-       ========================= */
+    /* ==========================================
+       FRASE
+       ========================================== */
 
     .frase {
       background: var(--azul);
-      color: var(--blanco);
+      color: #ffffff;
       text-align: center;
       padding: 75px 20px;
     }
 
     .frase p {
       max-width: 820px;
-      margin: 0 auto;
-      font-size: clamp(1.35rem, 3vw, 2rem);
+      margin: auto;
+      font-size: clamp(1.3rem, 3vw, 2rem);
       line-height: 1.45;
-      font-weight: 400;
     }
 
-    /* =========================
+    /* ==========================================
        PERMISOS
-       ========================= */
+       ========================================== */
 
     .permiso {
       text-align: center;
     }
 
     .permiso .letra {
+      color: var(--azul);
       font-size: 3rem;
       font-weight: 700;
-      color: var(--azul);
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .permiso h3 {
+      color: var(--azul);
       margin-bottom: 10px;
     }
 
@@ -399,66 +383,65 @@
       color: var(--gris);
     }
 
-    /* =========================
+    /* ==========================================
        60 AÑOS
-       ========================= */
+       ========================================== */
 
     .revista {
       margin-top: 45px;
-      text-align: center;
     }
 
-    .revista-imagenes {
+    .revista-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 30px;
+      gap: 25px;
     }
 
-    .marco-revista {
+    .marco {
       min-height: 300px;
-      border: 1px dashed #aeb9c2;
-      background: #f2f5f7;
+      background: var(--fondo-suave);
+      border: 1px dashed #b5c0c9;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 25px;
       color: var(--gris);
     }
 
-    .marco-revista strong {
+    .marco strong {
       display: block;
-      color: var(--texto);
-      margin-bottom: 7px;
+      color: var(--azul);
+      margin-bottom: 8px;
     }
 
-    /* =========================
+    /* ==========================================
        BLOG
-       ========================= */
+       ========================================== */
 
-    .blog-intro {
+    .blog {
       max-width: 760px;
-      margin: 0 auto;
+      margin: auto;
       text-align: center;
     }
 
-    .blog-intro p {
+    .blog p {
       color: var(--gris);
       margin-bottom: 25px;
     }
 
-    /* =========================
+    /* ==========================================
        CONTACTO
-       ========================= */
+       ========================================== */
 
     .contacto {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 45px;
+      gap: 50px;
     }
 
-    .datos-contacto h3 {
+    .contacto h3 {
+      color: var(--azul);
       font-size: 1.5rem;
       margin-bottom: 22px;
     }
@@ -469,7 +452,7 @@
 
     .dato strong {
       display: block;
-      margin-bottom: 3px;
+      color: var(--texto);
     }
 
     .dato span,
@@ -478,8 +461,8 @@
     }
 
     .mapa {
-      min-height: 360px;
-      background: var(--azul-claro);
+      min-height: 350px;
+      background: var(--fondo-suave);
       border: 1px solid var(--borde);
       display: flex;
       align-items: center;
@@ -490,111 +473,94 @@
 
     .mapa p {
       color: var(--gris);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .boton-azul {
       background: var(--azul);
-      color: var(--blanco);
+      color: #ffffff;
     }
 
     .boton-azul:hover {
       background: var(--azul-oscuro);
     }
 
-    /* =========================
+    /* ==========================================
        REDES
-       ========================= */
+       ========================================== */
 
     .redes {
-      margin-top: 55px;
-      padding-top: 30px;
+      margin-top: 50px;
+      padding-top: 28px;
       border-top: 1px solid var(--borde);
       text-align: center;
     }
 
     .redes p {
       color: var(--gris);
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .redes a {
       color: var(--azul);
-      margin: 0 10px;
-      font-size: 0.92rem;
       font-weight: 700;
+      font-size: 0.9rem;
+      margin: 0 9px;
     }
 
-    /* =========================
-       CTA FINAL
-       ========================= */
+    /* ==========================================
+       FINAL
+       ========================================== */
 
-    .cta-final {
-      background: var(--azul-claro);
+    .final {
+      background: var(--fondo-suave);
       text-align: center;
       padding: 70px 20px;
     }
 
-    .cta-final h2 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      margin-bottom: 14px;
+    .final h2 {
+      color: var(--azul);
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      margin-bottom: 12px;
     }
 
-    .cta-final p {
+    .final p {
       color: var(--gris);
-      max-width: 700px;
-      margin: 0 auto 25px;
+      margin-bottom: 25px;
     }
 
-    /* =========================
+    /* ==========================================
        PIE
-       ========================= */
+       ========================================== */
 
     footer {
-      background: #26343f;
+      background: #293640;
       color: rgba(255,255,255,0.8);
-      padding: 30px 20px;
       text-align: center;
-      font-size: 0.86rem;
+      padding: 28px 20px;
+      font-size: 0.85rem;
     }
 
-    footer p {
-      margin-bottom: 5px;
-    }
+    /* ==========================================
+       MOVIL
+       ========================================== */
 
-    /* =========================
-       RESPONSIVE
-       ========================= */
+    @media (max-width: 800px) {
 
-    @media (max-width: 850px) {
-
-      .barra {
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px 0;
+      .entrada {
+        min-height: 600px;
       }
 
-      nav {
-        justify-content: center;
-        gap: 12px 18px;
-      }
-
-      .hero {
-        padding: 70px 18px 80px;
-      }
-
-      .rejilla {
+      .rejilla,
+      .dos-columnas,
+      .contacto,
+      .revista-grid {
         grid-template-columns: 1fr;
       }
 
-      .bloque-doble,
-      .contacto {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .revista-imagenes {
-        grid-template-columns: 1fr;
+      .menu-interior {
+        padding: 12px 0;
+        gap: 10px 17px;
       }
 
       section {
@@ -604,24 +570,17 @@
 
     @media (max-width: 500px) {
 
-      .logo {
-        font-size: 1.1rem;
+      .marca {
+        letter-spacing: -2px;
       }
 
-      nav a {
-        font-size: 0.84rem;
-      }
-
-      .hero h1 {
-        letter-spacing: -1px;
-      }
-
-      .hero p {
+      .entrada-descripcion {
         font-size: 1rem;
       }
 
       .botones {
         flex-direction: column;
+        align-items: center;
       }
 
       .boton {
@@ -629,13 +588,9 @@
         max-width: 280px;
       }
 
-      .tarjeta {
-        padding: 24px;
-      }
-
       .paso {
-        grid-template-columns: 45px 1fr;
-        gap: 15px;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
       }
     }
   </style>
@@ -643,120 +598,126 @@
 
 <body>
 
-  <!-- =====================================================
-       CABECERA + HERO
-       Todo este bloque comparte el mismo azul.
-       ===================================================== -->
+  <!-- ==================================================
+       ENTRADA PRINCIPAL
+       ================================================== -->
 
-  <div class="zona-superior">
+  <header class="entrada">
 
-    <header>
-      <div class="contenedor barra">
+    <div class="entrada-contenido">
 
-        <div class="logo">
-          Autoescuela Paco <span>· Rota</span>
-        </div>
+      <div class="marca">
+        Autoescuela Paco
+      </div>
 
-        <nav>
-          <a href="#historia">Historia</a>
-          <a href="#como-trabajamos">Cómo trabajamos</a>
-          <a href="#teoria">Teoría</a>
-          <a href="#practicas">Prácticas</a>
-          <a href="#permisos">Permisos</a>
-          <a href="#60-anios">60 años</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
+      <h2>
+        Más de 60 años formando conductores
+      </h2>
+
+      <div class="desde">
+        Desde 1965
+      </div>
+
+      <p class="entrada-descripcion">
+        Experiencia, formación y acompañamiento profesional
+        para aprender a conducir en Rota.
+      </p>
+
+      <div class="botones">
+
+        <a
+          class="boton boton-blanco"
+          href="tel:+34956811540"
+        >
+          Llamar
+        </a>
+
+        <a
+          class="boton boton-transparente"
+          href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Rota+C%C3%A1diz"
+          target="_blank"
+          rel="noopener"
+        >
+          Cómo llegar
+        </a>
 
       </div>
-    </header>
 
-    <div class="hero">
-      <div class="hero-contenido">
-
-        <div class="hero-superior">
-          Desde 1965 · Rota, Cádiz
-        </div>
-
-        <h1>Autoescuela Paco</h1>
-
-        <h2>Más de 60 años formando conductores</h2>
-
-        <p>
-          Experiencia, formación y acompañamiento profesional
-          para aprender a conducir en Rota.
-        </p>
-
-        <div class="botones">
-          <a class="boton boton-blanco" href="tel:+34956811540">
-            Llamar
-          </a>
-
-          <a
-            class="boton boton-borde"
-            href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Rota+C%C3%A1diz"
-            target="_blank"
-            rel="noopener"
-          >
-            Cómo llegar
-          </a>
-        </div>
-
-      </div>
     </div>
 
-  </div>
+  </header>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
+       MENU
+       ================================================== -->
+
+  <nav class="menu">
+
+    <div class="contenedor menu-interior">
+
+      <a href="#historia">Historia</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#teoria">Teoría</a>
+      <a href="#practicas">Prácticas</a>
+      <a href="#permisos">Permisos</a>
+      <a href="#60-anios">60 años</a>
+      <a href="#contacto">Contacto</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ==================================================
        HISTORIA
-       ===================================================== -->
+       ================================================== -->
 
   <section id="historia">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Desde 1965</span>
 
-        <h2 class="titulo">
-          Una autoescuela con historia en Rota
+        <h2>
+          Historia
         </h2>
 
         <p>
-          Más de seis décadas dedicadas a la formación de conductores.
+          Una autoescuela con historia en Rota.
         </p>
 
       </div>
 
-      <div class="texto-ancho">
+      <div class="texto">
 
         <p>
           Autoescuela Paco nació en Rota en 1965. Desde entonces,
-          varias generaciones de alumnos han pasado por nuestras aulas
-          y vehículos para aprender a conducir.
+          varias generaciones de alumnos han pasado por nuestras
+          aulas y vehículos para aprender a conducir.
         </p>
 
         <p>
-          La experiencia acumulada durante todos estos años convive
-          con una forma de trabajar actual, profesional y adaptada
-          a las necesidades de cada alumno.
+          Más de seis décadas después, mantenemos la experiencia
+          acumulada durante todos estos años y la combinamos con
+          una formación actual y adaptada a las necesidades de cada alumno.
         </p>
 
         <p>
-          Nuestro objetivo no es únicamente preparar a una persona
-          para superar un examen. Queremos que aprenda a conducir
-          con criterio, seguridad y responsabilidad.
+          Nuestro objetivo no es únicamente preparar para superar
+          un examen. Queremos formar conductores capaces de conducir
+          con seguridad, criterio y responsabilidad.
         </p>
 
-        <div class="historia-destacada">
+        <div class="destacado">
 
           <strong>
             La de toda la vida, con la formación de hoy.
           </strong>
 
-          Más de 60 años de experiencia y una forma de trabajar
-          pensada para acompañar al alumno durante todo su aprendizaje.
+          Más de 60 años de experiencia al servicio de los alumnos de Rota.
 
         </div>
 
@@ -767,30 +728,29 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        COMO TRABAJAMOS
-       ===================================================== -->
+       ================================================== -->
 
   <section id="como-trabajamos">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Nuestra forma de trabajar</span>
 
-        <h2 class="titulo">
-          Formación acompañada de principio a fin
+        <h2>
+          Cómo trabajamos
         </h2>
 
         <p>
-          Cada alumno necesita aprender a su ritmo y entender
-          qué está haciendo y por qué.
+          Acompañamos al alumno durante todo el proceso de aprendizaje.
         </p>
 
       </div>
 
-      <div class="lista-profesional">
+      <div class="pasos">
 
         <div class="paso">
 
@@ -800,8 +760,7 @@
             <h3>Conocemos al alumno</h3>
 
             <p>
-              Adaptamos la formación a su punto de partida,
-              sus necesidades y su evolución.
+              Adaptamos la formación a sus necesidades y a su evolución.
             </p>
           </div>
 
@@ -812,12 +771,11 @@
           <div class="numero">2</div>
 
           <div>
-            <h3>Formación teórica</h3>
+            <h3>Aprendemos la teoría</h3>
 
             <p>
-              Clases presenciales con profesor, apoyadas por una
-              plataforma online disponible las 24 horas para
-              reforzar y repasar desde casa.
+              El profesor explica y acompaña al alumno, utilizando
+              también herramientas digitales para reforzar el aprendizaje.
             </p>
           </div>
 
@@ -828,11 +786,11 @@
           <div class="numero">3</div>
 
           <div>
-            <h3>Formación práctica</h3>
+            <h3>Aprendemos a conducir</h3>
 
             <p>
-              Aprendizaje progresivo, seguimiento individual y
-              comunicación directa con el profesor.
+              La formación práctica es progresiva y se adapta a la
+              evolución de cada alumno.
             </p>
           </div>
 
@@ -843,12 +801,11 @@
           <div class="numero">4</div>
 
           <div>
-            <h3>Preparación del examen</h3>
+            <h3>Preparamos el examen</h3>
 
             <p>
-              No trabajamos únicamente rutas. Buscamos que el alumno
-              esté preparado para resolver las situaciones que pueden
-              aparecer durante la prueba.
+              Trabajamos situaciones de conducción y no solamente
+              recorridos memorizados.
             </p>
           </div>
 
@@ -859,11 +816,11 @@
           <div class="numero">5</div>
 
           <div>
-            <h3>Seguimiento después del examen</h3>
+            <h3>Analizamos y seguimos avanzando</h3>
 
             <p>
-              Si algo no sale bien, analizamos los errores y buscamos
-              la manera de trabajarlos para continuar avanzando.
+              El seguimiento continúa también después de la prueba
+              para aprender de los errores y seguir mejorando.
             </p>
           </div>
 
@@ -876,9 +833,9 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        FRASE
-       ===================================================== -->
+       ================================================== -->
 
   <div class="frase">
 
@@ -890,64 +847,60 @@
   </div>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        TEORIA
-       ===================================================== -->
+       ================================================== -->
 
   <section id="teoria">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Formación teórica</span>
 
-        <h2 class="titulo">
-          Aula + profesor + plataforma 24/7
+        <h2>
+          Teoría
         </h2>
 
         <p>
-          Formación acompañada antes, durante y después de cada clase.
+          Aula + profesor + plataforma 24/7:
+          formación acompañada antes, durante y después de cada clase.
         </p>
 
       </div>
 
-      <div class="bloque-doble">
+      <div class="dos-columnas">
 
         <div>
 
-          <h3>La clase presencial sigue siendo fundamental</h3>
+          <h3>Profesor y formación presencial</h3>
 
           <p>
-            El alumno cuenta con un profesor que explica los contenidos,
-            resuelve dudas y ayuda a comprender las situaciones que
-            aparecen en la conducción.
+            Las clases presenciales permiten explicar los contenidos,
+            resolver dudas y comprender las situaciones que aparecen
+            en la conducción.
           </p>
 
           <p>
-            La formación presencial se complementa con recursos digitales
-            para poder continuar trabajando desde casa.
+            La plataforma online complementa la formación y permite
+            continuar trabajando desde casa.
           </p>
 
         </div>
 
         <div>
 
-          <h3>Herramientas para seguir aprendiendo</h3>
+          <h3>Herramientas de aprendizaje</h3>
 
           <ul class="lista">
 
             <li>Plataforma online disponible 24 horas.</li>
-
             <li>Contenido audiovisual.</li>
-
             <li>Tests online.</li>
-
             <li>Tests en papel.</li>
-
-            <li>Corrección y seguimiento de errores.</li>
-
-            <li>Orientación del profesor durante el proceso.</li>
+            <li>Corrección de errores.</li>
+            <li>Seguimiento individual.</li>
 
           </ul>
 
@@ -960,25 +913,24 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        PRACTICAS
-       ===================================================== -->
+       ================================================== -->
 
   <section id="practicas">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Formación práctica</span>
 
-        <h2 class="titulo">
-          Aprender a conducir, no solo a aprobar
+        <h2>
+          Prácticas
         </h2>
 
         <p>
-          Una formación progresiva, individualizada y centrada
-          en adquirir seguridad al volante.
+          Aprender a conducir, no solamente a aprobar.
         </p>
 
       </div>
@@ -990,9 +942,8 @@
           <h3>Clases de una hora</h3>
 
           <p>
-            Las clases prácticas tienen una duración de una hora,
-            permitiendo trabajar las diferentes situaciones de
-            conducción con continuidad.
+            Clases prácticas de una hora para trabajar con continuidad
+            las diferentes situaciones de conducción.
           </p>
 
         </div>
@@ -1002,9 +953,8 @@
           <h3>Vehículos actuales</h3>
 
           <p>
-            Contamos con tres Renault Clio manuales de menos de
-            tres años, equipados con doble mando. Dos se utilizan
-            habitualmente y uno permanece como vehículo de reserva.
+            Tres Renault Clio manuales de menos de tres años,
+            equipados con doble mando.
           </p>
 
         </div>
@@ -1014,15 +964,15 @@
           <h3>Seguimiento individual</h3>
 
           <p>
-            El profesor realiza un seguimiento de la evolución,
-            detectando errores y aspectos que necesitan más trabajo.
+            El profesor realiza un seguimiento de la evolución
+            y de los errores que necesitan más trabajo.
           </p>
 
         </div>
 
       </div>
 
-      <div class="bloque-doble" style="margin-top:55px;">
+      <div class="dos-columnas" style="margin-top:55px;">
 
         <div>
 
@@ -1031,12 +981,12 @@
           <p>
             La primera toma de contacto práctica se realiza en Rota.
             Posteriormente, la organización de las clases permite
-            trabajar también en el entorno de Jerez.
+            trabajar también en Jerez.
           </p>
 
           <p>
-            Buscamos mantener la continuidad con el profesor y el
-            vehículo siempre que la organización lo permita.
+            Procuramos mantener la continuidad con el profesor
+            y el vehículo siempre que la organización lo permita.
           </p>
 
         </div>
@@ -1047,9 +997,8 @@
 
           <p>
             El alumno tiene comunicación directa con su profesor
-            para poder comentar dudas o situaciones surgidas durante
-            el aprendizaje sin tener que esperar necesariamente
-            a la siguiente clase.
+            para comentar dudas o situaciones surgidas durante
+            el aprendizaje.
           </p>
 
         </div>
@@ -1061,30 +1010,29 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        EXAMEN
-       ===================================================== -->
+       ================================================== -->
 
   <section>
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
-        <span class="etiqueta">Examen práctico</span>
+        <span class="etiqueta">Formación</span>
 
-        <h2 class="titulo">
-          Preparación más allá de memorizar recorridos
+        <h2>
+          Preparación del examen práctico
         </h2>
 
         <p>
-          Queremos que el alumno llegue al examen preparado
-          para conducir y afrontar situaciones reales.
+          Llegar al examen preparado para conducir y tomar decisiones.
         </p>
 
       </div>
 
-      <div class="bloque-doble">
+      <div class="dos-columnas">
 
         <div>
 
@@ -1092,15 +1040,11 @@
 
           <ul class="lista">
 
-            <li>Valoramos la evolución del alumno.</li>
-
-            <li>Trabajamos situaciones habituales del examen.</li>
-
-            <li>Realizamos simulaciones.</li>
-
-            <li>Trabajamos los nervios y la toma de decisiones.</li>
-
-            <li>El profesor acompaña al alumno durante el proceso.</li>
+            <li>Valoración de la evolución.</li>
+            <li>Trabajo de situaciones habituales.</li>
+            <li>Simulaciones.</li>
+            <li>Trabajo de los nervios.</li>
+            <li>Acompañamiento del profesor.</li>
 
           </ul>
 
@@ -1117,8 +1061,7 @@
           </p>
 
           <p>
-            El profesor acompaña a los alumnos y, una vez finalizada
-            la prueba, se realiza un seguimiento de lo ocurrido.
+            El profesor acompaña a los alumnos durante el proceso.
           </p>
 
         </div>
@@ -1130,42 +1073,40 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        DESPUES DEL EXAMEN
-       ===================================================== -->
+       ================================================== -->
 
   <section>
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Seguimiento</span>
 
-        <h2 class="titulo">
-          Si algo falla, analizamos por qué
+        <h2>
+          Después del examen
         </h2>
+
+        <p>
+          Los errores también forman parte del aprendizaje.
+        </p>
 
       </div>
 
-      <div class="texto-ancho">
+      <div class="texto">
 
         <p>
-          Cuando un alumno no supera la prueba práctica, no nos
-          limitamos a decirle que tiene que practicar más.
+          Si un alumno no supera la prueba práctica, profesor y alumno
+          analizan lo ocurrido para identificar los errores y trabajar
+          sobre ellos.
         </p>
 
         <p>
-          Profesor y alumno analizan los errores cometidos para
-          identificar exactamente qué ocurrió y cómo evitar que
-          vuelva a suceder.
-        </p>
-
-        <p>
-          Cuando es posible, volvemos con el alumno al lugar exacto
-          donde se produjo el error. Si no es posible hacerlo,
-          utilizamos fotografías, vídeos u otros recursos visuales
-          para ayudarle a identificar y comprender la situación.
+          Cuando es posible, volvemos al lugar donde se produjo el error.
+          Si no es posible, utilizamos fotografías, vídeos u otros
+          recursos visuales para ayudar al alumno a comprender la situación.
         </p>
 
       </div>
@@ -1175,47 +1116,44 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        RECICLAJE
-       ===================================================== -->
+       ================================================== -->
 
   <section>
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
-        <span class="etiqueta">También para conductores</span>
+        <span class="etiqueta">Conductores</span>
 
-        <h2 class="titulo">
-          Clases de reciclaje y perfeccionamiento
+        <h2>
+          Reciclaje y perfeccionamiento
         </h2>
 
         <p>
-          Porque obtener el permiso no significa que el aprendizaje
-          tenga que terminar.
+          También ayudamos a quienes ya tienen permiso de conducir.
         </p>
 
       </div>
 
-      <div class="texto-ancho">
+      <div class="texto">
 
         <p>
-          Ofrecemos clases para personas que ya tienen permiso de
-          conducir pero quieren recordar conceptos, volver a practicar
-          o recuperar seguridad al volante.
+          Clases para personas que quieren recordar conceptos,
+          volver a practicar o recuperar seguridad al volante.
         </p>
 
         <p>
-          Dependiendo de las circunstancias, las clases pueden realizarse
-          incluso en el propio vehículo del alumno.
+          Dependiendo de las circunstancias, las clases pueden
+          realizarse en el propio vehículo del alumno.
         </p>
 
         <p>
-          Cuando durante la formación se detectan dificultades
-          relacionadas con el miedo o la inseguridad al conducir,
-          podemos orientar al alumno sobre la conveniencia de buscar
-          ayuda profesional especializada.
+          Si durante la formación se detectan dificultades relacionadas
+          con el miedo o la inseguridad al conducir, podemos orientar
+          sobre la conveniencia de buscar ayuda profesional especializada.
         </p>
 
       </div>
@@ -1225,21 +1163,25 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        PERMISOS
-       ===================================================== -->
+       ================================================== -->
 
   <section id="permisos">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Permisos</span>
 
-        <h2 class="titulo">
-          Formación para los permisos AM y B
+        <h2>
+          Permisos AM y B
         </h2>
+
+        <p>
+          Formación teórica y práctica.
+        </p>
 
       </div>
 
@@ -1252,8 +1194,8 @@
           <h3>Permiso B</h3>
 
           <p>
-            Formación teórica y práctica para obtener el permiso
-            de conducción de automóviles.
+            Formación para obtener el permiso de conducción
+            de automóviles.
           </p>
 
         </div>
@@ -1265,8 +1207,8 @@
           <h3>Permiso AM</h3>
 
           <p>
-            Preparación para el permiso AM con formación teórica
-            y práctica adaptada a sus características.
+            Preparación teórica y práctica adaptada a las
+            características del permiso AM.
           </p>
 
         </div>
@@ -1279,7 +1221,7 @@
 
           <p>
             Profesores titulados y seguimiento durante todo
-            el proceso de formación.
+            el proceso.
           </p>
 
         </div>
@@ -1291,39 +1233,42 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        INSTALACIONES Y EQUIPO
-       ===================================================== -->
+       ================================================== -->
 
   <section>
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
         <span class="etiqueta">Autoescuela Paco</span>
 
-        <h2 class="titulo">
-          Experiencia y medios actuales
+        <h2>
+          Instalaciones y equipo
         </h2>
+
+        <p>
+          Experiencia profesional acompañada de medios actuales.
+        </p>
 
       </div>
 
-      <div class="bloque-doble">
+      <div class="dos-columnas">
 
         <div>
 
           <h3>Un espacio preparado para aprender</h3>
 
           <p>
-            Contamos con instalaciones renovadas, luminosas y cuidadas,
-            con zona de recepción y espera pensada para ofrecer
-            comodidad a nuestros alumnos.
+            Instalaciones renovadas, luminosas y cuidadas,
+            con zona de recepción y espera.
           </p>
 
           <p>
-            El aula dispone de pantalla digital y ordenadores para
-            apoyar la formación teórica y facilitar el aprendizaje.
+            El aula dispone de pantalla digital y ordenadores
+            para apoyar la formación teórica.
           </p>
 
         </div>
@@ -1333,14 +1278,14 @@
           <h3>Un equipo con experiencia</h3>
 
           <p>
-            Autoescuela Paco cuenta con cuatro profesores titulados,
-            con más de 20 años de experiencia demostrable.
+            Cuatro profesores titulados, con más de 20 años
+            de experiencia demostrable.
           </p>
 
           <p>
-            Un equipo formado por Noelia, Rosa, Juan y Dani, con
-            experiencia acumulada y una forma de trabajar basada
-            en el seguimiento cercano del alumno.
+            Noelia, Rosa, Juan y Dani forman un equipo con
+            experiencia acumulada y una forma de trabajar
+            basada en el seguimiento cercano del alumno.
           </p>
 
         </div>
@@ -1352,19 +1297,19 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        60 AÑOS
-       ===================================================== -->
+       ================================================== -->
 
   <section id="60-anios">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
-        <span class="etiqueta">Nuestra historia</span>
+        <span class="etiqueta">Desde 1965</span>
 
-        <h2 class="titulo">
+        <h2>
           Más de 60 años formando conductores
         </h2>
 
@@ -1374,58 +1319,44 @@
 
       </div>
 
-      <div class="texto-ancho">
+      <div class="texto">
 
         <p>
-          En 2025 Autoescuela Paco celebró seis décadas desde su
-          fundación en 1965.
+          En 2025 Autoescuela Paco celebró seis décadas desde
+          su fundación en 1965.
         </p>
 
         <p>
-          Sesenta años de trabajo, aprendizaje y generaciones de
-          conductores formados en Rota.
+          Sesenta años de trabajo, aprendizaje y generaciones
+          de conductores formados en Rota.
         </p>
 
       </div>
 
       <div class="revista">
 
-        <div class="revista-imagenes">
+        <!--
+          FUTURO:
+          Aquí colocaremos las fotografías reales de la parte
+          delantera y trasera del folleto de 60 años.
+        -->
 
-          <!--
-            FUTURO:
-            Sustituir este bloque por la imagen real
-            de la portada del folleto de 60 años.
-          -->
+        <div class="revista-grid">
 
-          <div class="marco-revista">
+          <div class="marco">
 
             <div>
-
-              <strong>Imagen delantera</strong>
-
-              Espacio reservado para la portada
-              del folleto de 60 años.
-
+              <strong>Portada del folleto</strong>
+              Espacio reservado para la imagen.
             </div>
 
           </div>
 
-          <!--
-            FUTURO:
-            Sustituir este bloque por la imagen real
-            de la parte trasera del folleto.
-          -->
-
-          <div class="marco-revista">
+          <div class="marco">
 
             <div>
-
-              <strong>Imagen trasera</strong>
-
-              Espacio reservado para la parte trasera
-              del folleto de 60 años.
-
+              <strong>Parte trasera del folleto</strong>
+              Espacio reservado para la imagen.
             </div>
 
           </div>
@@ -1434,14 +1365,14 @@
 
         <!--
           FUTURO:
-          Cuando tengamos la URL definitiva de la revista
-          de 60 años, colocar aquí el enlace real.
+          Aquí colocaremos el enlace definitivo a la revista
+          digital de 60 años cuando tengamos su URL.
         -->
 
-        <div class="botones">
+        <div class="botones" style="margin-top:30px;">
 
           <span class="boton boton-azul">
-            Próximamente · Ver la revista de 60 años
+            Próximamente · Revista de 60 años
           </span>
 
         </div>
@@ -1453,26 +1384,29 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        BLOG
-       ===================================================== -->
+       ================================================== -->
 
   <section>
 
     <div class="contenedor">
 
-      <div class="blog-intro">
+      <div class="blog">
 
-        <span class="etiqueta">Blog</span>
+        <div class="encabezado">
 
-        <h2 class="titulo">
-          Consejos y formación para conductores
-        </h2>
+          <span class="etiqueta">Blog</span>
+
+          <h2>
+            Información y consejos para conductores
+          </h2>
+
+        </div>
 
         <p>
-          En nuestro blog compartimos información sobre el permiso B
-          y AM, formación teórica, clases prácticas, preparación del
-          examen y otros temas relacionados con la conducción.
+          Información sobre permisos, formación teórica, clases prácticas,
+          preparación del examen y otros temas relacionados con la conducción.
         </p>
 
         <div class="botones">
@@ -1495,33 +1429,35 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- ==================================================
        CONTACTO
-       ===================================================== -->
+       ================================================== -->
 
   <section id="contacto">
 
     <div class="contenedor">
 
-      <div class="cabecera-seccion">
+      <div class="encabezado">
 
-        <span class="etiqueta">Contacto</span>
+        <span class="etiqueta">Rota · Cádiz</span>
 
-        <h2 class="titulo">
-          Estamos en Rota
+        <h2>
+          Contacto
         </h2>
 
         <p>
-          Puedes visitarnos en nuestra autoescuela.
+          Estamos en Avenida San Fernando.
         </p>
 
       </div>
 
       <div class="contacto">
 
-        <div class="datos-contacto">
+        <div>
 
-          <h3>Autoescuela Paco</h3>
+          <h3>
+            Autoescuela Paco
+          </h3>
 
           <div class="dato">
 
@@ -1575,16 +1511,6 @@
 
           </div>
 
-          <div class="dato">
-
-            <strong>Clases prácticas</strong>
-
-            <span>
-              07:30–14:30 · 15:30–20:30
-            </span>
-
-          </div>
-
         </div>
 
 
@@ -1602,7 +1528,7 @@
               target="_blank"
               rel="noopener"
             >
-              Cómo llegar en Google Maps
+              Cómo llegar
             </a>
 
           </div>
@@ -1611,11 +1537,6 @@
 
       </div>
 
-
-      <!--
-        Redes sociales presentadas de forma discreta.
-        No queremos convertir la web en una página de redes.
-      -->
 
       <div class="redes">
 
@@ -1662,41 +1583,33 @@
   </section>
 
 
-  <!-- =====================================================
-       CTA FINAL
-       ===================================================== -->
+  <!-- ==================================================
+       FINAL
+       ================================================== -->
 
-  <div class="cta-final">
+  <div class="final">
 
-    <div class="contenedor">
+    <h2>
+      Aprende a conducir con experiencia.
+    </h2>
 
-      <h2>
-        Aprende a conducir con experiencia.
-      </h2>
+    <p>
+      Más de 60 años formando conductores en Rota.
+    </p>
 
-      <p>
-        Más de 60 años formando conductores en Rota.
-      </p>
+    <div class="botones">
 
-      <div class="botones">
-
-        <a
-          class="boton boton-azul"
-          href="tel:+34956811540"
-        >
-          Llamar a Autoescuela Paco
-        </a>
-
-      </div>
+      <a
+        class="boton boton-azul"
+        href="tel:+34956811540"
+      >
+        Llamar
+      </a>
 
     </div>
 
   </div>
 
-
-  <!-- =====================================================
-       PIE
-       ===================================================== -->
 
   <footer>
 
