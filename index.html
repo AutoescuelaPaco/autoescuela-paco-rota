@@ -445,6 +445,7 @@
             display: flex;
             gap: 10px;
             margin-top: 15px;
+            flex-wrap: wrap;
         }
 
         .social-btn {
@@ -458,6 +459,12 @@
             justify-content: center;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: white;
         }
 
         /* CONTENEDOR MULTIMEDIA CONTACTO (Fachada + Mapa) */
@@ -580,7 +587,7 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo-area">
-                <img src="Screenshot_2026-08-26-18-26-26-723_com.miuli.gallery-edit.jpg" alt="Autoescuela Paco Logo" class="site-logo">
+                <img src="Screenshot_20260324-122904_Gallery.jpg" alt="Autoescuela Paco Logo" class="site-logo">
                 <div class="logo-text">
                     <h1>Autoescuela Paco</h1>
                     <span>Desde 1965 · Rota</span>
@@ -593,7 +600,6 @@
                     <li><a href="#teoria">Teoría</a></li>
                     <li><a href="#practicas">Prácticas</a></li>
                     <li><a href="#permisos">Permisos</a></li>
-                    <!-- Botón de llamada directa sin saltos raros -->
                     <li><a href="tel:956811540" class="nav-cta">Llamar</a></li>
                 </ul>
             </nav>
@@ -604,14 +610,13 @@
     <section class="hero" id="inicio">
         <div class="hero-container">
             <div>
-                <img src="Screenshot_2026-08-26-18-26-26-723_com.miuli.gallery-edit.jpg" alt="Autoescuela Paco Logo" class="hero-main-logo">
+                <img src="Screenshot_20260324-122904_Gallery.jpg" alt="Autoescuela Paco Logo" class="hero-main-logo">
                 <div class="hero-tag">
                     <i class="fa-solid fa-award"></i> Más de 60 años en Rota
                 </div>
                 <h2>Aprende a conducir con <span>seguridad y confianza</span></h2>
                 <p>La autoescuela de toda la vida combinada con la formación digital de hoy. Profesorado experto y acompañamiento personalizado.</p>
                 <div class="hero-buttons">
-                    <!-- Botón de llamada directa -->
                     <a href="tel:956811540" class="btn-primary">
                         <i class="fa-solid fa-phone"></i> Llamar 956 811 540
                     </a>
@@ -643,7 +648,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 1: TRAYECTORIA CON FOTO HISTÓRICA -->
+    <!-- BLOQUE 1: TRAYECTORIA -->
     <section id="experiencia" style="padding-bottom: 10px;">
         <div class="content-block">
             <div class="block-text">
@@ -657,12 +662,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-34-56-620_com.miuli.gallery-edit.jpg" alt="Autoescuela Paco - Historia y tradición en Rota">
+                <img src="Screenshot_20260324-122923_Gallery.jpg" alt="Autoescuela Paco - Historia y tradición en Rota">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 2: TEORÍA CON LA FOTO DEL AULA -->
+    <!-- BLOQUE 2: TEORÍA -->
     <section id="teoria" style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
@@ -676,12 +681,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-40-53-003_com.opera.browser-edit.jpg" alt="Aula teórica de Autoescuela Paco en Rota">
+                <img src="Screenshot_20260324-122944_Gallery.jpg" alt="Aula teórica de Autoescuela Paco en Rota">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 3: PRÁCTICAS CON LA FOTO DE LOS COCHES -->
+    <!-- BLOQUE 3: PRÁCTICAS -->
     <section id="practicas" style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block">
             <div class="block-text">
@@ -695,13 +700,13 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-43-34-002_com.opera.browser-edit.jpg" alt="Flota de vehículos de Autoescuela Paco en Rota">
+                <img src="Screenshot_20260324-123005_Gallery.jpg" alt="Flota de vehículos de Autoescuela Paco en Rota">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 4: TECNOLOGÍA / INSTALACIONES -->
-    <section style="padding-bottom: 20px; padding-top: 10px;">
+    <!-- BLOQUE 4: INSTALACIONES -->
+    <section style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
                 <span class="section-tag">Instalaciones</span>
@@ -714,7 +719,61 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-40-53-003_com.opera.browser-edit.jpg" alt="Zona de ordenadores y pantallas en Autoescuela Paco">
+                <img src="Screenshot_20260324-123026_Gallery.jpg" alt="Zona de ordenadores y pantallas en Autoescuela Paco">
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section style="padding-bottom: 10px; padding-top: 10px;">
+        <div class="content-block">
+            <div class="block-text">
+                <span class="section-tag">Nuestro Blog</span>
+                <h3>Consejos viales, novedades y noticias de la autoescuela</h3>
+                <p>Publicamos artículos periódicamente con trucos para aprobar el carnet a la primera, cambios en la normativa de tráfico y actualidad de nuestra autoescuela en Rota.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Consejos prácticos para el examen de conducir</li>
+                    <li><i class="fa-solid fa-check"></i> Actualidad y avisos importantes para alumnos</li>
+                </ul>
+                <div style="margin-top: 15px;">
+                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="btn-primary">
+                        <i class="fa-solid fa-blog"></i> Visitar nuestro Blog
+                    </a>
+                </div>
+            </div>
+            <div class="block-img-container" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2B52B6 0%, #1d398a 100%); color: white; text-align: center; padding: 20px;">
+                <div>
+                    <i class="fa-solid fa-pen-nib" style="font-size: 3rem; margin-bottom: 15px; color: #60a5fa;"></i>
+                    <h4 style="font-size: 1.2rem; font-weight: 700;">Blog Oficial</h4>
+                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Mantente al día con nuestras publicaciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVISTA -->
+    <section style="padding-bottom: 20px; padding-top: 10px;">
+        <div class="content-block reverse">
+            <div class="block-text">
+                <span class="section-tag">Nuestra Revista</span>
+                <h3>Espacio cultural y divulgativo de Autoescuela Paco</h3>
+                <p>Próximamente publicaremos aquí nuestra revista digital con reportajes especiales, entrevistas, historia de Rota vinculada al motor y contenidos exclusivos para todos nuestros alumnos y seguidores.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Artículos de interés y reportajes especiales</li>
+                    <li><i class="fa-solid fa-check"></i> Espacio interactivo en constante crecimiento</li>
+                </ul>
+                <div style="margin-top: 15px;">
+                    <a href="#" target="_blank" class="btn-secondary" style="background: var(--dark); color: white; border: none;">
+                        <i class="fa-solid fa-book-open"></i> Leer la Revista (Próximamente)
+                    </a>
+                </div>
+            </div>
+            <div class="block-img-container" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #111827 0%, #374151 100%); color: white; text-align: center; padding: 20px;">
+                <div>
+                    <i class="fa-solid fa-newspaper" style="font-size: 3rem; margin-bottom: 15px; color: var(--accent);"></i>
+                    <h4 style="font-size: 1.2rem; font-weight: 700;">Revista Digital</h4>
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 5px;">Próximamente disponible</p>
+                </div>
             </div>
         </div>
     </section>
@@ -750,7 +809,7 @@
         </div>
     </section>
 
-    <!-- Contacto con Fachada y Mapa de Google -->
+    <!-- Contacto con Fachada y Mapa -->
     <section id="contacto">
         <div class="section-header">
             <span class="section-tag">Estamos en Rota</span>
@@ -793,17 +852,20 @@
                     </div>
                 </div>
 
+                <!-- REDES SOCIALES -->
                 <div class="social-links">
-                    <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100063371431221" target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.tiktok.com/@autoescuelapaco" target="_blank" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063371431221" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/A_PacoRota" target="_blank" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@autoescuelapaco" target="_blank" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="social-btn" title="Blog"><i class="fa-solid fa-blog"></i></a>
                 </div>
             </div>
 
-            <!-- Columna visual: Foto de la fachada y Mapa de Google -->
+            <!-- Columna visual: Fachada y Mapa -->
             <div class="contact-visuals">
                 <div class="fachada-box">
-                    <img src="Screenshot_2026-08-26-18-36-46-738_com.opera.browser-edit.jpg" alt="Fachada de Autoescuela Paco en Rota">
+                    <img src="Screenshot_20260324-123048_Gallery.jpg" alt="Fachada de Autoescuela Paco en Rota">
                 </div>
                 <div class="map-box">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.1!2d-6.363!3d36.623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd123456789:0x123456789!2sAv.+San+Fernando,+63,+11520+Rota,+C%C3%A1diz!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
