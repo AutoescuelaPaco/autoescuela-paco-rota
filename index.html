@@ -290,6 +290,81 @@
             color: var(--gray);
         }
 
+        /* BLOQUES INTERCALADOS TEXTO + FOTO */
+        .content-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .content-block.reverse {
+            direction: rtl;
+        }
+
+        .content-block.reverse > * {
+            direction: ltr;
+        }
+
+        .block-text h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .block-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .block-img-container {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 320px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+            background: #e5e7eb;
+        }
+
+        .block-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .content-block:hover .block-img-container img {
+            transform: scale(1.03);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .feature-list i {
+            color: #10b981;
+            background: #d1fae5;
+            padding: 6px;
+            border-radius: 50%;
+            font-size: 0.8rem;
+        }
+
         /* Permisos Grid */
         .permisos-grid {
             display: grid;
@@ -334,111 +409,6 @@
         .permiso-card p {
             color: var(--gray);
             margin-bottom: 20px;
-        }
-
-        /* Metodología / Cómo trabajamos */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .step-card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            position: relative;
-            text-align: center;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--accent);
-            color: white;
-            font-weight: 800;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-
-        .step-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .step-card p {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-
-        /* Información Teórica y Práctica */
-        .features-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            background: white;
-            border-radius: 24px;
-            padding: 50px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
-        }
-
-        .features-split.reverse {
-            direction: rtl;
-        }
-
-        .features-split.reverse > * {
-            direction: ltr;
-        }
-
-        .feature-content h3 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .feature-content p {
-            color: var(--gray);
-            margin-bottom: 15px;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .feature-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .feature-list i {
-            color: #10b981;
-            background: #d1fae5;
-            padding: 6px;
-            border-radius: 50%;
-            font-size: 0.8rem;
-        }
-
-        .feature-box-visual {
-            background: #f3f4f6;
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            font-weight: 700;
-            color: var(--gray);
-            border: 2px dashed #d1d5db;
         }
 
         /* Contacto & Ubicación */
@@ -555,7 +525,7 @@
 
         /* Responsive */
         @media(max-width: 968px) {
-            .hero-container, .features-split, .contact-container {
+            .hero-container, .content-block, .contact-container {
                 grid-template-columns: 1fr;
             }
             .hero h2 {
@@ -563,6 +533,9 @@
             }
             nav ul {
                 display: none;
+            }
+            .content-block.reverse {
+                direction: ltr;
             }
         }
     </style>
@@ -582,7 +555,7 @@
             <nav>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#metodologia">Método</a></li>
+                    <li><a href="#experiencia">Trayectoria</a></li>
                     <li><a href="#teoria">Teoría</a></li>
                     <li><a href="#practicas">Prácticas</a></li>
                     <li><a href="#permisos">Permisos</a></li>
@@ -633,160 +606,149 @@
         </div>
     </section>
 
-    <!-- Permisos -->
-    <section id="permisos">
-        <div class="section-header">
-            <span class="section-tag">Nuestros Permisos</span>
-            <h2>¿Qué carnet quieres sacarte?</h2>
-            <p>Formación teórica y práctica adaptada a tus necesidades con atención cercana.</p>
-        </div>
-        <div class="permisos-grid">
-            <div class="permiso-card">
-                <div class="permiso-badge">B</div>
-                <h3>Permiso B</h3>
-                <p>Formación completa para obtener el carnet de turismos y automóviles. Clases dinámicas y prácticas reales en Rota y Jerez.</p>
-                <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Más información</a>
+    <!-- BLOQUE 1: TRAYECTORIA / HISTORIA (Texto e Imagen intercalados) -->
+    <section id="experiencia" style="padding-bottom: 20px;">
+        <div class="content-block">
+            <div class="block-text">
+                <span class="section-tag">Nuestra Historia</span>
+                <h3>Tradición y cercanía en Rota desde 1965</h3>
+                <p>Generación tras generación, en Autoescuela Paco nos hemos ganado la confianza de los vecinos de Rota. Nuestro compromiso es ofrecer una enseñanza rigurosa pero muy cercana, adaptada a cada alumno para que aprender a conducir sea una experiencia positiva.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Profesores titulados con amplia experiencia</li>
+                    <li><i class="fa-solid fa-check"></i> Trato familiar, honesto y totalmente personalizado</li>
+                    <li><i class="fa-solid fa-check"></i> Ubicación céntrica en la Avda. San Fernando</li>
+                </ul>
             </div>
-            <div class="permiso-card" style="border-top-color: var(--accent);">
-                <div class="permiso-badge" style="background: #ffeeef; color: var(--accent);">AM</div>
-                <h3>Permiso AM</h3>
-                <p>Preparación específica para ciclomotores y vehículos ligeros. Teórica adaptada y pistas prácticas supervisadas por expertos.</p>
-                <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; background: var(--accent);">Más información</a>
-            </div>
-            <div class="permiso-card" style="border-top-color: #10b981;">
-                <div class="permiso-badge" style="background: #ecfdf5; color: #10b981;">+</div>
-                <h3>Reciclaje & Perfeccionamiento</h3>
-                <p>¿Tienes carnet pero hace tiempo que no conduces o necesitas recuperar seguridad? Clases adaptadas, incluso en tu propio vehículo.</p>
-                <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; background: #10b981;">Más información</a>
+            <div class="block-img-container">
+                <!-- Cambia este enlace por la foto de la fachada o el equipo -->
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Autoescuela Paco en Rota">
             </div>
         </div>
     </section>
 
-    <!-- Cómo trabajamos -->
-    <section id="metodologia" style="background: #f1f5f9; max-width: 100%;">
+    <!-- BLOQUE 2: TEORÍA (Texto e Imagen invertidos) -->
+    <section id="teoria" style="padding-bottom: 20px; padding-top: 20px;">
+        <div class="content-block reverse">
+            <div class="block-text">
+                <span class="section-tag">Formación Teórica</span>
+                <h3>Aulas equipadas y plataforma online 24/7</h3>
+                <p>Entiende las normas de circulación de forma sencilla y amena. Puedes asistir a nuestras clases presenciales en el centro para resolver dudas directamente con el profesor, o estudiar desde casa a tu propio ritmo con nuestra plataforma digital actualizada.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Clases presenciales con pantallas y soportes visuales</li>
+                    <li><i class="fa-solid fa-check"></i> Tests oficiales actualizados listos para móvil y ordenador</li>
+                    <li><i class="fa-solid fa-check"></i> Seguimiento individual de tus fallos y aciertos</li>
+                </ul>
+            </div>
+            <div class="block-img-container">
+                <!-- Cambia este enlace por la foto del aula o estudiando -->
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Aula teórica Autoescuela Paco">
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE 3: PRÁCTICAS (Texto e Imagen intercalados) -->
+    <section id="practicas" style="padding-bottom: 40px; padding-top: 20px;">
+        <div class="content-block">
+            <div class="block-text">
+                <span class="section-tag">Clases Prácticas</span>
+                <h3>Aprende a circular con vehículos modernos</h3>
+                <p>Nuestras clases prácticas están diseñadas para que ganes soltura real al volante. Te preparamos tanto en las calles de Rota como en los recorridos de examen en Jerez, garantizando que afrontes la prueba con absoluta seguridad.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Turismos modernos equipados con doble mando</li>
+                    <li><i class="fa-solid fa-check"></i> Prácticas adaptadas a tu disponibilidad horaria</li>
+                    <li><i class="fa-solid fa-check"></i> Profesor paciente enfocado en quitarte los nervios</li>
+                </ul>
+            </div>
+            <div class="block-img-container">
+                <!-- Cambia este enlace por la foto del coche de la autoescuela -->
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Coche de prácticas Autoescuela Paco">
+            </div>
+        </div>
+    </section>
+
+    <!-- Permisos -->
+    <section id="permisos" style="background: #f1f5f9; max-width: 100%; padding-top: 60px; padding-bottom: 60px;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div class="section-header">
-                <span class="section-tag">Paso a paso</span>
-                <h2>Cómo trabajamos contigo</h2>
-                <p>Un método centrado en tu evolución y en formarte como un conductor seguro para toda la vida.</p>
+                <span class="section-tag">Nuestros Permisos</span>
+                <h2>¿Qué carnet quieres sacarte?</h2>
+                <p>Formación teórica y práctica adaptada a tus necesidades con atención cercana.</p>
             </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h4>Te conocemos</h4>
-                    <p>Adaptamos el ritmo de aprendizaje a tus necesidades y disponibilidad.</p>
+            <div class="permisos-grid">
+                <div class="permiso-card" style="background: white;">
+                    <div class="permiso-badge">B</div>
+                    <h3>Permiso B</h3>
+                    <p>Formación completa para obtener el carnet de turismos y automóviles. Clases dinámicas y prácticas reales en Rota y Jerez.</p>
+                    <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Más información</a>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h4>Teoría eficaz</h4>
-                    <p>Aulas presenciales con pantallas digitales y plataforma online 24/7.</p>
+                <div class="permiso-card" style="border-top-color: var(--accent); background: white;">
+                    <div class="permiso-badge" style="background: #ffeeef; color: var(--accent);">AM</div>
+                    <h3>Permiso AM</h3>
+                    <p>Preparación específica para ciclomotores y vehículos ligeros. Teórica adaptada y pistas prácticas supervisadas por expertos.</p>
+                    <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; background: var(--accent);">Más información</a>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h4>Prácticas reales</h4>
-                    <p>Flota moderna de Renault Clio con doble mando en Rota y Jerez.</p>
+                <div class="permiso-card" style="border-top-color: #10b981; background: white;">
+                    <div class="permiso-badge" style="background: #ecfdf5; color: #10b981;">+</div>
+                    <h3>Reciclaje & Perfeccionamiento</h3>
+                    <p>¿Tienes carnet pero hace tiempo que no conduces o necesitas recuperar seguridad? Clases adaptadas, incluso en tu propio vehículo.</p>
+                    <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; background: #10b981;">Más información</a>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h4>Acompañamiento</h4>
-                    <p>Preparamos situaciones reales de tráfico, controlando los nervios.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teoría -->
-    <section id="teoria">
-        <div class="features-split">
-            <div class="feature-content">
-                <span class="section-tag">Formación Teórica</span>
-                <h3>Aula, profesor y plataforma 24/7</h3>
-                <p>Las clases presenciales te permiten resolver dudas directamente con profesionales con más de 20 años de experiencia, comprendiendo las situaciones reales de la carretera.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Plataforma online disponible 24 horas</li>
-                    <li><i class="fa-solid fa-check"></i> Tests actualizados online y en papel</li>
-                    <li><i class="fa-solid fa-check"></i> Soporte audiovisual en aula digital</li>
-                    <li><i class="fa-solid fa-check"></i> Corrección de errores individualizada</li>
-                </ul>
-            </div>
-            <div class="feature-box-visual">
-                <i class="fa-solid fa-laptop-code" style="font-size: 3rem; color: var(--primary); margin-bottom: 15px;"></i>
-                <p>Estudia desde casa o en nuestra academia en Avda. San Fernando</p>
-            </div>
-        </div>
-
-        <div class="features-split reverse">
-            <div class="feature-content">
-                <span class="section-tag">Formación Práctica</span>
-                <h3>Aprender a conducir, no solo a aprobar</h3>
-                <p>Trabajamos con clases de una hora en vehículos modernos (Renault Clio manuales de menos de tres años). Las prácticas se desarrollan en Rota y se extienden a Jerez para dominar el examen oficial.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Desplazamiento organizado a Jerez incluido</li>
-                    <li><i class="fa-solid fa-check"></i> Seguimiento continuo de la evolución</li>
-                    <li><i class="fa-solid fa-check"></i> Comunicación directa con tu profesor</li>
-                </ul>
-            </div>
-            <div class="feature-box-visual" style="background: #eef2ff;">
-                <i class="fa-solid fa-car" style="font-size: 3rem; color: var(--accent); margin-bottom: 15px;"></i>
-                <p>Flota moderna equipada con doble mando</p>
             </div>
         </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" style="background: #f8fafc; max-width: 100%;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div class="section-header">
-                <span class="section-tag">Estamos en Rota</span>
-                <h2>Ven a conocernos o contacta</h2>
-                <p>Te informamos sin compromiso sobre matrículas, horarios y ofertas actuales.</p>
+    <section id="contacto">
+        <div class="section-header">
+            <span class="section-tag">Estamos en Rota</span>
+            <h2>Ven a conocernos o contacta</h2>
+            <p>Te informamos sin compromiso sobre matrículas, horarios y ofertas actuales.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Autoescuela Paco</h3>
+                
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Avenida San Fernando, 63<br>11520 Rota, Cádiz</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h4>Teléfono / Móvil</h4>
+                        <p><a href="tel:956811540">956 811 540</a> / <a href="tel:672046418">672 046 418</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:pacoescuela@hotmail.com">pacoescuela@hotmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4>Horario de atención</h4>
+                        <p>Lunes a Viernes: 09:30–13:30 y 17:00–20:00</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063371431221" target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@autoescuelapaco" target="_blank" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Autoescuela Paco</h3>
-                    
-                    <div class="contact-detail">
-                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h4>Dirección</h4>
-                            <p>Avenida San Fernando, 63<br>11520 Rota, Cádiz</p>
-                        </div>
-                    </div>
 
-                    <div class="contact-detail">
-                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <h4>Teléfono / Móvil</h4>
-                            <p><a href="tel:956811540">956 811 540</a> / <a href="tel:672046418">672 046 418</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-detail">
-                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:pacoescuela@hotmail.com">pacoescuela@hotmail.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-detail">
-                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div>
-                            <h4>Horario de atención</h4>
-                            <p>Lunes a Viernes: 09:30–13:30 y 17:00–20:00</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100063371431221" target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@autoescuelapaco" target="_blank" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </div>
-
-                <div class="map-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.87654321!2d-6.357!3d36.621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQsK7MzMnMzcuMiJOIDbCsDIxJzI1LjIiVw!5e0!3m2!1ses!2ses!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.87654321!2d-6.357!3d36.621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sQsK7MzMnMzcuMiJOIDbCsDIxJzI1LjIiVw!5e0!3m2!1ses!2ses!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
