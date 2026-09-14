@@ -144,11 +144,6 @@
             transition: background 0.2s;
         }
 
-        /* Ocultar el menú clásico en móviles para dar protagonismo a los botones directos */
-        nav ul {
-            display: none;
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
@@ -446,16 +441,17 @@
             word-break: break-word;
         }
 
+        /* REDES SOCIALES AMPLIADAS Y MÁS GRANDES */
         .social-links {
             display: flex;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 14px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
 
         .social-btn {
-            width: 36px;
-            height: 36px;
+            width: 50px;
+            height: 50px;
             background: #f3f4f6;
             color: var(--dark);
             border-radius: 50%;
@@ -463,16 +459,17 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.2s, color 0.2s;
+            font-size: 1.35rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
         }
 
         .social-btn:hover {
             background: var(--primary);
             color: white;
+            transform: translateY(-3px);
         }
 
-        /* CONTENEDOR MULTIMEDIA CONTACTO (Fachada + Mapa) */
         .contact-visuals {
             display: grid;
             grid-template-columns: 1fr;
@@ -503,7 +500,7 @@
             display: block;
         }
 
-        /* BOTÓN FLOTANTE DE WHATSAPP */
+        /* WHATSAPP FLOTANTE */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -541,7 +538,7 @@
             margin-top: 5px;
         }
 
-        /* Ajustes para pantallas grandes (ordenadores o tablets) */
+        /* Responsive Desktop */
         @media(min-width: 968px) {
             .nav-container {
                 padding: 0.8rem 2rem;
@@ -593,11 +590,11 @@
 </head>
 <body>
 
-    <!-- Header Mejorado con Botones Directos -->
+    <!-- Header con Logo Grande y Botones Ordenados -->
     <header>
         <div class="nav-container">
             <a href="#inicio" class="logo-area">
-                <img src="Screenshot_20260324-122904_Gallery.png" alt="Autoescuela Paco Logo" class="site-logo">
+                <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Logo" class="site-logo">
                 <div class="logo-text">
                     <h1>Autoescuela Paco</h1>
                     <span>Desde 1965 · Rota</span>
@@ -614,7 +611,7 @@
         </div>
     </header>
 
-    <!-- Hero Section (Limpia, sin botones repetidos) -->
+    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="hero-container">
             <div>
@@ -647,7 +644,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 1: TRAYECTORIA -->
+    <!-- BLOQUE 1: TRAYECTORIA (Coche Clásico) -->
     <section id="experiencia" style="padding-bottom: 10px;">
         <div class="content-block">
             <div class="block-text">
@@ -661,12 +658,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_20260324-122923_Gallery.png" alt="Autoescuela Paco - Historia y tradición en Rota">
+                <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" alt="Autoescuela Paco - Historia y tradición en Rota">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 2: TEORÍA -->
+    <!-- BLOQUE 2: TEORÍA (Aula) -->
     <section id="teoria" style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
@@ -680,12 +677,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_20260324-122944_Gallery.png" alt="Aula teórica de Autoescuela Paco en Rota">
+                <img src="Screenshot_2026-08-26-18-41-11-133_com.opera.browser-edit.jpg" alt="Aula teórica de Autoescuela Paco en Rota">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 3: PRÁCTICAS -->
+    <!-- BLOQUE 3: PRÁCTICAS (Coches) -->
     <section id="practicas" style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block">
             <div class="block-text">
@@ -699,12 +696,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_20260324-123005_Gallery.png" alt="Flota de vehículos de Autoescuela Paco en Rota">
+                <img src="Screenshot_2026-08-26-18-43-34-002_com.opera.browser-edit.jpg" alt="Flota de vehículos de Autoescuela Paco en Rota">
             </div>
         </div>
     </section>
 
-    <!-- BLOQUE 4: INSTALACIONES -->
+    <!-- BLOQUE 4: INSTALACIONES (Zona de ordenadores) -->
     <section style="padding-bottom: 10px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
@@ -718,66 +715,12 @@
                 </ul>
             </div>
             <div class="block-img-container">
-                <img src="Screenshot_20260324-123026_Gallery.png" alt="Zona de ordenadores y pantallas en Autoescuela Paco">
+                <img src="Screenshot_2026-08-26-18-40-53-003_com.opera.browser-edit.jpg" alt="Zona de ordenadores y pantallas en Autoescuela Paco">
             </div>
         </div>
     </section>
 
-    <!-- BLOG -->
-    <section style="padding-bottom: 10px; padding-top: 10px;">
-        <div class="content-block">
-            <div class="block-text">
-                <span class="section-tag">Nuestro Blog</span>
-                <h3>Consejos viales, novedades y noticias de la autoescuela</h3>
-                <p>Publicamos artículos periódicamente con trucos para aprobar el carnet a la primera, cambios en la normativa de tráfico y actualidad de nuestra autoescuela en Rota.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Consejos prácticos para el examen de conducir</li>
-                    <li><i class="fa-solid fa-check"></i> Actualidad y avisos importantes para alumnos</li>
-                </ul>
-                <div style="margin-top: 15px;">
-                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="btn-primary">
-                        <i class="fa-solid fa-blog"></i> Visitar nuestro Blog
-                    </a>
-                </div>
-            </div>
-            <div class="block-img-container" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2B52B6 0%, #1d398a 100%); color: white; text-align: center; padding: 20px;">
-                <div>
-                    <i class="fa-solid fa-pen-nib" style="font-size: 3rem; margin-bottom: 15px; color: #60a5fa;"></i>
-                    <h4 style="font-size: 1.2rem; font-weight: 700;">Blog Oficial</h4>
-                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Mantente al día con nuestras publicaciones</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REVISTA -->
-    <section style="padding-bottom: 20px; padding-top: 10px;">
-        <div class="content-block reverse">
-            <div class="block-text">
-                <span class="section-tag">Nuestra Revista</span>
-                <h3>Espacio cultural y divulgativo de Autoescuela Paco</h3>
-                <p>Próximamente publicaremos aquí nuestra revista digital con reportajes especiales, entrevistas, historia de Rota vinculada al motor y contenidos exclusivos para todos nuestros alumnos y seguidores.</p>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Artículos de interés y reportajes especiales</li>
-                    <li><i class="fa-solid fa-check"></i> Espacio interactivo en constante crecimiento</li>
-                </ul>
-                <div style="margin-top: 15px;">
-                    <a href="#" target="_blank" class="btn-secondary" style="background: var(--dark); color: white; border: none; padding: 8px 16px; border-radius: 10px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem;">
-                        <i class="fa-solid fa-book-open"></i> Leer la Revista (Próximamente)
-                    </a>
-                </div>
-            </div>
-            <div class="block-img-container" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #111827 0%, #374151 100%); color: white; text-align: center; padding: 20px;">
-                <div>
-                    <i class="fa-solid fa-newspaper" style="font-size: 3rem; margin-bottom: 15px; color: var(--accent);"></i>
-                    <h4 style="font-size: 1.2rem; font-weight: 700;">Revista Digital</h4>
-                    <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 5px;">Próximamente disponible</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Permisos -->
+    <!-- Permisos (¿Qué carnet quieres sacarte?) -->
     <section id="permisos" style="background: #f1f5f9; padding: 35px 1rem;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div class="section-header">
@@ -808,7 +751,53 @@
         </div>
     </section>
 
-    <!-- Contacto con Fachada y Mapa -->
+    <!-- REVISTA (Justo después de los permisos) -->
+    <section style="padding-bottom: 10px; padding-top: 30px;">
+        <div class="content-block">
+            <div class="block-text">
+                <span class="section-tag">Nuestra Revista</span>
+                <h3>Espacio cultural y divulgativo de Autoescuela Paco</h3>
+                <p>Publicación especial con reportajes, historia de Rota vinculada al motor y contenidos exclusivos para todos nuestros alumnos y seguidores.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Artículos de interés y reportajes especiales</li>
+                    <li><i class="fa-solid fa-check"></i> Edición especial 60 aniversario</li>
+                </ul>
+                <div style="margin-top: 15px;">
+                    <a href="#" target="_blank" class="btn-primary" style="background: var(--dark);">
+                        <i class="fa-solid fa-book-open"></i> Ver Revista Digital
+                    </a>
+                </div>
+            </div>
+            <div class="block-img-container">
+                <img src="Screenshot_2026-08-27-17-45-39-345_com.canva.editor-edit.jpg" alt="Revista Autoescuela Paco">
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG (Justo después de la revista) -->
+    <section style="padding-bottom: 20px; padding-top: 10px;">
+        <div class="content-block reverse">
+            <div class="block-text">
+                <span class="section-tag">Nuestro Blog</span>
+                <h3>Consejos viales, novedades y noticias de la autoescuela</h3>
+                <p>Publicamos artículos periódicamente con trucos para aprobar el carnet a la primera, cambios en la normativa de tráfico y actualidad de nuestra autoescuela en Rota.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Consejos prácticos para el examen de conducir</li>
+                    <li><i class="fa-solid fa-check"></i> Actualidad y avisos importantes para alumnos</li>
+                </ul>
+                <div style="margin-top: 15px;">
+                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="btn-primary">
+                        <i class="fa-solid fa-blog"></i> Visitar nuestro Blog
+                    </a>
+                </div>
+            </div>
+            <div class="block-img-container">
+                <img src="copilot_image_1789428777874.jpeg" alt="Blog de Autoescuela Paco">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto con Fachada, Mapa y Redes Sociales Grandes -->
     <section id="contacto">
         <div class="section-header">
             <span class="section-tag">Estamos en Rota</span>
@@ -851,7 +840,7 @@
                     </div>
                 </div>
 
-                <!-- REDES SOCIALES -->
+                <!-- REDES SOCIALES MÁS GRANDES -->
                 <div class="social-links">
                     <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100063371431221" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -864,7 +853,7 @@
             <!-- Columna visual: Fachada y Mapa -->
             <div class="contact-visuals">
                 <div class="fachada-box">
-                    <img src="Screenshot_20260324-123048_Gallery.png" alt="Fachada de Autoescuela Paco en Rota">
+                    <img src="Screenshot_2026-08-26-18-36-46-738_com.opera.browser-edit.jpg" alt="Fachada de Autoescuela Paco en Rota">
                 </div>
                 <div class="map-box">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.1!2d-6.363!3d36.623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd123456789:0x123456789!2sAv.+San+Fernando,+63,+11520+Rota,+C%C3%A1diz!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -874,7 +863,7 @@
     </section>
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/34672046418?text=Hola,%20me%20gustaría%20información%20sobre%20los%20cursos%20y%20precios%20de%20la%20autoescuela." class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+    <a href="https://wa.me/34672046418?text=Hola,%20me%20gustaría%20información%20sobre%2520los%20cursos%20y%20precios%20de%20la%20autoescuela." class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
