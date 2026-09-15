@@ -65,14 +65,15 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             min-width: 0;
+            flex: 1;
         }
 
         .site-logo {
-            width: 55px;
-            height: 55px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--primary);
@@ -84,24 +85,24 @@
             min-width: 0;
         }
 
+        /* Solución para que el nombre no se corte y ajuste mejor en móviles */
         .logo-text h1 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: var(--dark);
             line-height: 1.1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: normal; 
+            word-break: break-word;
         }
 
         .logo-text span {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--accent);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: block;
-            margin-top: 2px;
+            margin-top: 1px;
         }
 
         .header-actions {
@@ -115,14 +116,14 @@
             background: var(--accent);
             color: white;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 50px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
             box-shadow: 0 2px 6px rgba(230, 57, 70, 0.3);
         }
 
@@ -130,14 +131,14 @@
             background: var(--primary);
             color: white;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 50px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
             box-shadow: 0 2px 6px rgba(43, 82, 182, 0.3);
         }
 
@@ -303,10 +304,11 @@
             object-fit: cover;
         }
 
-        /* Contenedor específico para la foto del coche (evita que se corte) */
-        .block-img-container.revista-img img {
+        /* Contenedor específico para imágenes que necesitan verse completas (como el coche o el logo del blog) */
+        .block-img-container.contain-img img {
             object-fit: contain;
             background-color: #f8fafc;
+            padding: 10px;
         }
 
         .feature-list {
@@ -444,7 +446,7 @@
             word-break: break-word;
         }
 
-        /* Redes Sociales con SVG integrados (Sin colores corporativos y con X visible asegurada) */
+        /* Redes Sociales con SVG integrados */
         .social-links {
             display: flex;
             gap: 14px;
@@ -551,6 +553,7 @@
             .nav-container { padding: 0.8rem 2rem; }
             .header-actions { flex-direction: row; gap: 10px; }
             .btn-header-call, .btn-header-map { font-size: 0.85rem; padding: 8px 18px; }
+            .logo-text h1 { font-size: 1.25rem; white-space: nowrap; }
             .hero-container { grid-template-columns: 1.1fr 0.9fr; padding: 60px 2rem; }
             .hero h2 { font-size: 2.8rem; }
             .content-block { grid-template-columns: 1fr 1fr; padding: 40px; gap: 40px; margin-bottom: 35px; }
@@ -727,7 +730,7 @@
         </div>
     </section>
 
-    <!-- Revista Digital (Foto corregida sin cortes) -->
+    <!-- Revista Digital -->
     <section style="padding-bottom: 10px; padding-top: 30px;">
         <div class="content-block">
             <div class="block-text">
@@ -739,18 +742,19 @@
                     <li><i class="fa-solid fa-check"></i> Edición especial 60 aniversario</li>
                 </ul>
                 <div style="margin-top: 15px;">
+                    <!-- AQUÍ PUEDES PONER EL ENLACE DE LA REVISTA CUANDO LO TENGAS -->
                     <a href="#" target="_blank" class="btn-primary" style="background: var(--dark);">
                         <i class="fa-solid fa-book-open"></i> Ver Revista Digital
                     </a>
                 </div>
             </div>
-            <div class="block-img-container revista-img">
+            <div class="block-img-container contain-img">
                 <img src="Screenshot_2026-08-27-17-45-39-345_com.canva.editor-edit.jpg" alt="Revista Autoescuela Paco">
             </div>
         </div>
     </section>
 
-    <!-- Blog (Apartado recuperado a continuación de la revista) -->
+    <!-- Blog (Con la imagen correcta y enlace de Blogger) -->
     <section id="blog" style="padding-bottom: 20px; padding-top: 10px;">
         <div class="content-block reverse">
             <div class="block-text">
@@ -762,13 +766,13 @@
                     <li><i class="fa-solid fa-check"></i> Actualidad sobre normas de tráfico y seguridad vial</li>
                 </ul>
                 <div style="margin-top: 15px;">
-                    <a href="#" target="_blank" class="btn-primary" style="background: var(--primary);">
+                    <a href="https://autoescuelapacorota.blogspot.com/?m=1" target="_blank" class="btn-primary" style="background: var(--primary);">
                         <i class="fa-solid fa-blog"></i> Visitar el Blog
                     </a>
                 </div>
             </div>
-            <div class="block-img-container">
-                <img src="Screenshot_2026-08-26-18-41-11-133_com.opera.browser-edit.jpg" alt="Blog Autoescuela Paco">
+            <div class="block-img-container contain-img">
+                <img src="copilot_image_1789428777874.jpeg" alt="Blog de la Autoescuela Paco">
             </div>
         </div>
     </section>
@@ -816,7 +820,7 @@
                     </div>
                 </div>
 
-                <!-- Redes sociales con SVG seguros (Instagram, Facebook, X, TikTok) -->
+                <!-- Redes sociales -->
                 <div class="social-links">
                     <!-- Instagram -->
                     <a href="https://www.instagram.com/autoescuelapaco" target="_blank" class="social-btn" title="Instagram">
