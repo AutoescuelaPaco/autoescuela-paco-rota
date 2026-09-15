@@ -41,7 +41,7 @@
             width: 100%;
         }
 
-        /* HEADER & MENÚ DESPLEGABLE */
+        /* HEADER & MENÚ DESPLEGABLE MEJORADO PARA MÓVIL */
         header {
             position: sticky;
             top: 0;
@@ -54,40 +54,46 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0.75rem 1rem;
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-top-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            width: 100%;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             min-width: 0;
         }
 
         .site-logo {
-            width: 52px;
-            height: 52px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--primary);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
             flex-shrink: 0;
         }
 
         .logo-text h1 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 800;
             color: var(--dark);
             line-height: 1.1;
         }
 
         .logo-text span {
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             color: var(--accent);
             font-weight: 700;
             text-transform: uppercase;
@@ -96,58 +102,57 @@
             margin-top: 2px;
         }
 
-        .header-right {
+        /* Botón hamburguesa (Tres rayitas) */
+        .menu-toggle {
+            background: #f3f4f6;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .menu-toggle:hover {
+            background: #e5e7eb;
+        }
+
+        .nav-actions-row {
+            display: flex;
             gap: 8px;
+            width: 100%;
+        }
+
+        .btn-header-call, .btn-header-map {
+            flex: 1;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 9px 10px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-align: center;
         }
 
         .btn-header-call {
             background: var(--accent);
             color: white;
-            text-decoration: none;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 7px 12px;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
             box-shadow: 0 2px 6px rgba(230, 57, 70, 0.3);
         }
 
         .btn-header-map {
             background: var(--primary);
             color: white;
-            text-decoration: none;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 7px 12px;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
             box-shadow: 0 2px 6px rgba(43, 82, 182, 0.3);
-        }
-
-        /* Botón hamburguesa (Tres rayitas) */
-        .menu-toggle {
-            background: #f3f4f6;
-            border: none;
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--dark);
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .menu-toggle:hover {
-            background: #e5e7eb;
         }
 
         /* Menú desplegable lateral móvil */
@@ -250,7 +255,7 @@
             display: block;
         }
 
-        /* Hero Section Rediseñado (Protagonismo de Marca) */
+        /* Hero Section Limpio */
         .hero {
             background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
             color: white;
@@ -261,23 +266,6 @@
         .hero-container {
             max-width: 900px;
             margin: 0 auto;
-        }
-
-        .hero-brand-highlight {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .hero-logo-large {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid #60a5fa;
-            object-fit: cover;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .hero-tag {
@@ -672,7 +660,9 @@
 
         /* Desktop media queries */
         @media(min-width: 968px) {
-            .nav-container { padding: 0.8rem 2rem; }
+            .nav-container { flex-direction: row; justify-content: space-between; align-items: center; padding: 0.8rem 2rem; }
+            .nav-actions-row { width: auto; gap: 10px; }
+            .btn-header-call, .btn-header-map { flex: unset; padding: 7px 14px; font-size: 0.78rem; }
             .logo-text h1 { font-size: 1.35rem; }
             .permisos-grid { grid-template-columns: repeat(3, 1fr); }
             .content-block { grid-template-columns: 1fr 1fr; padding: 40px; gap: 40px; margin-bottom: 35px; }
@@ -687,26 +677,28 @@
 </head>
 <body>
 
-    <!-- Header & Menú desplegable -->
+    <!-- Header & Menú desplegable estructurado en móvil -->
     <header>
         <div class="nav-container">
-            <a href="#inicio" class="logo-area">
-                <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Logo" class="site-logo">
-                <div class="logo-text">
-                    <h1>Autoescuela Paco</h1>
-                    <span>Desde 1965 · Rota</span>
-                </div>
-            </a>
-            <div class="header-right">
+            <div class="nav-top-row">
+                <a href="#inicio" class="logo-area">
+                    <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Logo" class="site-logo">
+                    <div class="logo-text">
+                        <h1>Autoescuela Paco</h1>
+                        <span>Desde 1965 · Rota</span>
+                    </div>
+                </a>
+                <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div class="nav-actions-row">
                 <a href="tel:956811540" class="btn-header-call">
                     <i class="fa-solid fa-phone"></i> Llamar
                 </a>
                 <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Rota+Cádiz" target="_blank" class="btn-header-map">
                     <i class="fa-solid fa-location-dot"></i> Ubicación
                 </a>
-                <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
             </div>
         </div>
     </header>
@@ -730,14 +722,11 @@
         </ul>
     </div>
 
-    <!-- Hero Section con gran protagonismo del Logo e Identidad -->
+    <!-- Hero Section Limpio -->
     <section class="hero" id="inicio">
         <div class="hero-container">
-            <div class="hero-brand-highlight">
-                <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Autoescuela Paco" class="hero-logo-large">
-                <div class="hero-tag">
-                    <i class="fa-solid fa-award"></i> Desde 1965 en Rota
-                </div>
+            <div class="hero-tag">
+                <i class="fa-solid fa-award"></i> Desde 1965 en Rota
             </div>
             <h2>Aprende a conducir con <span>seguridad y confianza</span></h2>
             <p>La autoescuela de toda la vida combinada con la formación digital de hoy. Profesorado experto y acompañamiento personalizado.</p>
