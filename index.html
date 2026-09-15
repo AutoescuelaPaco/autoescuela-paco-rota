@@ -3,476 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Autoescuela Paco en Rota (Cádiz), fundada en 1965. Más de 60 años de experiencia, profesores titulados y formación para los permisos B y AM.">
-<meta name="robots" content="index,follow">
 <title>Autoescuela Paco | Desde 1965 en Rota</title>
 
 <style>
-:root{
-  --azul:#294cb0;
-  --azul-claro:#3a5fd9;
-  --azul-oscuro:#17223b;
-  --rojo:#e53935;
-  --rojo-hover:#c62828;
-  --verde:#25d366;
-  --fondo-oscuro:#0b0f19;
-  --card-oscuro:#131b2e;
-  --borde-oscuro:rgba(255,255,255,.1);
-  --texto-claro:#f3f4f6;
-  --texto-gris:#9ca3af;
-  --blanco:#fff;
-  --radio:16px;
+:root {
+  --azul-brand: #2042b5;
+  --verde-wsp: #25d366;
+  --fondo-general: #0b0f19;
+  --contenedor-bg: #111827;
+  --borde-color: rgba(255, 255, 255, 0.08);
+  --texto-blanco: #ffffff;
+  --texto-gris: #9ca3af;
 }
 
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--fondo-general);
+  color: var(--texto-blanco);
+  line-height: 1.5;
 }
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--texto-claro);
-  line-height:1.6;
-  background:var(--fondo-oscuro);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+/* =========================================
+   CABECERA PRINCIPAL (ESTILO EXACTO FOTO)
+   ========================================= */
+header {
+  background-color: var(--fondo-general);
+  border-bottom: 1px solid var(--borde-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.container{
-  width:min(1120px,92%);
-  margin:auto;
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* =========================
-   CABECERA OSCURA
-   ========================= */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(11,15,25,.95);
-  border-bottom:1px solid var(--borde-oscuro);
-  backdrop-filter:blur(10px);
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.header-inner{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.15);
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.brand img{
-  width:46px;
-  height:46px;
-  object-fit:contain;
-  border-radius:50%;
-}
-
-.brand-text{
-  font-weight:900;
-  font-size:1.15rem;
-  line-height:1.1;
-  letter-spacing:-.02em;
-  color:var(--blanco);
-}
-
-.brand-text small{
-  display:block;
-  font-size:.72rem;
-  font-weight:700;
-  color:var(--texto-gris);
-}
-
-/* BOTÓN WHATSAPP SUPERIOR */
-.top-whatsapp{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:var(--verde);
-  color:#fff;
-  padding:8px 14px;
-  border-radius:20px;
-  font-weight:800;
-  font-size:.82rem;
-  box-shadow:0 4px 12px rgba(37,211,102,.25);
-}
-
-.top-whatsapp svg{
-  width:16px;
-  height:16px;
-  fill:currentColor;
-}
-
-/* MENÚ DE NAVEGACIÓN INFERIOR EN CABECERA */
-.sub-nav{
-  background:#111827;
-  border-bottom:1px solid var(--borde-oscuro);
-  padding:10px 0;
-  overflow-x:auto;
-  white-space:nowrap;
-}
-
-.sub-nav-inner{
-  display:flex;
-  justify-content:center;
-  gap:24px;
-  width:min(1120px,92%);
-  margin:auto;
-}
-
-.sub-nav a{
-  font-size:.9rem;
-  font-weight:800;
-  color:var(--texto-claro);
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  transition:.2s;
-}
-
-.sub-nav a:hover{
-  color:var(--azul-claro);
-}
-
-/* =========================
-   PORTADA (HERO) - CLAVADA A LA FOTO
-   ========================= */
-
-.hero{
-  padding:24px 0 50px;
-  background:var(--fondo-oscuro);
-  text-align:center;
-}
-
-.hero-box{
-  max-width:850px;
-  margin:0 auto;
-  background:var(--card-oscuro);
-  border:1px solid var(--borde-oscuro);
-  border-radius:20px;
-  padding:16px;
-  box-shadow:0 12px 32px rgba(0,0,0,.4);
-}
-
-/* FRANJA AZUL DE 60 AÑOS INTEGRADA DENTRO DE LA TARJETA */
-.hero-brand-band{
-  background:var(--azul);
-  color:#fff;
-  border-radius:12px 12px 0 0;
-  padding:14px 15px;
-  box-shadow:0 4px 15px rgba(41,76,176,.3);
-  margin-bottom:0;
-}
-
-.hero-brand-band h1{
-  margin:0;
-  font-size:clamp(0.9rem, 3.2vw, 1.35rem);
-  line-height:1.1;
-  font-weight:900;
-  letter-spacing:0.02em;
-  color:#fff;
+.brand-titles h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
-.hero-photo-wrap{
-  position:relative;
+.brand-titles p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--texto-gris);
+  font-weight: 600;
 }
 
-.hero-photo{
-  height:min(68vw,440px);
-  min-height:260px;
-  overflow:hidden;
-  background:#1a2238;
-  border-radius:0 0 12px 12px;
+/* Botón WhatsApp Superior */
+.whatsapp-btn-top {
+  background-color: var(--verde-wsp);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
-.hero-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+.whatsapp-btn-top svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
-/* TÍTULO PRINCIPAL DEBAJO DE LA FOTO */
-.hero-main-title{
-  margin:28px auto 10px;
-  max-width:750px;
+/* Menú de Navegación Horizontal */
+.nav-bar {
+  background-color: #080c14;
+  border-bottom: 1px solid var(--borde-color);
+  padding: 12px 0;
 }
 
-.hero-main-title h2{
-  margin:0;
-  font-size:clamp(1.5rem, 4.5vw, 2.4rem);
-  line-height:1.15;
-  font-weight:900;
-  color:var(--blanco);
-  letter-spacing:-.02em;
-  text-transform:uppercase;
+.nav-links {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
 }
 
-.hero-main-title p{
-  margin:10px 0 0;
-  font-size:1.02rem;
-  color:var(--texto-gris);
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--texto-blanco);
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
 
-/* BOTONES DE ACCIÓN (EMPIEZA AHORA / NUESTROS CURSOS) */
-.hero-actions{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  margin:24px 0 30px;
-  flex-wrap:wrap;
+.nav-links a:hover {
+  color: #4f73ff;
 }
 
-.btn-primary{
-  background:var(--rojo);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:12px;
-  font-weight:900;
-  font-size:.92rem;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-  box-shadow:0 6px 20px rgba(229,57,53,.3);
-  transition:.2s;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
+/* =========================================
+   SECCIÓN PRINCIPAL (HERO)
+   ========================================= */
+.main-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+  text-align: center;
 }
 
-.btn-primary:hover{
-  background:var(--rojo-hover);
+/* Tarjeta contenedora de la foto y la franja */
+.hero-card {
+  background-color: var(--contenedor-bg);
+  border: 1px solid var(--borde-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.btn-secondary{
-  background:var(--azul);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:12px;
-  font-weight:900;
-  font-size:.92rem;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-  box-shadow:0 6px 20px rgba(41,76,176,.3);
-  transition:.2s;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
+/* Franja Azul Superior */
+.hero-banner-blue {
+  background-color: var(--azul-brand);
+  color: #fff;
+  padding: 18px 20px;
+  font-weight: 900;
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.btn-secondary:hover{
-  background:var(--azul-claro);
+/* Contenedor de la Imagen */
+.hero-image-wrapper {
+  width: 100%;
+  max-height: 480px;
+  overflow: hidden;
 }
 
-/* BARRA DE ICONOS INFERIORES */
-.hero-features-bar{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:10px;
-  max-width:780px;
-  margin:0 auto;
-  background:#0f172a;
-  border:1px solid var(--borde-oscuro);
-  border-radius:14px;
-  padding:16px 10px;
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.hero-feature-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap:8px;
+/* Textos inferiores */
+.hero-content-bottom {
+  margin-top: 35px;
 }
 
-.hero-feature-icon{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:rgba(41,76,176,.25);
-  color:var(--azul-claro);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.hero-content-bottom h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 900;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: var(--texto-blanco);
 }
 
-.hero-feature-icon svg{
-  width:20px;
-  height:20px;
-  fill:currentColor;
+.hero-content-bottom p {
+  font-size: 1.05rem;
+  color: var(--texto-gris);
+  margin: 0;
+  font-weight: 400;
 }
 
-.hero-feature-item span{
-  font-size:.8rem;
-  font-weight:800;
-  color:var(--texto-claro);
-}
-
-/* =========================
-   PIE DE PÁGINA
-   ========================= */
-
-footer{
-  background:#070a12;
-  color:var(--texto-gris);
-  text-align:center;
-  padding:30px 0;
-  border-top:1px solid var(--borde-oscuro);
-  font-size:.85rem;
-  margin-top:50px;
-}
-
-footer strong{
-  color:var(--blanco);
-}
-
-/* RESPONSIVE */
-@media(max-width:560px){
-  .hero-box{
-    padding:10px;
-    border-radius:14px;
+/* RESPONSIVE MÓVIL */
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 16px;
+    justify-content: space-around;
   }
-  .hero-features-bar{
-    grid-template-columns:repeat(3, 1fr);
-    gap:6px;
-    padding:12px 6px;
+  .nav-links a {
+    font-size: 0.78rem;
   }
-  .hero-feature-item span{
-    font-size:.68rem;
+  .brand-titles h1 {
+    font-size: 0.95rem;
   }
-  .hero-actions{
-    flex-direction:column;
-    padding:0 5px;
-  }
-  .btn-primary, .btn-secondary{
-    width:100%;
-    justify-content:center;
+  .whatsapp-btn-top span {
+    display: none; /* Oculta la palabra WhatsApp en móviles muy estrechos si sobra, o déjalo si prefieres */
   }
 }
 </style>
 </head>
-
 <body>
 
-<header>
-
-  <div class="container header-inner">
-
-    <a class="brand" href="#inicio">
-      <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Logotipo Autoescuela Paco">
-      <span class="brand-text">
-        AUTOESCUELA PACO
-        <small>Desde 1965 · Rota</small>
-      </span>
-    </a>
-
-    <a class="top-whatsapp" href="https://wa.me/34672046418" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M20 3.9A10 10 0 0 0 4.3 16.4L3 21l4.7-1.2A10 10 0 0 0 20 3.9zm-8 16.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.8.7-.8-2.7-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.9-.1.2-.2.2-.4.1-1.2-.6-2.1-1.5-2.8-2.7-.1-.2 0-.3.1-.4l.4-.5c.1-.1.2-.4.2-.4s0-.3-.1-.5l-.6-1.4c-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.7.7-.7 1.7s.7 2 .8 2.1c.1.1 1.4 2.2 3.4 3 .5.2.9.3 1.2.4.5.2 1 .2 1.4.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"/></svg>
-      WhatsApp
-    </a>
-
-  </div>
-
-  <div class="sub-nav">
-    <div class="sub-nav-inner">
-      <a href="#inicio">Inicio</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
-
-</header>
-
-
-<main>
-
-  <section class="hero" id="inicio">
-
-    <div class="container">
-
-      <div class="hero-box">
-
-        <!-- Franja Azul Superior de 60 Años (Integrada en la tarjeta) -->
-        <div class="hero-brand-band">
-          <h1>60 AÑOS FORMANDO CONDUCTORES EN ROTA</h1>
+  <!-- CABECERA -->
+  <header>
+    <div class="header-container">
+      <div class="brand-group">
+        <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Logo Autoescuela Paco" class="brand-logo">
+        <div class="brand-titles">
+          <h1>Autoescuela Paco</h1>
+          <p>Desde 1965 &middot; Rota</p>
         </div>
-
-        <!-- Foto de los coches -->
-        <div class="hero-photo-wrap">
-          <div class="hero-photo">
-            <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota">
-          </div>
-        </div>
-
       </div>
 
-      <!-- Título Principal Debajo -->
-      <div class="hero-main-title">
-        <h2>Una trayectoria que mira al futuro</h2>
-        <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
-      </div>
-
-      <!-- Botones de Acción -->
-      <div class="hero-actions">
-        <a href="#contacto" class="btn-primary">Empieza ahora &gt;</a>
-        <a href="#cursos" class="btn-secondary">Nuestros cursos &gt;</a>
-      </div>
-
-      <!-- Barra de iconos inferiores -->
-      <div class="hero-features-bar">
-
-        <div class="hero-feature-item">
-          <div class="hero-feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5.2 3.2.8-1.3-4.5-2.7z"/></svg>
-          </div>
-          <span>Clases Prácticas</span>
-        </div>
-
-        <div class="hero-feature-item">
-          <div class="hero-feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.83-6-8.83V6.31l6-2.25 6 2.25v4.78z"/></svg>
-          </div>
-          <span>Seguridad y Confianza</span>
-        </div>
-
-        <div class="hero-feature-item">
-          <div class="hero-feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>
-          </div>
-          <span>Horarios Flexibles</span>
-        </div>
-
-      </div>
-
+      <a href="https://wa.me/34672046418" class="whatsapp-btn-top" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20 3.9A10 10 0 0 0 4.3 16.4L3 21l4.7-1.2A10 10 0 0 0 20 3.9zm-8 16.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.8.7-.8-2.7-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.9-.1.2-.2.2-.4.1-1.2-.6-2.1-1.5-2.8-2.7-.1-.2 0-.3.1-.4l.4-.5c.1-.1.2-.4.2-.4s0-.3-.1-.5l-.6-1.4c-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.7.7-.7 1.7s.7 2 .8 2.1c.1.1 1.4 2.2 3.4 3 .5.2.9.3 1.2.4.5.2 1 .2 1.4.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"/></svg>
+        <span>WhatsApp</span>
+      </a>
     </div>
 
-  </section>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
 
-</main>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-section">
+    <div class="hero-card">
+      <div class="hero-banner-blue">
+        60 AÑOS FORMANDO CONDUCTORES EN ROTA
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Coches de Autoescuela Paco">
+      </div>
+    </div>
 
-
-<footer>
-  <div class="container">
-    <strong>Autoescuela Paco · Desde 1965 · Rota</strong>
-    <p>© 2026 Autoescuela Paco. Todos los derechos reservados.</p>
-  </div>
-</footer>
+    <div class="hero-content-bottom">
+      <h2>Una trayectoria que mira al futuro</h2>
+      <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
+    </div>
+  </main>
 
 </body>
 </html>
