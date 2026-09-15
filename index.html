@@ -151,11 +151,12 @@ nav a:hover{
 
 .hero-brand-band h1{
   margin:0;
-  font-size:clamp(2rem,6vw,3.7rem);
+  font-size:clamp(1.4rem, 4.5vw, 2.2rem);
   line-height:1;
   font-weight:900;
   letter-spacing:-.035em;
   color:#fff;
+  text-transform: uppercase;
 }
 
 .hero-photo-wrap{
@@ -168,6 +169,7 @@ nav a:hover{
   overflow:hidden;
   background:#e9edf5;
   box-shadow:var(--sombra);
+  border-radius:0 0 18px 18px;
 }
 
 .hero-photo img{
@@ -923,14 +925,20 @@ footer p{
     padding:16px 0 62px;
   }
 
+  /* AQUÍ ESTÁ EL CAMBIO: Mantenemos visible la franja azul en móvil */
   .hero-brand-band{
-    display:none;
+    display:block;
+    padding: 14px 15px;
+  }
+
+  .hero-brand-band h1{
+    font-size: clamp(1.1rem, 4.2vw, 1.5rem);
   }
 
   .hero-photo{
     height:74vw;
     min-height:260px;
-    border-radius:14px;
+    border-radius:0 0 14px 14px;
     box-shadow:var(--sombra);
   }
 
@@ -958,11 +966,6 @@ footer p{
   .hero-history p{
     font-size:1rem;
   }
-
-  /*
-     LOS BOTONES GRANDES DE LA PORTADA
-     YA NO SE MUESTRAN
-  */
 
   .hero-copy{
     display:none;
@@ -1123,7 +1126,7 @@ footer p{
   <div class="container">
 
     <div class="hero-brand-band">
-      <h1>AUTOESCUELA PACO</h1>
+      <h1>60 AÑOS FORMANDO CONDUCTORES EN ROTA</h1>
     </div>
 
     <div class="hero-photo-wrap">
