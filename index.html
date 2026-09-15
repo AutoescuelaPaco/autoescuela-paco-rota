@@ -99,7 +99,7 @@ header{
   color:var(--texto-gris);
 }
 
-/* BOTÓN WHATSAPP SUPERIOR (ESTILO DE LA FOTO) */
+/* BOTÓN WHATSAPP SUPERIOR */
 .top-whatsapp{
   display:inline-flex;
   align-items:center;
@@ -150,7 +150,7 @@ header{
 }
 
 /* =========================
-   PORTADA (HERO)
+   PORTADA (HERO) - CLAVADA A LA FOTO
    ========================= */
 
 .hero{
@@ -159,20 +159,32 @@ header{
   text-align:center;
 }
 
+.hero-box{
+  max-width:850px;
+  margin:0 auto;
+  background:var(--card-oscuro);
+  border:1px solid var(--borde-oscuro);
+  border-radius:20px;
+  padding:16px;
+  box-shadow:0 12px 32px rgba(0,0,0,.4);
+}
+
+/* FRANJA AZUL DE 60 AÑOS INTEGRADA DENTRO DE LA TARJETA */
 .hero-brand-band{
   background:var(--azul);
   color:#fff;
-  border-radius:14px 14px 0 0;
+  border-radius:12px 12px 0 0;
   padding:14px 15px;
   box-shadow:0 4px 15px rgba(41,76,176,.3);
+  margin-bottom:0;
 }
 
 .hero-brand-band h1{
   margin:0;
-  font-size:clamp(.95rem, 3.8vw, 1.4rem);
+  font-size:clamp(0.9rem, 3.2vw, 1.35rem);
   line-height:1.1;
   font-weight:900;
-  letter-spacing:.02em;
+  letter-spacing:0.02em;
   color:#fff;
   text-transform: uppercase;
 }
@@ -182,12 +194,11 @@ header{
 }
 
 .hero-photo{
-  height:min(70vw,460px);
+  height:min(68vw,440px);
   min-height:260px;
   overflow:hidden;
   background:#1a2238;
-  border-radius:0 0 14px 14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.5);
+  border-radius:0 0 12px 12px;
 }
 
 .hero-photo img{
@@ -199,13 +210,13 @@ header{
 
 /* TÍTULO PRINCIPAL DEBAJO DE LA FOTO */
 .hero-main-title{
-  margin:32px auto 10px;
-  max-width:800px;
+  margin:28px auto 10px;
+  max-width:750px;
 }
 
 .hero-main-title h2{
   margin:0;
-  font-size:clamp(1.6rem, 5vw, 2.6rem);
+  font-size:clamp(1.5rem, 4.5vw, 2.4rem);
   line-height:1.15;
   font-weight:900;
   color:var(--blanco);
@@ -215,7 +226,7 @@ header{
 
 .hero-main-title p{
   margin:10px 0 0;
-  font-size:1.05rem;
+  font-size:1.02rem;
   color:var(--texto-gris);
 }
 
@@ -224,7 +235,7 @@ header{
   display:flex;
   justify-content:center;
   gap:12px;
-  margin:28px 0 35px;
+  margin:24px 0 30px;
   flex-wrap:wrap;
 }
 
@@ -234,7 +245,7 @@ header{
   padding:14px 22px;
   border-radius:12px;
   font-weight:900;
-  font-size:.95rem;
+  font-size:.92rem;
   letter-spacing:.03em;
   text-transform:uppercase;
   box-shadow:0 6px 20px rgba(229,57,53,.3);
@@ -254,7 +265,7 @@ header{
   padding:14px 22px;
   border-radius:12px;
   font-weight:900;
-  font-size:.95rem;
+  font-size:.92rem;
   letter-spacing:.03em;
   text-transform:uppercase;
   box-shadow:0 6px 20px rgba(41,76,176,.3);
@@ -268,17 +279,17 @@ header{
   background:var(--azul-claro);
 }
 
-/* ICONOS INFERIORES DE LA PORTADA (CLASES PRÁCTICAS, SEGURIDAD, HORARIOS) */
+/* BARRA DE ICONOS INFERIORES */
 .hero-features-bar{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   gap:10px;
-  max-width:850px;
+  max-width:780px;
   margin:0 auto;
-  background:var(--card-oscuro);
+  background:#0f172a;
   border:1px solid var(--borde-oscuro);
-  border-radius:var(--radio);
-  padding:18px 12px;
+  border-radius:14px;
+  padding:16px 10px;
 }
 
 .hero-feature-item{
@@ -290,10 +301,10 @@ header{
 }
 
 .hero-feature-icon{
-  width:42px;
-  height:42px;
+  width:40px;
+  height:40px;
   border-radius:50%;
-  background:rgba(41,76,176,.2);
+  background:rgba(41,76,176,.25);
   color:var(--azul-claro);
   display:flex;
   align-items:center;
@@ -301,19 +312,19 @@ header{
 }
 
 .hero-feature-icon svg{
-  width:22px;
-  height:22px;
+  width:20px;
+  height:20px;
   fill:currentColor;
 }
 
 .hero-feature-item span{
-  font-size:.82rem;
+  font-size:.8rem;
   font-weight:800;
   color:var(--texto-claro);
 }
 
 /* =========================
-   PIE DE PÁGINA BÁSICO
+   PIE DE PÁGINA
    ========================= */
 
 footer{
@@ -332,17 +343,21 @@ footer strong{
 
 /* RESPONSIVE */
 @media(max-width:560px){
+  .hero-box{
+    padding:10px;
+    border-radius:14px;
+  }
   .hero-features-bar{
     grid-template-columns:repeat(3, 1fr);
     gap:6px;
-    padding:14px 6px;
+    padding:12px 6px;
   }
   .hero-feature-item span{
-    font-size:.7rem;
+    font-size:.68rem;
   }
   .hero-actions{
     flex-direction:column;
-    padding:0 15px;
+    padding:0 5px;
   }
   .btn-primary, .btn-secondary{
     width:100%;
@@ -391,19 +406,23 @@ footer strong{
 
     <div class="container">
 
-      <!-- Franja Azul Superior -->
-      <div class="hero-brand-band">
-        <h1>60 AÑOS FORMANDO CONDUCTORES EN ROTA</h1>
-      </div>
+      <div class="hero-box">
 
-      <!-- Foto de los coches -->
-      <div class="hero-photo-wrap">
-        <div class="hero-photo">
-          <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota">
+        <!-- Franja Azul Superior de 60 Años (Integrada en la tarjeta) -->
+        <div class="hero-brand-band">
+          <h1>60 AÑOS FORMANDO CONDUCTORES EN ROTA</h1>
         </div>
+
+        <!-- Foto de los coches -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo">
+            <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota">
+          </div>
+        </div>
+
       </div>
 
-      <!-- Título Principal -->
+      <!-- Título Principal Debajo -->
       <div class="hero-main-title">
         <h2>Una trayectoria que mira al futuro</h2>
         <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
@@ -420,7 +439,6 @@ footer strong{
 
         <div class="hero-feature-item">
           <div class="hero-feature-icon">
-            <!-- Icono Reloj / Prácticas -->
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5.2 3.2.8-1.3-4.5-2.7z"/></svg>
           </div>
           <span>Clases Prácticas</span>
@@ -428,7 +446,6 @@ footer strong{
 
         <div class="hero-feature-item">
           <div class="hero-feature-icon">
-            <!-- Icono Escudo / Seguridad -->
             <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.83-6-8.83V6.31l6-2.25 6 2.25v4.78z"/></svg>
           </div>
           <span>Seguridad y Confianza</span>
@@ -436,7 +453,6 @@ footer strong{
 
         <div class="hero-feature-item">
           <div class="hero-feature-icon">
-            <!-- Icono Calendario / Horarios -->
             <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>
           </div>
           <span>Horarios Flexibles</span>
