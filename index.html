@@ -1,68 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Autoescuela Paco | Rota, Cádiz</title>
-<meta name="description" content="Autoescuela Paco en Rota (Cádiz), fundada en 1965. Más de 60 años formando conductores. Permisos B y AM, formación teórica y clases prácticas con acompañamiento personal.">
-<meta name="theme-color" content="#234b8f">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Autoescuela Paco en Rota (Cádiz), fundada en 1965. Más de 60 años de experiencia, profesores titulados y formación para los permisos B y AM.">
+<meta name="robots" content="index,follow">
+
+<title>Autoescuela Paco | Desde 1965 en Rota</title>
 
 <style>
+
 :root{
-  --blue:#234b8f;
-  --blue-dark:#17396f;
-  --red:#d33c32;
-  --cream:#faf8f3;
-  --ink:#1d2733;
-  --muted:#66717d;
-  --line:#e8e5df;
-  --white:#fff;
+  --azul:#294cb0;
+  --azul-oscuro:#1d367f;
+  --rojo:#f44739;
+  --verde:#25d366;
+  --texto:#18243a;
+  --gris:#657084;
+  --fondo:#f6f8fc;
+  --blanco:#fff;
+  --borde:#e1e6ef;
+  --sombra:0 12px 32px rgba(24,36,58,.09);
+  --radio:18px;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  color:var(--ink);
-  background:var(--cream);
+  color:var(--texto);
   line-height:1.6;
+  background:#fff;
 }
 
-a{color:inherit}
-img{max-width:100%;display:block}
+a{
+  color:inherit;
+}
 
 .container{
-  width:min(1100px,92%);
+  width:min(1120px,92%);
   margin:auto;
 }
 
-/* CABECERA */
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
 
 header{
-  background:#fff;
-  border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
-  z-index:20;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--borde);
+  backdrop-filter:blur(8px);
 }
 
 .header-inner{
   min-height:78px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:20px;
+  gap:18px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:13px;
   text-decoration:none;
-  font-weight:800;
+  margin-right:auto;
 }
 
 .brand img{
@@ -72,1180 +86,1104 @@ header{
   border-radius:50%;
 }
 
-.brand span{
-  font-size:1.05rem;
+.brand-text{
+  font-weight:900;
+  font-size:1.45rem;
+  line-height:1;
+  letter-spacing:-.03em;
+}
+
+.brand-text small{
+  display:block;
+  margin-top:5px;
+  font-size:.70rem;
+  font-weight:700;
+  color:var(--gris);
+  letter-spacing:.03em;
 }
 
 nav{
   display:flex;
-  gap:18px;
+  gap:16px;
   align-items:center;
 }
 
 nav a{
   text-decoration:none;
-  font-size:.9rem;
-  font-weight:700;
+  font-size:.82rem;
+  font-weight:800;
 }
 
-.menu{
+nav a:hover{
+  color:var(--azul);
+}
+
+.menu-btn{
   display:none;
   border:0;
-  background:none;
-  font-size:1.7rem;
+  background:var(--azul);
+  color:#fff;
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:1.05rem;
 }
 
-/* PORTADA */
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
 
 .hero{
-  padding:22px 0 0;
-  background:var(--cream);
+  padding:26px 0 70px;
+  background:#fff;
+}
+
+
+/* Banda azul superior de la portada */
+
+.hero-brand-band{
+  background:var(--azul);
+  color:#fff;
+  border-radius:18px 18px 0 0;
+  padding:19px 20px 18px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(24,36,58,.08);
+}
+
+.hero-brand-band h1{
+  margin:0;
+  font-size:clamp(2rem,6vw,3.7rem);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-.035em;
+  color:#fff;
+}
+
+
+/* Foto principal */
+
+.hero-photo-wrap{
+  position:relative;
 }
 
 .hero-photo{
-  position:relative;
-  background:#e9e5dc;
-  border-radius:22px;
+  height:min(66vw,530px);
+  min-height:300px;
   overflow:hidden;
+  background:#e9edf5;
+  box-shadow:var(--sombra);
 }
 
 .hero-photo img{
   width:100%;
-  height:auto;
-  max-height:620px;
-  object-fit:contain;
-  background:#e9e5dc;
-}
-
-.hero-note{
-  position:absolute;
-  left:5%;
-  bottom:5%;
-  background:#fff;
-  padding:17px 22px;
-  border-radius:14px;
-  box-shadow:0 12px 30px #0002;
-  max-width:280px;
-}
-
-.hero-note strong{
+  height:100%;
+  object-fit:cover;
   display:block;
-  font-size:1.35rem;
-  line-height:1.15;
 }
 
-.hero-note span{
-  display:block;
-  margin-top:5px;
-  color:var(--muted);
-  font-weight:700;
-}
 
-.brand-band{
-  background:var(--blue);
+/* Banda azul inferior de la foto */
+
+.hero-years-band{
+  background:var(--azul);
   color:#fff;
   text-align:center;
-  padding:20px 15px;
+  padding:16px 20px 17px;
+  border-radius:0 0 18px 18px;
 }
 
-.brand-band h1{
-  margin:0;
-  font-size:clamp(2rem,7vw,3.6rem);
-  line-height:1;
-  letter-spacing:.02em;
-  white-space:nowrap;
+.hero-years-band strong{
+  display:block;
+  font-size:clamp(1.15rem,4vw,1.7rem);
+  line-height:1.15;
+  font-weight:900;
 }
 
-.brand-band p{
-  margin:8px 0 0;
-  font-weight:600;
+
+/* Texto y botones */
+
+.hero-copy{
+  text-align:center;
+  max-width:850px;
+  margin:25px auto 0;
+}
+
+.hero-copy p{
+  max-width:720px;
+  margin:18px auto 0;
+  font-size:1.08rem;
+  color:var(--gris);
 }
 
 .actions{
   display:flex;
-  gap:10px;
   justify-content:center;
+  gap:11px;
   flex-wrap:wrap;
-  padding:18px 0 6px;
+  margin-top:20px;
 }
 
-.btn{
+.action{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:8px;
+  min-width:145px;
+  padding:12px 17px;
+  border-radius:12px;
   text-decoration:none;
-  border-radius:999px;
-  padding:12px 20px;
-  font-weight:800;
-  border:1px solid transparent;
-  cursor:pointer;
+  font-weight:900;
+  border:2px solid transparent;
+  transition:.2s;
 }
 
-.btn.primary{
-  background:var(--red);
+.action svg{
+  width:18px;
+  height:18px;
+  fill:currentColor;
+}
+
+.action:hover{
+  transform:translateY(-1px);
+}
+
+
+/* Botón teléfono */
+
+.action-phone{
+  background:var(--rojo);
   color:#fff;
+  border-color:var(--rojo);
 }
 
-.btn.secondary{
-  background:#fff;
-  border-color:#d9d6d0;
-}
 
-.btn.blue{
-  background:var(--blue);
+/* Botón mapas */
+
+.action-map{
+  background:var(--azul);
   color:#fff;
+  border-color:var(--azul);
 }
 
-/* SECCIONES */
 
-section{
-  padding:70px 0;
+/* Botón WhatsApp */
+
+.action-whatsapp{
+  background:var(--verde);
+  color:#fff;
+  border-color:var(--verde);
 }
 
-.section-head{
-  max-width:760px;
-  margin:0 auto 35px;
+
+/* =========================================================
+   BLOQUE HISTORIA INICIAL
+   ========================================================= */
+
+.hero-history{
+  max-width:850px;
+  margin:32px auto 0;
   text-align:center;
 }
 
-.kicker{
+.hero-history-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--azul);
+  color:#fff;
+  padding:9px 20px;
+  border-radius:12px;
+  font-weight:900;
+  font-size:.95rem;
+  margin-bottom:15px;
+}
+
+.hero-history h2{
+  margin:0 0 10px;
+  font-size:clamp(1.9rem,5vw,3rem);
+  line-height:1.05;
+  color:var(--texto);
+  letter-spacing:-.025em;
+}
+
+.hero-history p{
+  margin:0;
+  color:var(--gris);
+  font-size:1.05rem;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+section{
+  padding:78px 0;
+}
+
+section.alt{
+  background:var(--fondo);
+}
+
+.section-intro{
+  text-align:center;
+  max-width:790px;
+  margin:0 auto 38px;
+}
+
+.eyebrow{
   text-transform:uppercase;
-  letter-spacing:.14em;
-  font-size:.76rem;
-  font-weight:800;
-  color:var(--red);
+  letter-spacing:.13em;
+  font-weight:900;
+  font-size:.72rem;
+  color:var(--rojo);
 }
 
 h2{
-  font-size:clamp(1.8rem,4vw,2.7rem);
-  line-height:1.15;
-  margin:8px 0 12px;
+  font-size:clamp(2rem,4.5vw,3.2rem);
+  line-height:1.05;
+  letter-spacing:-.025em;
+  margin:8px 0 15px;
+  color:var(--texto);
 }
 
-.section-head p{
-  color:var(--muted);
+.section-intro h2{
+  color:var(--azul);
+}
+
+.lead{
+  font-size:1.07rem;
+  color:var(--gris);
   margin:0;
 }
 
-.grid{
+.two{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:center;
+}
+
+.photo{
+  min-height:310px;
+  border:2px dashed #bcc6d5;
+  border-radius:var(--radio);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  font-weight:900;
+  letter-spacing:.05em;
+  color:#78859a;
+  background:#fff;
+}
+
+
+/* =========================================================
+   HISTORIA
+   ========================================================= */
+
+.history-number{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--azul);
+  font-weight:900;
+  margin-top:12px;
+}
+
+.history-number:before{
+  content:"";
+  width:34px;
+  height:4px;
+  border-radius:4px;
+  background:var(--rojo);
+}
+
+
+/* =========================================================
+   FORMACIÓN
+   ========================================================= */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
 .card{
   background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:26px;
-  box-shadow:0 8px 25px #00000008;
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:18px;
+  box-shadow:var(--sombra);
 }
 
-.card h3{
-  margin-top:0;
-}
-
-.card p{
-  color:var(--muted);
-}
-
-.cards3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.info-btn{
-  width:100%;
-  text-align:left;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:22px;
-  cursor:pointer;
-}
-
-.info-btn strong{
-  display:block;
-  font-size:1.05rem;
-}
-
-.info-btn span{
-  color:var(--muted);
-  display:block;
-  margin-top:6px;
-}
-
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-  align-items:center;
-}
-
-.photo-placeholder{
-  min-height:220px;
-  border-radius:16px;
-  background:#e8e4db;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#777;
-  font-weight:800;
-  letter-spacing:.08em;
+.card .photo{
+  min-height:210px;
   margin-bottom:20px;
 }
 
-.contact-grid{
+.card-label{
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  font-weight:900;
+  color:var(--rojo);
+}
+
+.card h3{
+  font-size:1.35rem;
+  line-height:1.15;
+  margin:5px 0 9px;
+  color:var(--azul);
+}
+
+.card p{
+  margin:0;
+  color:var(--gris);
+}
+
+
+/* =========================================================
+   TARJETAS INTERACTIVAS
+   ========================================================= */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.feature{
+  background:#fff;
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:22px;
+  box-shadow:var(--sombra);
+  position:relative;
+  min-height:165px;
+}
+
+.feature-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#edf1ff;
+  color:var(--azul);
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.feature h3{
+  font-size:1.03rem;
+  line-height:1.2;
+  margin:0 35px 8px 0;
+}
+
+.feature p{
+  font-size:.92rem;
+  color:var(--gris);
+  margin:0;
+}
+
+.feature button{
+  position:absolute;
+  right:16px;
+  top:16px;
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:50%;
+  background:var(--azul);
+  color:#fff;
+  font-size:1.25rem;
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   PRÁCTICAS
+   ========================================================= */
+
+.hours-box{
+  margin-top:22px;
+  padding:20px;
+  border-radius:15px;
+  background:#fff;
+  border:1px solid var(--borde);
+}
+
+.hours-box strong{
+  display:block;
+  color:var(--azul);
+  margin-bottom:4px;
+}
+
+
+/* =========================================================
+   DESTACADO
+   ========================================================= */
+
+.highlight{
+  background:var(--azul);
+  color:#fff;
+  border-radius:24px;
+  padding:42px;
+}
+
+.highlight .eyebrow{
+  color:#fff;
+}
+
+.highlight h2{
+  color:#fff;
+}
+
+.highlight p{
+  max-width:860px;
+  color:rgba(255,255,255,.9);
+}
+
+.highlight strong{
+  color:#fff;
+}
+
+
+/* =========================================================
+   PERMISOS
+   ========================================================= */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.stat{
+  background:#fff;
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:25px;
+  box-shadow:var(--sombra);
+}
+
+.stat strong{
+  display:block;
+  font-size:2.35rem;
+  line-height:1;
+  color:var(--rojo);
+  margin-bottom:10px;
+}
+
+.stat p{
+  margin:0;
+  color:var(--gris);
+}
+
+
+/* =========================================================
+   RECURSOS
+   ========================================================= */
+
+.resource-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:20px;
 }
 
-.contact-item{
+.resource{
   background:#fff;
-  border:1px solid var(--line);
-  border-radius:15px;
-  padding:18px;
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:25px;
+  box-shadow:var(--sombra);
 }
 
-.contact-item strong{
-  display:block;
+.resource .photo{
+  min-height:230px;
+  margin-bottom:20px;
 }
 
-.contact-item a{
+.resource h3{
+  color:var(--azul);
+  font-size:1.4rem;
+  margin:0 0 8px;
+}
+
+.resource p{
+  color:var(--gris);
+}
+
+.resource a{
+  display:inline-flex;
+  margin-top:7px;
+  background:var(--azul);
+  color:#fff;
   text-decoration:none;
-  font-weight:700;
+  padding:11px 16px;
+  border-radius:10px;
+  font-weight:900;
+}
+
+
+/* =========================================================
+   REDES
+   ========================================================= */
+
+.social-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 28px;
+}
+
+.social-head .brand-name{
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:900;
+  line-height:1;
+  color:var(--azul);
+  letter-spacing:-.03em;
+}
+
+.social-head h2{
+  font-size:1.25rem;
+  margin:7px 0 9px;
+  color:var(--rojo);
+  letter-spacing:0;
+}
+
+.social-head p{
+  margin:0;
+  color:var(--gris);
 }
 
 .socials{
   display:flex;
-  gap:12px;
+  justify-content:center;
+  gap:15px;
   flex-wrap:wrap;
-  margin-top:18px;
 }
 
 .social{
-  width:48px;
-  height:48px;
+  width:58px;
+  height:58px;
   border-radius:50%;
-  background:var(--blue);
-  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  font-size:1.35rem;
-  font-weight:800;
-}
-
-footer{
-  background:#172235;
+  background:var(--azul);
   color:#fff;
-  padding:35px 0;
-  text-align:center;
+  box-shadow:var(--sombra);
+  transition:.2s;
 }
 
-footer p{
-  margin:5px 0;
-  opacity:.85;
-  font-size:.9rem;
+.social:hover{
+  transform:translateY(-2px);
+  background:var(--azul-oscuro);
 }
 
-/* VENTANAS */
+.social svg{
+  width:27px;
+  height:27px;
+  fill:currentColor;
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.contact-intro{
+  max-width:720px;
+  margin-bottom:30px;
+}
+
+.contact-intro .brand-name{
+  font-size:clamp(2.25rem,6vw,3.6rem);
+  font-weight:900;
+  line-height:1;
+  color:var(--azul);
+  letter-spacing:-.04em;
+}
+
+.contact-intro h2{
+  font-size:1.25rem;
+  margin:8px 0 8px;
+  color:var(--rojo);
+  letter-spacing:0;
+}
+
+.contact-intro p{
+  margin:0;
+  color:var(--gris);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:24px;
+}
+
+.contact-box{
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:25px;
+  background:#fff;
+  box-shadow:var(--sombra);
+}
+
+.contact-row{
+  padding:14px 0;
+  border-bottom:1px solid var(--borde);
+}
+
+.contact-row:first-child{
+  padding-top:0;
+}
+
+.contact-row:last-child{
+  border-bottom:0;
+  padding-bottom:0;
+}
+
+.contact-row strong{
+  display:block;
+  color:var(--azul);
+  margin-bottom:2px;
+}
+
+.contact-row a{
+  color:var(--texto);
+  font-weight:800;
+  text-decoration:none;
+}
+
+.contact-map{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.contact-map .mini-title{
+  font-size:1.2rem;
+  font-weight:900;
+  color:var(--azul);
+  margin-bottom:8px;
+}
+
+.map-button{
+  display:inline-flex;
+  align-self:flex-start;
+  margin-top:14px;
+  background:var(--rojo);
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  padding:11px 16px;
+  font-weight:900;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
 
 .modal{
   position:fixed;
   inset:0;
-  background:#0008;
+  background:rgba(7,17,38,.62);
   display:none;
   align-items:center;
   justify-content:center;
   padding:20px;
-  z-index:50;
+  z-index:2000;
 }
 
-.modal.open{
+.modal.show{
   display:flex;
 }
 
 .modal-box{
   background:#fff;
-  border-radius:20px;
-  max-width:650px;
+  max-width:620px;
   width:100%;
+  border-radius:20px;
   padding:30px;
   position:relative;
-  max-height:85vh;
-  overflow:auto;
 }
 
-.close{
+.modal-box h3{
+  color:var(--azul);
+  font-size:1.5rem;
+  margin:0 35px 10px 0;
+}
+
+.modal-box p{
+  color:var(--gris);
+  margin:0;
+}
+
+.modal-close{
   position:absolute;
-  right:15px;
-  top:10px;
+  right:13px;
+  top:8px;
   border:0;
-  background:none;
+  background:transparent;
   font-size:1.8rem;
   cursor:pointer;
 }
 
-.modal-box h3{
-  margin-top:0;
-  font-size:1.7rem;
+
+/* =========================================================
+   PIE
+   ========================================================= */
+
+footer{
+  background:#13224d;
+  color:#fff;
+  padding:35px 0;
 }
 
-/* MÓVIL */
+footer strong{
+  font-size:1.05rem;
+}
 
-@media(max-width:800px){
+footer p{
+  margin:5px 0;
+  color:#dbe3f8;
+  font-size:.88rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
 
   nav{
     display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:78px;
+    background:#fff;
+    padding:18px 4%;
+    border-bottom:1px solid var(--borde);
+    flex-direction:column;
+    align-items:flex-start;
   }
 
-  .menu{
+  nav.open{
+    display:flex;
+  }
+
+  .menu-btn{
     display:block;
   }
 
-  .grid,
-  .split,
+  .two,
   .contact-grid{
     grid-template-columns:1fr;
   }
 
-  .cards3{
+  .card-grid{
     grid-template-columns:1fr;
   }
 
-  section{
-    padding:52px 0;
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  .hero-note{
-    left:4%;
-    bottom:4%;
-    padding:12px 16px;
-    max-width:230px;
+  .stats{
+    grid-template-columns:1fr;
   }
 
-  .hero-note strong{
-    font-size:1.1rem;
+  .resource-grid{
+    grid-template-columns:1fr;
   }
 
-  .brand-band h1{
-    font-size:clamp(1.7rem,8vw,2.5rem);
+  .hero{
+    padding-top:18px;
   }
 
-  .actions .btn{
-    flex:1;
-    min-width:105px;
-    padding:11px 10px;
-    font-size:.88rem;
-  }
 }
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media(max-width:560px){
+
+  section{
+    padding:58px 0;
+  }
+
+  .header-inner{
+    min-height:70px;
+  }
+
+  .brand img{
+    width:48px;
+    height:48px;
+  }
+
+  .brand-text{
+    font-size:1.18rem;
+  }
+
+  .brand-text small{
+    font-size:.62rem;
+  }
+
+  .hero-brand-band{
+    border-radius:14px 14px 0 0;
+    padding:16px 10px;
+  }
+
+  .hero-brand-band h1{
+    font-size:clamp(1.75rem,8vw,2.5rem);
+    white-space:nowrap;
+  }
+
+  .hero-photo{
+    height:74vw;
+    min-height:260px;
+    border-radius:0;
+  }
+
+  .hero-years-band{
+    border-radius:0 0 14px 14px;
+    padding:14px 12px;
+  }
+
+  .hero-years-band strong{
+    font-size:1.08rem;
+  }
+
+  .hero-copy{
+    margin-top:20px;
+  }
+
+  .hero-copy p{
+    font-size:1rem;
+  }
+
+  .actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+
+  .action{
+    width:100%;
+  }
+
+  .hero-history{
+    margin-top:28px;
+  }
+
+  .hero-history-badge{
+    margin-bottom:13px;
+  }
+
+  .hero-history h2{
+    font-size:2rem;
+  }
+
+  .hero-history p{
+    font-size:.98rem;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .highlight{
+    padding:28px 22px;
+    border-radius:18px;
+  }
+
+  .photo{
+    min-height:240px;
+  }
+
+  .social{
+    width:54px;
+    height:54px;
+  }
+
+}
+
+
+/* =========================================================
+   PANTALLAS MUY PEQUEÑAS
+   ========================================================= */
+
+@media(max-width:380px){
+
+  .brand-text{
+    font-size:1.05rem;
+  }
+
+  .brand img{
+    width:44px;
+    height:44px;
+  }
+
+  .hero-brand-band h1{
+    font-size:1.6rem;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .action,
+  .social{
+    transition:none;
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =====================================================
+     CABECERA
+     ===================================================== -->
+
 <header>
-<div class="container header-inner">
 
-<a class="brand" href="#inicio">
-<img src="logo-paco.png" alt="Logo Autoescuela Paco">
-<span>Autoescuela Paco</span>
-</a>
+  <div class="container header-inner">
 
-<nav>
-<a href="#historia">Historia</a>
-<a href="#formacion">Formación</a>
-<a href="#practicas">Prácticas</a>
-<a href="#revista">Revista</a>
-<a href="#contacto">Contacto</a>
-</nav>
+    <a class="brand" href="#inicio" aria-label="Autoescuela Paco">
 
-<button class="menu" aria-label="Menú">☰</button>
+      <img
+        src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg"
+        alt="Logotipo de Autoescuela Paco"
+      >
 
-</div>
+      <span class="brand-text">
+        Autoescuela Paco
+        <small>Desde 1965 · Rota</small>
+      </span>
+
+    </a>
+
+
+    <button
+      class="menu-btn"
+      onclick="toggleMenu()"
+      aria-label="Abrir menú"
+    >
+      ☰
+    </button>
+
+
+    <nav id="menu">
+
+      <a href="#historia">Historia</a>
+      <a href="#formacion">Formación</a>
+      <a href="#practicas">Prácticas</a>
+      <a href="#permisos">Permisos</a>
+      <a href="#revista">60 años</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+
+    </nav>
+
+  </div>
+
 </header>
 
 
-<main id="inicio">
 
-<!-- PORTADA -->
+<main>
 
-<section class="hero">
 
-<div class="container">
+<!-- =====================================================
+     PORTADA
+     ===================================================== -->
 
-<div class="hero-photo">
+<section class="hero" id="inicio">
 
-<img
-src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg"
-alt="Vehículo de Autoescuela Paco en Rota"
->
+  <div class="container">
 
-<div class="hero-note">
-<strong>Tu autoescuela</strong>
-<span>La de toda la vida</span>
-</div>
 
-</div>
+    <!-- NOMBRE DEL NEGOCIO ENCIMA DE LA FOTO -->
 
-</div>
+    <div class="hero-brand-band">
 
-<div class="brand-band">
+      <h1>AUTOESCUELA PACO</h1>
 
-<h1>AUTOESCUELA PACO</h1>
+    </div>
 
-<p>Más de 60 años formando conductores en Rota.</p>
 
-</div>
+    <!-- FOTO PRINCIPAL -->
 
-<div class="container actions">
+    <div class="hero-photo-wrap">
 
-<a class="btn primary" href="tel:+34956811540">
-☎ Llamar
-</a>
+      <div class="hero-photo">
 
-<a
-class="btn secondary"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Rota+C%C3%A1diz">
-⌖ Cómo llegar
-</a>
+        <img
+          src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg"
+          alt="Vehículos de Autoescuela Paco en Rota"
+        >
 
-<a
-class="btn blue"
-target="_blank"
-href="https://wa.me/34672046418">
-◉ WhatsApp
-</a>
+      </div>
 
-</div>
+    </div>
 
-</section>
 
+    <!-- TEXTO AZUL DEBAJO DE LA FOTO -->
 
-<!-- HISTORIA -->
+    <div class="hero-years-band">
 
-<section id="historia">
+      <strong>
+        Más de 60 años formando conductores en Rota
+      </strong>
 
-<div class="container">
+    </div>
 
-<div class="section-head">
 
-<div class="kicker">Desde 1965</div>
+    <!-- BOTONES -->
 
-<h2>
-Una trayectoria que sigue mirando al futuro
-</h2>
+    <div class="hero-copy">
 
-<p>
-Más de seis décadas acompañando a generaciones de conductores en Rota.
-</p>
 
-</div>
+      <div class="actions">
 
 
-<div class="grid">
+        <!-- LLAMAR -->
 
-<div class="card">
+        <a
+          class="action action-phone"
+          href="tel:+34956811540"
+        >
 
-<div class="photo-placeholder">
-FOTO AQUÍ · HISTORIA
-</div>
-
-<h3>La de toda la vida</h3>
-
-<p>
-Autoescuela Paco nació en 1965.
-Hoy seguimos manteniendo el trato cercano y profesional que forma parte de nuestra historia,
-incorporando nuevas herramientas y tecnología.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Profesores titulados con experiencia</h3>
-
-<p>
-Contamos con un equipo de cuatro profesores titulados,
-con más de 20 años de experiencia demostrable.
-La experiencia no sustituye a la tecnología:
-la ponemos al servicio de una formación mejor.
-</p>
-
-<button
-class="btn blue"
-onclick="openInfo('profesores')">
-Conocer nuestro enfoque
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FORMACIÓN -->
-
-<section id="formacion">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">Formación</div>
-
-<h2>
-Aula + profesor + plataforma 24/7
-</h2>
-
-<p>
-Formación acompañada antes, durante y después de cada clase.
-</p>
-
-</div>
-
-
-<div class="cards3">
-
-<button class="info-btn" onclick="openInfo('teoria')">
-<strong>Aula y profesor</strong>
-<span>La formación presencial es el centro.</span>
-</button>
-
-<button class="info-btn" onclick="openInfo('plataforma')">
-<strong>Plataforma 24/7</strong>
-<span>Contenido audiovisual y tests para reforzar desde casa.</span>
-</button>
-
-<button class="info-btn" onclick="openInfo('seguimiento')">
-<strong>Seguimiento de errores</strong>
-<span>Corrección y orientación individual.</span>
-</button>
-
-</div>
-
-
-<div class="grid" style="margin-top:20px">
-
-<div class="card">
-
-<h3>Teoría también es acompañamiento</h3>
-
-<p>
-Clases presenciales, plataforma online, vídeos,
-tests digitales y en papel y corrección individual.
-El profesor sigue siendo la referencia para resolver dudas y detectar errores.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Examen teórico: vamos contigo</h3>
-
-<p>
-Autoescuela Paco organiza el desplazamiento de ida y vuelta.
-El alumno va acompañado por un profesor,
-que puede resolver dudas durante el trayecto.
-El profesor permanece fuera mientras se realiza el examen.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRÁCTICAS -->
-
-<section id="practicas">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">Prácticas</div>
-
-<h2>
-La clase termina, pero el acompañamiento continúa
-</h2>
-
-<p>
-Aprender a conducir no consiste solo en superar una prueba:
-consiste en saber desenvolverse con seguridad.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<div class="card">
-
-<div class="photo-placeholder">
-FOTO AQUÍ · CLASE PRÁCTICA
-</div>
-
-<h3>Clase de una hora</h3>
-
-<p>
-Clases prácticas individuales de una hora,
-con progresión adaptada al alumno y seguimiento de sus errores y avances.
-</p>
-
-<p>
-<strong>
-Horario práctico: 07:30–13:30 y 15:30–20:30.
-</strong>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="photo-placeholder">
-FOTO AQUÍ · VEHÍCULOS
-</div>
-
-<h3>Vehículos actuales</h3>
-
-<p>
-Disponemos de tres Renault Clio manuales de menos de tres años,
-con doble mando.
-Normalmente se utilizan dos y uno queda como vehículo de reserva.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="grid" style="margin-top:20px">
-
-<div class="card">
-
-<h3>Preparación del examen práctico</h3>
-
-<p>
-El examen se realiza en Jerez.
-Organizamos el desplazamiento desde Rota
-y el profesor acompaña al alumno, también durante el examen.
-</p>
-
-<button
-class="btn blue"
-onclick="openInfo('practico')">
-Cómo trabajamos el examen
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Si algo sale mal, lo trabajamos</h3>
-
-<p>
-Después del examen analizamos los errores.
-Cuando es posible, volvemos al lugar exacto donde ocurrió el fallo;
-si no, utilizamos fotografías, vídeos u otro material visual
-para comprender la situación.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ACOMPAÑAMIENTO -->
-
-<section>
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">
-Mucho más que preparar un examen
-</div>
-
-<h2>
-Un aprendizaje con seguimiento personal
-</h2>
-
-</div>
-
-
-<div class="cards3">
-
-<button
-class="info-btn"
-onclick="openInfo('historia60')">
-
-<strong>Experiencia desde 1965</strong>
-
-<span>
-Décadas de formación vial en Rota.
-</span>
-
-</button>
-
-
-<button
-class="info-btn"
-onclick="openInfo('acompanamiento')">
-
-<strong>Acompañamiento personal</strong>
-
-<span>
-Una persona de referencia durante el proceso.
-</span>
-
-</button>
-
-
-<button
-class="info-btn"
-onclick="openInfo('reciclaje')">
-
-<strong>Reciclaje y pérdida de confianza</strong>
-
-<span>
-También ayudamos a quienes ya tienen permiso.
-</span>
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PERMISOS -->
-
-<section>
-
-<div class="container split">
-
-<div>
-
-<div class="kicker">Permisos</div>
-
-<h2>
-Permiso B y permiso AM
-</h2>
-
-<p>
-Formación para obtener el permiso que necesitas
-con una metodología basada en el acompañamiento
-y la práctica progresiva.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Reciclaje y clases de confianza
-</h3>
-
-<p>
-Para personas que ya tienen permiso y quieren volver a practicar,
-recordar contenidos o ganar seguridad.
-Según las circunstancias,
-las clases pueden realizarse incluso en el vehículo del alumno.
-</p>
-
-<p>
-Si aparecen dificultades relacionadas con el miedo o la ansiedad al conducir,
-podemos orientarte para valorar la ayuda de un profesional especializado.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- REVISTA Y BLOG -->
-
-<section id="revista">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">Nuestra historia</div>
-
-<h2>
-60 años de Autoescuela Paco
-</h2>
-
-<p>
-Una mirada a nuestra trayectoria y a las personas que han formado parte de ella.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<div class="card">
-
-<div class="photo-placeholder">
-FOTO AQUÍ · REVISTA / FOLLETO
-</div>
-
-<h3>Revista conmemorativa</h3>
-
-<p>
-Recorre nuestra historia y descubre imágenes
-y recuerdos de estas décadas.
-</p>
-
-<a
-class="btn primary"
-target="_blank"
-href="https://heyzine.com/flip-book/c6e5d9056c.html?3">
-Ver revista digital
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="photo-placeholder">
-FOTO AQUÍ · BLOG
-</div>
-
-<h3>
-Blog Autoescuela Paco Rota
-</h3>
-
-<p>
-Consejos, formación y explicaciones sobre los permisos B y AM
-y el proceso para aprender a conducir.
-</p>
-
-<a
-class="btn blue"
-target="_blank"
-href="https://autoescuelapacorota.blogspot.com/">
-Visitar el blog
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- REDES -->
-
-<section>
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">
-Autoescuela Paco
-</div>
-
-<h2>
-Síguenos
-</h2>
-
-<p>
-Noticias, alumnos, actualidad y momentos de nuestra autoescuela.
-</p>
-
-</div>
-
-
-<div
-class="socials"
-style="justify-content:center">
-
-<a
-class="social"
-target="_blank"
-href="https://www.instagram.com/autoescuelapaco"
-aria-label="Instagram">
-◎
-</a>
-
-<a
-class="social"
-target="_blank"
-href="https://www.facebook.com/profile.php?id=100063371431221"
-aria-label="Facebook">
-<b>f</b>
-</a>
-
-<a
-class="social"
-target="_blank"
-href="https://www.tiktok.com/@autoescuelapaco"
-aria-label="TikTok">
-<b>♪</b>
-</a>
-
-<a
-class="social"
-target="_blank"
-href="https://x.com/A_PacoRota"
-aria-label="X">
-<b>𝕏</b>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACTO -->
-
-<section id="contacto">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">
-Autoescuela Paco
-</div>
-
-<h2>
-Estamos aquí para ayudarte
-</h2>
-
-<p>
-Ven a conocernos o contacta con nosotros para informarte sobre tu formación.
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-<div class="contact-item">
-
-<strong>Dirección</strong>
-
-<a
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Avenida+San+Fernando+63+Rota+C%C3%A1diz">
-
-Avenida San Fernando, 63 · 11520 Rota (Cádiz)
-
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Teléfono</strong>
-
-<a href="tel:+34956811540">
-956 811 540
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>WhatsApp</strong>
-
-<a
-target="_blank"
-href="https://wa.me/34672046418">
-
-672 046 418
-
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Email</strong>
-
-<a href="mailto:pacoescuela@hotmail.com">
-pacoescuela@hotmail.com
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-Horario de atención y teoría
-</strong>
-
-<span>
-Lunes a viernes:
-09:30–13:30 y 17:00–20:00
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<div class="container">
-
-<strong>
-Autoescuela Paco · Rota
-</strong>
-
-<p>
-Desde 1965 · Más de 60 años formando conductores.
-</p>
-
-</div>
-
-</footer>
-
-
-<!-- MODAL -->
-
-<div
-class="modal"
-id="modal"
-onclick="if(event.target===this)closeInfo()">
-
-<div class="modal-box">
-
-<button
-class="close"
-onclick="closeInfo()">
-×
-</button>
-
-<h3 id="modalTitle"></h3>
-
-<p id="modalText"></p>
-
-</div>
-
-</div>
-
-
-<script>
-
-const info={
-
-historia60:[
-"Experiencia desde 1965",
-"Autoescuela Paco fue fundada en 1965. Más de seis décadas después seguimos formando conductores en Rota, combinando la experiencia de nuestros profesores con herramientas y tecnología actuales."
-],
-
-profesores:[
-"Profesores titulados",
-"Nuestro equipo está formado por cuatro profesores titulados, con más de 20 años de experiencia demostrable. El objetivo es que el alumno tenga una referencia profesional durante todo su aprendizaje."
-],
-
-teoria:[
-"Aula + profesor + plataforma 24/7",
-"La formación presencial es el centro. La plataforma online complementa las clases con contenido audiovisual, tests y material para estudiar desde casa, mientras el profesor corrige errores y resuelve dudas."
-],
-
-plataforma:[
-"Plataforma 24/7",
-"Puedes reforzar la formación desde casa con contenido audiovisual y tests. La plataforma no sustituye al profesor: sirve para practicar, revisar y llegar mejor preparado a cada clase y al examen."
-],
-
-seguimiento:[
-"Seguimiento de errores",
-"Trabajamos los errores para que el alumno entienda por qué se equivoca y pueda corregirlos."
-],
-
-practico:[
-"Cómo trabajamos el examen práctico",
-"El examen práctico se realiza en Jerez. Autoescuela Paco organiza el desplazamiento desde Rota y el profesor acompaña al alumno, también durante el examen. Después analizamos el resultado y trabajamos los puntos que hayan generado dificultades."
-],
-
-acompanamiento:[
-"Acompañamiento personal",
-"El alumno mantiene comunicación directa con su profesor para resolver dudas y comentar situaciones relacionadas con su aprendizaje. La clase termina, pero el acompañamiento continúa."
-],
-
-reciclaje:[
-"Reciclaje y pérdida de confianza",
-"También ofrecemos clases para personas que ya tienen permiso y quieren recuperar práctica, recordar contenidos o ganar confianza. En determinadas circunstancias pueden realizarse en el vehículo del alumno."
-]
-
-};
-
-
-function openInfo(k){
-
-document.getElementById("modalTitle").textContent=info[k][0];
-
-document.getElementById("modalText").textContent=info[k][1];
-
-document.getElementById("modal").classList.add("open");
-
-}
-
-
-function closeInfo(){
-
-document.getElementById("modal").classList.remove("open");
-
-}
-
-
-document.addEventListener(
-"keydown",
-e=>{
-if(e.key==="Escape")closeInfo();
-}
-);
-
-</script>
-
-</body>
-</html>
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C11.4 21.2 2.8 12.6 2.8 3.4 2.8 2.7 3.3 2.2 4 
