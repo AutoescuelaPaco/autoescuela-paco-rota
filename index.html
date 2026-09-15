@@ -8,6 +8,9 @@
 <style>
 :root {
   --azul-brand: #2042b5;
+  --azul-hover: #294cb0;
+  --rojo-btn: #e53935;
+  --rojo-hover: #c62828;
   --verde-wsp: #25d366;
   --fondo-general: #0b0f19;
   --contenedor-bg: #111827;
@@ -34,7 +37,7 @@ a {
 }
 
 /* =========================================
-   CABECERA PRINCIPAL (ESTILO EXACTO FOTO)
+   CABECERA PRINCIPAL
    ========================================= */
 header {
   background-color: var(--fondo-general);
@@ -102,7 +105,7 @@ header {
   fill: currentColor;
 }
 
-/* Menú de Navegación Horizontal */
+/* Menú de Navegación Horizontal (EN MAYÚSCULAS) */
 .nav-bar {
   background-color: #080c14;
   border-bottom: 1px solid var(--borde-color);
@@ -135,8 +138,8 @@ header {
    SECCIÓN PRINCIPAL (HERO)
    ========================================= */
 .main-section {
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 850px;
+  margin: 30px auto 50px;
   padding: 0 16px;
   text-align: center;
 }
@@ -164,7 +167,7 @@ header {
 /* Contenedor de la Imagen */
 .hero-image-wrapper {
   width: 100%;
-  max-height: 480px;
+  max-height: 460px;
   overflow: hidden;
 }
 
@@ -177,11 +180,11 @@ header {
 
 /* Textos inferiores */
 .hero-content-bottom {
-  margin-top: 35px;
+  margin: 30px auto 20px;
 }
 
 .hero-content-bottom h2 {
-  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
   font-weight: 900;
   margin: 0 0 12px 0;
   letter-spacing: -0.5px;
@@ -196,6 +199,102 @@ header {
   font-weight: 400;
 }
 
+/* =========================================
+   BOTONES DE ACCIÓN
+   ========================================= */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0 35px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--rojo-btn);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(229,57,53,0.3);
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary:hover {
+  background: var(--rojo-hover);
+}
+
+.btn-secondary {
+  background: var(--azul-brand);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(32,66,181,0.3);
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-secondary:hover {
+  background: var(--azul-hover);
+}
+
+/* =========================================
+   BARRA DE ICONOS INFERIORES
+   ========================================= */
+.hero-features-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background-color: var(--contenedor-bg);
+  border: 1px solid var(--borde-color);
+  border-radius: 14px;
+  padding: 18px 12px;
+  margin-top: 25px;
+}
+
+.hero-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.hero-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(32, 66, 181, 0.25);
+  color: #4f73ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-feature-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.hero-feature-item span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--texto-blanco);
+}
+
 /* RESPONSIVE MÓVIL */
 @media (max-width: 600px) {
   .nav-links {
@@ -205,11 +304,20 @@ header {
   .nav-links a {
     font-size: 0.78rem;
   }
-  .brand-titles h1 {
-    font-size: 0.95rem;
+  .hero-actions {
+    flex-direction: column;
   }
-  .whatsapp-btn-top span {
-    display: none; /* Oculta la palabra WhatsApp en móviles muy estrechos si sobra, o déjalo si prefieres */
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-features-bar {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 14px 6px;
+  }
+  .hero-feature-item span {
+    font-size: 0.68rem;
   }
 }
 </style>
@@ -235,10 +343,10 @@ header {
 
     <nav class="nav-bar">
       <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio">INICIO</a>
+        <a href="#cursos">CURSOS</a>
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#contacto">CONTACTO</a>
       </div>
     </nav>
   </header>
@@ -257,6 +365,36 @@ header {
     <div class="hero-content-bottom">
       <h2>Una trayectoria que mira al futuro</h2>
       <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
+    </div>
+
+    <!-- Botones de Acción -->
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">EMPIEZA AHORA &gt;</a>
+      <a href="#cursos" class="btn-secondary">NUESTROS CURSOS &gt;</a>
+    </div>
+
+    <!-- Barra de Iconos Inferiores -->
+    <div class="hero-features-bar">
+      <div class="hero-feature-item">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5.2 3.2.8-1.3-4.5-2.7z"/></svg>
+        </div>
+        <span>Clases Prácticas</span>
+      </div>
+
+      <div class="hero-feature-item">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.83-6-8.83V6.31l6-2.25 6 2.25v4.78z"/></svg>
+        </div>
+        <span>Seguridad y Confianza</span>
+      </div>
+
+      <div class="hero-feature-item">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>
+        </div>
+        <span>Horarios Flexibles</span>
+      </div>
     </div>
   </main>
 
