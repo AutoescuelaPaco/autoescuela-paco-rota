@@ -1,5 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autoescuela Paco | Desde 1965 en Rota</title>
 <style>
-/* Estilo Placa de Reconocimiento Roja y Blanca */
+:root{ --azul:#294cb0; --azul-oscuro:#1d367f; --rojo:#f44739; --verde:#25d366; --texto:#18243a; --gris:#657084; --fondo:#f6f8fc; --blanco:#fff; --borde:#e1e6ef; --sombra:0 12px 32px rgba(24,36,58,.09); --radio:18px; } 
+*{box-sizing:border-box} 
+html{ scroll-behavior:smooth; scroll-padding-top:130px; } 
+body{ margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--texto); line-height:1.6; background:#fff; } 
+a{color:inherit} 
+.container{ width:min(1120px,92%); margin:auto; } 
+
+/* CABECERA */ 
+header{ position:sticky; top:0; z-index:1000; background:rgba(255,255,255,.98); border-bottom:1px solid var(--borde); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(24,36,58,.06); } 
+.header-inner{ min-height:82px; display:flex; align-items:center; gap:18px; width:min(1120px,92%); margin:auto; } 
+.brand{ display:flex; align-items:center; gap:13px; text-decoration:none; margin-right:auto; } 
+.brand img{ width:58px; height:58px; object-fit:contain; border-radius:50%; flex:none; } 
+.brand-text{ font-weight:900; font-size:1.45rem; line-height:1; letter-spacing:-.03em; } 
+.brand-text small{ display:block; margin-top:6px; font-size:.82rem; font-weight:800; color:var(--rojo); letter-spacing:.02em; } 
+nav{ display:flex; gap:16px; align-items:center; } 
+nav a{ text-decoration:none; font-size:.82rem; font-weight:800; } 
+nav a:hover{ color:var(--azul); } 
+.menu-btn{ display:none; border:0; background:var(--azul); color:#fff; border-radius:10px; padding:10px 12px; font-size:1.05rem; cursor:pointer; } 
+
+.mobile-contact-bar{ display:none; } 
+
+/* PORTADA */ 
+.hero{ padding:26px 0 70px; background:#fff; } 
+.hero-photo-wrap{ position:relative; width:min(1120px,92%); margin:auto; } 
+.hero-photo{ min-height:300px; max-height:600px; overflow:hidden; background:#0f172a; border-radius:var(--radio); box-shadow:var(--sombra); display:flex; align-items:center; justify-content:center; } 
+.hero-photo img{ width:100%; height:auto; max-height:600px; object-fit:contain; display:block; } 
+
+/* BLOQUE HISTÓRICO / PLACA ROJA Y BLANCA */ 
+.hero-copy{ text-align:center; max-width:850px; margin:38px auto 0; padding:0 20px; } 
+.hero-history{ max-width:850px; margin:0 auto; text-align:center; } 
+
 .hero-history-badge{ 
     display:inline-flex; 
     align-items:center; 
@@ -11,12 +47,11 @@
     font-weight:900; 
     font-size:1.15rem; 
     letter-spacing:.1em; 
-    border: 4px solid #facc15; /* Detalle dorado exterior opcional para mantener el brillo de placa de honor, o puedes cambiarlo si lo prefieres todo rojo/blanco */
+    border: 4px solid #facc15; 
     box-shadow: 0 10px 25px rgba(244,71,57,0.3), inset 0 2px 5px rgba(255,255,255,0.3); 
     margin-bottom:28px; 
     position:relative; 
 }
-/* Tornillos decorativos laterales dorados tipo placa */
 .hero-history-badge::before, .hero-history-badge::after {
     content: "";
     position: absolute;
@@ -30,4 +65,105 @@
 }
 .hero-history-badge::before { left: 14px; }
 .hero-history-badge::after { right: 14px; }
+
+.hero-history h2{ margin:0 0 12px; font-size:clamp(2rem,5vw,3.2rem); line-height:1.05; color:var(--texto); letter-spacing:-.03em; } 
+.hero-history p{ margin:0; color:var(--gris); font-size:1.08rem; } 
+
+/* SECCIONES Y RESTO */ 
+section{ padding:78px 0; } 
+section.alt{ background:var(--fondo); } 
+.section-intro{ text-align:center; max-width:790px; margin:0 auto 38px; } 
+.eyebrow{ text-transform:uppercase; letter-spacing:.13em; font-weight:900; font-size:.72rem; color:var(--rojo); } 
+h2{ font-size:clamp(2rem,4.5vw,3.2rem); line-height:1.05; letter-spacing:-.025em; margin:8px 0 15px; color:var(--texto); } 
+.section-intro h2{ color:var(--azul); } 
+.lead{ font-size:1.07rem; color:var(--gris); margin:0; } 
+.two{ display:grid; grid-template-columns:1fr 1fr; gap:38px; align-items:center; width:min(1120px,92%); margin:auto; } 
+.photo{ min-height:310px; border:2px dashed #bcc6d5; border-radius:var(--radio); display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; font-weight:900; letter-spacing:.05em; color:#78859a; background:#fff; } 
+.history-number{ display:inline-flex; align-items:center; gap:9px; color:var(--azul); font-weight:900; margin-top:12px; } 
+.history-number:before{ content:""; width:34px; height:4px; border-radius:4px; background:var(--rojo); } 
+
+/* PIE */ 
+footer{ background:#13224d; color:#fff; padding:35px 0; text-align:center; } 
+footer p{ margin:5px 0; color:#dbe3f8; font-size:.88rem; } 
+
+/* MÓVIL */ 
+@media(max-width:900px){ 
+    nav{ display:none; position:absolute; left:0; right:0; top:82px; background:#fff; padding:18px 4%; border-bottom:1px solid var(--borde); flex-direction:column; align-items:flex-start; } 
+    nav.open{ display:flex; } 
+    .menu-btn{ display:block; } 
+    .two{ grid-template-columns:1fr; } 
+} 
+
+@media(max-width:560px){ 
+    .mobile-contact-bar{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; padding:7px 4%; background:#fff; border-bottom:1px solid var(--borde); position:sticky; top:72px; z-index:999; } 
+    .mobile-contact{ display:flex; align-items:center; justify-content:center; gap:5px; padding:8px 4px; border-radius:9px; text-decoration:none; color:#fff; font-size:.72rem; font-weight:900; } 
+    .mobile-contact.phone{ background:var(--rojo); } 
+    .mobile-contact.location{ background:var(--azul); } 
+    .mobile-contact.whatsapp{ background:var(--verde); } 
+} 
 </style>
+</head>
+<body id="inicio">
+
+<!-- CABECERA -->
+<header>
+    <div class="header-inner">
+        <a class="brand" href="#inicio" aria-label="Autoescuela Paco"> 
+            <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Logotipo de Autoescuela Paco"> 
+            <span class="brand-text"> Autoescuela Paco <small>Desde 1965 · Rota</small> </span> 
+        </a> 
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú"> ☰ </button> 
+        <nav id="menu"> 
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Historia</a> 
+            <a href="#formacion">Formación</a> 
+            <a href="#practicas">Prácticas</a> 
+            <a href="#permisos">Permisos</a> 
+            <a href="#contacto">Contacto</a> 
+        </nav>
+    </div>
+</header>
+
+<!-- PORTADA -->
+<section class="hero">
+    <div class="hero-photo-wrap"> 
+        <div class="hero-photo"> 
+            <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco de Rota"> 
+        </div> 
+    </div> 
+    <div class="hero-copy"> 
+        <div class="hero-history" id="historia"> 
+            <div class="hero-history-badge"> DESDE 1965 </div> 
+            <h2> Una trayectoria que sigue mirando al futuro </h2> 
+            <p> Más de seis décadas formando conductores en Rota </p> 
+        </div> 
+    </div>
+</section>
+
+<!-- SECCIÓN HISTORIA -->
+<section class="alt">
+    <div class="container two">
+        <div> 
+            <div class="eyebrow"> Una trayectoria que continúa </div> 
+            <h2> Desde 1965,<br> la de toda la vida. </h2> 
+            <p class="lead"> Autoescuela Paco nació en Rota en 1965 y continúa dedicada a la formación vial con una idea clara: ofrecer un servicio profesional, cercano y cuidado. </p> 
+            <div class="history-number"> Más de 60 años formando conductores </div> 
+        </div> 
+        <div class="photo"> FOTO HISTÓRICA / ARCHIVO AQUÍ </div> 
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Autoescuela Paco · Desde 1965 · Rota</strong></p>
+        <p>© 2026 Autoescuela Paco. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){ 
+    document.getElementById('menu').classList.toggle('open'); 
+} 
+</script>
+</body>
+</html>
