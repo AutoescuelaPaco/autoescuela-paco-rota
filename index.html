@@ -41,7 +41,7 @@
             width: 100%;
         }
 
-        /* HEADER & MENÚ DESPLEGABLE MEJORADO PARA MÓVIL */
+        /* HEADER & MENÚ DESPLEGABLE CON NOMBRE MÁS GRANDE */
         header {
             position: sticky;
             top: 0;
@@ -54,10 +54,10 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 10px 15px;
+            padding: 12px 15px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         .nav-top-row {
@@ -70,14 +70,14 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
             min-width: 0;
         }
 
         .site-logo {
-            width: 46px;
-            height: 46px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--primary);
@@ -86,33 +86,34 @@
         }
 
         .logo-text h1 {
-            font-size: 1.1rem;
+            font-size: 1.35rem; /* Nombre mucho más grande y claro */
             font-weight: 800;
             color: var(--dark);
             line-height: 1.1;
+            letter-spacing: -0.5px;
         }
 
         .logo-text span {
-            font-size: 0.68rem;
+            font-size: 0.75rem;
             color: var(--accent);
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             display: block;
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         /* Botón hamburguesa (Tres rayitas) */
         .menu-toggle {
             background: #f3f4f6;
             border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--dark);
             cursor: pointer;
             transition: background 0.2s;
@@ -125,21 +126,21 @@
 
         .nav-actions-row {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             width: 100%;
         }
 
         .btn-header-call, .btn-header-map {
             flex: 1;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            padding: 9px 10px;
-            border-radius: 10px;
+            padding: 10px;
+            border-radius: 12px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 8px;
             text-align: center;
         }
 
@@ -255,7 +256,7 @@
             display: block;
         }
 
-        /* Hero Section Limpio */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
             color: white;
@@ -663,7 +664,7 @@
             .nav-container { flex-direction: row; justify-content: space-between; align-items: center; padding: 0.8rem 2rem; }
             .nav-actions-row { width: auto; gap: 10px; }
             .btn-header-call, .btn-header-map { flex: unset; padding: 7px 14px; font-size: 0.78rem; }
-            .logo-text h1 { font-size: 1.35rem; }
+            .logo-text h1 { font-size: 1.5rem; }
             .permisos-grid { grid-template-columns: repeat(3, 1fr); }
             .content-block { grid-template-columns: 1fr 1fr; padding: 40px; gap: 40px; margin-bottom: 35px; }
             .content-block.reverse { direction: rtl; }
@@ -677,7 +678,7 @@
 </head>
 <body>
 
-    <!-- Header & Menú desplegable estructurado en móvil -->
+    <!-- Header & Menú desplegable con nombre ampliado -->
     <header>
         <div class="nav-container">
             <div class="nav-top-row">
@@ -722,7 +723,7 @@
         </ul>
     </div>
 
-    <!-- Hero Section Limpio -->
+    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="hero-container">
             <div class="hero-tag">
