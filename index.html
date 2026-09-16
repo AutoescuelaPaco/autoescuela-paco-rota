@@ -43,7 +43,7 @@ body{
   background:var(--negro);
   overflow-x:hidden;
   padding-top: 105px;
-  /* Espacio inferior ajustado solo para los dos botones principales fijos */
+  /* Espacio inferior reservado para la barra fija de botones */
   padding-bottom: 95px;
 }
 
@@ -204,7 +204,7 @@ header{
 }
 
 /* =========================
-   ESTILOS DE CONTENIDO Y HERO
+   ESTILOS DE PORTADA / HERO Y BLOQUE DE ICONOS
    ========================= */
 .hero{
   padding:20px 0 30px;
@@ -217,6 +217,9 @@ header{
   box-shadow:var(--sombra);
   border:1px solid #222;
   margin-bottom:20px;
+  max-width:850px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .hero-photo img{
@@ -243,14 +246,15 @@ header{
 }
 
 .hero-content p{
-  margin:0 0 25px; /* Espacio antes de los iconos intermedios */
+  margin:0 0 20px;
   color:var(--gris-claro);
   font-size:1rem;
 }
 
-/* ZONA INTERMEDIA: LOS 3 ICONOS MÁS GRANDES Y DESTACADOS */
+/* ZONA DE ICONOS INTEGRADA Y FLUIDA (SIN HUECOS EXTRAÑOS) */
 .features-middle-section{
-  margin: 30px 0 45px;
+  max-width:850px;
+  margin: 0 auto 10px;
 }
 
 .features-grid-mid{
@@ -260,7 +264,7 @@ header{
   background:#111111;
   border:1px solid #282828;
   border-radius:var(--radio);
-  padding:18px 12px;
+  padding:16px 12px;
   box-shadow:var(--sombra);
 }
 
@@ -269,12 +273,12 @@ header{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:10px;
+  gap:8px;
 }
 
 .feature-mid-icon{
-  width:46px;
-  height:46px;
+  width:42px;
+  height:42px;
   border-radius:50%;
   background:#1f1f1f;
   border:1px solid #444;
@@ -286,16 +290,16 @@ header{
 }
 
 .feature-mid-icon svg{
-  width:22px;
-  height:22px;
+  width:20px;
+  height:20px;
   fill:currentColor;
 }
 
 .feature-mid-item span{
-  font-size:0.75rem;
+  font-size:0.72rem;
   font-weight:700;
   color:var(--blanco);
-  line-height:1.3;
+  line-height:1.2;
 }
 
 /* RESTO DE SECCIONES */
@@ -490,7 +494,7 @@ footer p{
       <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
     </div>
 
-    <!-- ZONA INTERMEDIA: LOS 3 ICONOS MÁS GRANDES EN EL HUECO CENTRAL -->
+    <!-- LOS 3 ICONOS INTEGRADOS JUSTO AQUÍ, DE FORMA COMPACTA Y ELEGANTE -->
     <div class="features-middle-section">
       <div class="features-grid-mid">
         <div class="feature-mid-item">
