@@ -43,8 +43,8 @@ body{
   background:var(--negro);
   overflow-x:hidden;
   padding-top: 105px;
-  /* Espacio inferior ampliado para alojar la barra fija completa */
-  padding-bottom: 155px;
+  /* Espacio inferior ajustado solo para los dos botones principales fijos */
+  padding-bottom: 95px;
 }
 
 a{
@@ -147,7 +147,7 @@ header{
 }
 
 /* =========================
-   BARRA FIJA INFERIOR (BOTONES + 3 ICONOS DEBAJO)
+   BARRA FIJA INFERIOR (SOLO BOTONES)
    ========================= */
 .fixed-bottom-bar{
   position:fixed;
@@ -162,20 +162,14 @@ header{
   box-shadow:0 -4px 20px rgba(0,0,0,.8);
 }
 
-.fixed-bottom-content{
-  width:min(1120px, 100%);
-  margin:0 auto;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
 .cta-buttons{
   display:flex;
   flex-direction:row;
   gap:10px;
   justify-content:center;
   align-items:center;
+  width:min(1120px, 100%);
+  margin:0 auto;
 }
 
 .btn{
@@ -183,8 +177,8 @@ header{
   align-items:center;
   justify-content:center;
   gap:4px;
-  padding:10px 10px;
-  border-radius:10px;
+  padding:12px 10px;
+  border-radius:12px;
   font-weight:800;
   font-size:0.75rem;
   cursor:pointer;
@@ -209,52 +203,8 @@ header{
   color:#fff;
 }
 
-/* 3 ICONOS ANCLADOS DEBAJO DE LOS BOTONES */
-.features-bar-bottom{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:6px;
-  background:#0b0b0b;
-  border:1px solid #1f1f1f;
-  border-radius:12px;
-  padding:8px 6px;
-}
-
-.feature-item-b{
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:3px;
-}
-
-.feature-icon-b{
-  width:26px;
-  height:26px;
-  border-radius:50%;
-  background:#181818;
-  border:1px solid #333;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-}
-
-.feature-icon-b svg{
-  width:13px;
-  height:13px;
-  fill:currentColor;
-}
-
-.feature-item-b span{
-  font-size:0.58rem;
-  font-weight:700;
-  color:var(--gris-claro);
-  line-height:1.1;
-}
-
 /* =========================
-   ESTILOS DE CONTENIDO
+   ESTILOS DE CONTENIDO Y HERO
    ========================= */
 .hero{
   padding:20px 0 30px;
@@ -280,7 +230,7 @@ header{
 .hero-content{
   text-align:center;
   max-width:750px;
-  margin:0 auto 20px;
+  margin:0 auto;
 }
 
 .hero-content h1{
@@ -293,11 +243,62 @@ header{
 }
 
 .hero-content p{
-  margin:0;
+  margin:0 0 25px; /* Espacio antes de los iconos intermedios */
   color:var(--gris-claro);
   font-size:1rem;
 }
 
+/* ZONA INTERMEDIA: LOS 3 ICONOS MÁS GRANDES Y DESTACADOS */
+.features-middle-section{
+  margin: 30px 0 45px;
+}
+
+.features-grid-mid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:12px;
+  background:#111111;
+  border:1px solid #282828;
+  border-radius:var(--radio);
+  padding:18px 12px;
+  box-shadow:var(--sombra);
+}
+
+.feature-mid-item{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+.feature-mid-icon{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#1f1f1f;
+  border:1px solid #444;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  box-shadow:0 4px 10px rgba(0,0,0,.4);
+}
+
+.feature-mid-icon svg{
+  width:22px;
+  height:22px;
+  fill:currentColor;
+}
+
+.feature-mid-item span{
+  font-size:0.75rem;
+  font-weight:700;
+  color:var(--blanco);
+  line-height:1.3;
+}
+
+/* RESTO DE SECCIONES */
 section{
   padding:40px 0;
 }
@@ -465,43 +466,17 @@ footer p{
   </nav>
 </header>
 
-<!-- BARRA FIJA INFERIOR: BOTONES + TUS 3 ICONOS EXACTOS DEBAJO -->
+<!-- BARRA FIJA INFERIOR (SOLO LOS 2 BOTONES PRINCIPALES) -->
 <div class="fixed-bottom-bar">
-  <div class="fixed-bottom-content">
-    <div class="cta-buttons">
-      <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn btn-secondary">VER UBICACIÓN &gt;</a>
-    </div>
-
-    <!-- Los 3 iconos con tus textos exactos -->
-    <div class="features-bar-bottom">
-      <div class="feature-item-b">
-        <div class="feature-icon-b">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        </div>
-        <span>Acompañamiento personalizado</span>
-      </div>
-
-      <div class="feature-item-b">
-        <div class="feature-icon-b">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-        </div>
-        <span>Últimos avances tecnológicos</span>
-      </div>
-
-      <div class="feature-item-b">
-        <div class="feature-icon-b">
-          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-        </div>
-        <span>Amplio horario de prácticas</span>
-      </div>
-    </div>
+  <div class="cta-buttons">
+    <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn btn-secondary">VER UBICACIÓN &gt;</a>
   </div>
 </div>
 
 <main>
 
-<!-- PORTADA / HERO (FOTO DE LOS COCHES) -->
+<!-- PORTADA / HERO -->
 <section class="hero" id="inicio">
   <div class="container">
     <div class="hero-photo-wrap">
@@ -514,6 +489,33 @@ footer p{
       <h1>UNA TRAYECTORIA QUE MIRA AL FUTURO</h1>
       <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
     </div>
+
+    <!-- ZONA INTERMEDIA: LOS 3 ICONOS MÁS GRANDES EN EL HUECO CENTRAL -->
+    <div class="features-middle-section">
+      <div class="features-grid-mid">
+        <div class="feature-mid-item">
+          <div class="feature-mid-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <span>Acompañamiento personalizado</span>
+        </div>
+
+        <div class="feature-mid-item">
+          <div class="feature-mid-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          </div>
+          <span>Últimos avances tecnológicos</span>
+        </div>
+
+        <div class="feature-mid-item">
+          <div class="feature-mid-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <span>Amplio horario de prácticas</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -531,7 +533,7 @@ footer p{
   </div>
 </section>
 
-<!-- FORMACIÓN (TARJETAS) -->
+<!-- FORMACIÓN -->
 <section class="alt" id="formacion">
   <div class="container">
     <div class="section-intro">
