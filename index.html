@@ -23,8 +23,8 @@
   --verde:#25d366;
   --texto:#fff;
   --borde:#222;
-  --sombra:0 12px 32px rgba(0,0,0,.45);
-  --radio:16px;
+  --sombra:0 8px 24px rgba(0,0,0,.4);
+  --radio:14px;
 }
 
 *{
@@ -39,12 +39,12 @@ body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   color:var(--texto);
-  line-height:1.6;
+  line-height:1.5;
   background:var(--negro);
   overflow-x:hidden;
-  padding-top: 105px;
+  padding-top: 100px;
   /* Espacio inferior reservado para la barra fija de botones */
-  padding-bottom: 95px;
+  padding-bottom: 85px;
 }
 
 a{
@@ -86,15 +86,15 @@ header{
 }
 
 .brand img{
-  width:38px;
-  height:38px;
+  width:36px;
+  height:36px;
   object-fit:contain;
   border-radius:50%;
 }
 
 .brand-text{
   font-weight:800;
-  font-size:1rem;
+  font-size:0.95rem;
   line-height:1.1;
   letter-spacing:-.02em;
   color:var(--blanco);
@@ -158,7 +158,7 @@ header{
   background:rgba(5,5,5,0.96);
   backdrop-filter:blur(10px);
   border-top:1px solid #222;
-  padding:10px 16px;
+  padding:8px 16px;
   box-shadow:0 -4px 20px rgba(0,0,0,.8);
 }
 
@@ -177,8 +177,8 @@ header{
   align-items:center;
   justify-content:center;
   gap:4px;
-  padding:12px 10px;
-  border-radius:12px;
+  padding:10px 10px;
+  border-radius:10px;
   font-weight:800;
   font-size:0.75rem;
   cursor:pointer;
@@ -207,7 +207,7 @@ header{
    ESTILOS DE PORTADA / HERO Y BLOQUE DE ICONOS
    ========================= */
 .hero{
-  padding:20px 0 30px;
+  padding:15px 0 25px;
   background:var(--negro);
 }
 
@@ -216,29 +216,31 @@ header{
   overflow:hidden;
   box-shadow:var(--sombra);
   border:1px solid #222;
-  margin-bottom:20px;
+  margin-bottom:15px;
   max-width:850px;
   margin-left:auto;
   margin-right:auto;
+  background:#000; /* Fondo negro para que si sobra espacio lateral no desentone */
 }
 
+/* USAMOS CONTAIN PARA QUE NUNCA SE CORTE LA FOTO (SE VE COMPLETA) */
 .hero-photo img{
   width:100%;
   height:auto;
   display:block;
-  max-height:420px;
-  object-fit:cover;
+  max-height:480px;
+  object-fit:contain; 
 }
 
 .hero-content{
   text-align:center;
   max-width:750px;
-  margin:0 auto;
+  margin:0 auto 15px;
 }
 
 .hero-content h1{
-  margin:0 0 10px;
-  font-size:clamp(1.6rem, 4.2vw, 2.5rem);
+  margin:0 0 8px;
+  font-size:clamp(1.4rem, 3.8vw, 2.2rem);
   line-height:1.15;
   font-weight:900;
   letter-spacing:-.02em;
@@ -246,25 +248,25 @@ header{
 }
 
 .hero-content p{
-  margin:0 0 20px;
+  margin:0;
   color:var(--gris-claro);
-  font-size:1rem;
+  font-size:0.95rem;
 }
 
-/* ZONA DE ICONOS INTEGRADA Y FLUIDA (SIN HUECOS EXTRAÑOS) */
+/* ZONA DE ICONOS COMPACTA Y FLUIDA */
 .features-middle-section{
   max-width:850px;
-  margin: 0 auto 10px;
+  margin: 0 auto;
 }
 
 .features-grid-mid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:12px;
+  gap:10px;
   background:#111111;
-  border:1px solid #282828;
+  border:1px solid #222;
   border-radius:var(--radio);
-  padding:16px 12px;
+  padding:12px 10px;
   box-shadow:var(--sombra);
 }
 
@@ -273,38 +275,37 @@ header{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:8px;
+  gap:6px;
 }
 
 .feature-mid-icon{
-  width:42px;
-  height:42px;
+  width:38px;
+  height:38px;
   border-radius:50%;
-  background:#1f1f1f;
-  border:1px solid #444;
+  background:#1a1a1a;
+  border:1px solid #333;
   display:flex;
   align-items:center;
   justify-content:center;
   color:#fff;
-  box-shadow:0 4px 10px rgba(0,0,0,.4);
 }
 
 .feature-mid-icon svg{
-  width:20px;
-  height:20px;
+  width:18px;
+  height:18px;
   fill:currentColor;
 }
 
 .feature-mid-item span{
-  font-size:0.72rem;
+  font-size:0.68rem;
   font-weight:700;
   color:var(--blanco);
   line-height:1.2;
 }
 
-/* RESTO DE SECCIONES */
+/* RESTO DE SECCIONES CON ESPACIADO REDUCIDO */
 section{
-  padding:40px 0;
+  padding:30px 0;
 }
 
 section.alt{
@@ -314,28 +315,28 @@ section.alt{
 .section-intro{
   text-align:center;
   max-width:750px;
-  margin:0 auto 30px;
+  margin:0 auto 25px;
 }
 
 .eyebrow{
   text-transform:uppercase;
   letter-spacing:.12em;
   font-weight:900;
-  font-size:.72rem;
+  font-size:.7rem;
   color:var(--rojo);
-  margin-bottom:6px;
+  margin-bottom:4px;
 }
 
 h2{
-  font-size:clamp(1.5rem,3.2vw,2.2rem);
+  font-size:clamp(1.4rem,3vw,2rem);
   line-height:1.15;
   letter-spacing:-.02em;
-  margin:0 0 10px;
+  margin:0 0 8px;
   color:var(--blanco);
 }
 
 .lead{
-  font-size:1rem;
+  font-size:0.95rem;
   color:var(--gris-claro);
   margin:0;
 }
@@ -343,7 +344,7 @@ h2{
 .two{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:30px;
+  gap:25px;
   align-items:center;
 }
 
@@ -359,53 +360,53 @@ h2{
   height:auto;
   display:block;
   object-fit:cover;
-  max-height:380px;
+  max-height:350px;
 }
 
 .card-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:14px;
 }
 
 .card{
   background:var(--negro-card);
   border:1px solid var(--borde);
   border-radius:var(--radio);
-  padding:20px;
+  padding:16px;
   box-shadow:var(--sombra);
 }
 
 .card h3{
-  font-size:1.1rem;
-  margin:8px 0 6px;
+  font-size:1.05rem;
+  margin:6px 0 4px;
   color:var(--blanco);
 }
 
 .card p{
   margin:0;
   color:var(--gris-claro);
-  font-size:.9rem;
+  font-size:0.85rem;
 }
 
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:20px;
+  gap:16px;
 }
 
 .contact-box{
   border:1px solid var(--borde);
   border-radius:var(--radio);
-  padding:20px;
+  padding:18px;
   background:var(--negro-card);
 }
 
 .contact-row{
-  padding:10px 0;
+  padding:8px 0;
   border-bottom:1px solid var(--borde);
   color:var(--gris-claro);
-  font-size:.92rem;
+  font-size:0.9rem;
 }
 
 .contact-row:last-child{
@@ -427,14 +428,14 @@ footer{
   background:var(--negro-footer);
   color:#fff;
   border-top:1px solid #1a1a1a;
-  padding:30px 0;
+  padding:25px 0;
   text-align:center;
 }
 
 footer p{
-  margin:4px 0;
+  margin:3px 0;
   color:#888;
-  font-size:.8rem;
+  font-size:.78rem;
 }
 
 @media(max-width:768px){
@@ -494,7 +495,7 @@ footer p{
       <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
     </div>
 
-    <!-- LOS 3 ICONOS INTEGRADOS JUSTO AQUÍ, DE FORMA COMPACTA Y ELEGANTE -->
+    <!-- LOS 3 ICONOS INTEGRADOS DE FORMA COMPACTA Y EQUILIBRADA -->
     <div class="features-middle-section">
       <div class="features-grid-mid">
         <div class="feature-mid-item">
