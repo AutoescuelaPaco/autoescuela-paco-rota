@@ -45,9 +45,9 @@ body{
   line-height:1.6;
   background:var(--negro);
   overflow-x:hidden;
-  /* Espaciado para que el contenido no quede oculto bajo las barras fijas arriba y abajo */
+  /* Espaciado para que la cabecera fija superior y la barra de botones fija inferior no tapen el contenido */
   padding-top: 105px;
-  padding-bottom: 85px;
+  padding-bottom: 90px;
 }
 
 a{
@@ -151,7 +151,7 @@ header{
 }
 
 /* =========================
-   BARRA FIJA INFERIOR (BOTONES DE ACCIÓN)
+   BARRA FIJA INFERIOR (BOTONES ROJO Y AZUL)
    ========================= */
 .fixed-bottom-bar{
   position:fixed;
@@ -208,50 +208,38 @@ header{
 }
 
 /* =========================
-ینس PORTADA Y HERO (ESTILO FOTO 2)
+   PORTADA Y HERO (FOTO PRINCIPAL)
    ========================= */
 .hero{
   padding:20px 0 30px;
   background:var(--negro);
 }
 
-/* SECCIÓN HISTORIA CON ESTILO DE FONDO E INTEGRACIÓN DE LA FOTO 1/2 */
-.hero-history-card {
-  position: relative;
-  border-radius: var(--radio);
-  overflow: hidden;
-  box-shadow: var(--sombra);
-  border: 1px solid #222;
-  background: #111;
-  padding: 24px 20px;
-  margin-bottom: 24px;
+.hero-photo-wrap{
+  border-radius:var(--radio);
+  overflow:hidden;
+  box-shadow:var(--sombra);
+  border:1px solid #222;
+  margin-bottom:20px;
 }
 
-.hero-history-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.9) 100%);
-  z-index: 1;
+.hero-photo img{
+  width:100%;
+  height:auto;
+  display:block;
+  max-height:420px;
+  object-fit:cover;
 }
 
-.hero-history-bg {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.45;
-}
-
-.hero-history-content {
-  position: relative;
-  z-index: 2;
-  text-align: left;
+.hero-content{
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 20px;
 }
 
 .hero-content h1{
-  margin:6px 0 12px;
-  font-size:clamp(1.6rem, 4vw, 2.3rem);
+  margin:0 0 10px;
+  font-size:clamp(1.6rem, 4.2vw, 2.5rem);
   line-height:1.15;
   font-weight:900;
   letter-spacing:-.02em;
@@ -259,9 +247,9 @@ header{
 }
 
 .hero-content p{
-  margin:0 0 20px;
+  margin:0;
   color:var(--gris-claro);
-  font-size:0.95rem;
+  font-size:1rem;
 }
 
 /* BARRA DE ICONOS INFERIOR */
@@ -310,7 +298,7 @@ header{
 }
 
 /* =========================
-   SECCIONES Y REJILLAS
+   SECCIÓN HISTORIA (FOTO HISTÓRICA)
    ========================= */
 section{
   padding:40px 0;
@@ -347,6 +335,28 @@ h2{
   font-size:1rem;
   color:var(--gris-claro);
   margin:0;
+}
+
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.history-photo-wrap{
+  border-radius:var(--radio);
+  overflow:hidden;
+  box-shadow:var(--sombra);
+  border:1px solid #222;
+}
+
+.history-photo-wrap img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  max-height:380px;
 }
 
 .card-grid{
@@ -429,6 +439,7 @@ footer p{
    MEDIA QUERIES MÓVIL
    ========================= */
 @media(max-width:768px){
+  .two,
   .card-grid,
   .contact-grid{
     grid-template-columns:1fr;
@@ -460,7 +471,7 @@ footer p{
   </nav>
 </header>
 
-<!-- BARRA FIJA INFERIOR CON LOS BOTONES DE ACCIÓN -->
+<!-- BARRA FIJA INFERIOR (BOTONES ROJO Y AZUL FIJOS) -->
 <div class="fixed-bottom-bar">
   <div class="cta-buttons">
     <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
@@ -470,18 +481,19 @@ footer p{
 
 <main>
 
-<!-- PORTADA / HERO CON ESTILO FOTO HISTÓRICA INTEGRADA -->
+<!-- PORTADA / HERO (FOTO ACTUAL DE LA AUTOESCUELA) -->
 <section class="hero" id="inicio">
   <div class="container">
 
-    <!-- Tarjeta Estilo Foto 2 (Texto sobre fondo de la foto histórica) -->
-    <div class="hero-history-card">
-      <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" class="hero-history-bg" alt="Fondo histórico Autoescuela Paco">
-      <div class="hero-history-content hero-content">
-        <div class="eyebrow">UNA TRAYECTORIA QUE CONTINÚA</div>
-        <h1>Desde 1965, la de toda la vida.</h1>
-        <p>Autoescuela Paco nació en Rota en 1965 y continúa dedicada a la formación vial con una idea clara: ofrecer un servicio profesional, cercano y cuidado, acompañando a generaciones enteras a obtener su permiso de conducir.</p>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota">
       </div>
+    </div>
+
+    <div class="hero-content">
+      <h1>UNA TRAYECTORIA QUE MIRA AL FUTURO</h1>
+      <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
     </div>
 
     <!-- BARRA DE ICONOS INFERIOR -->
@@ -511,6 +523,20 @@ footer p{
   </div>
 </section>
 
+<!-- SECCIÓN HISTORIA (CON LA FOTO HISTÓRICA DEL COCHE ANTIGUO) -->
+<section id="historia">
+  <div class="container two">
+    <div>
+      <div class="eyebrow">Una trayectoria que continúa</div>
+      <h2>Desde 1965, la de toda la vida.</h2>
+      <p class="lead">Autoescuela Paco nació en Rota en 1965 y continúa dedicada a la formación vial con una idea clara: ofrecer un servicio profesional, cercano y cuidado, acompañando a generaciones enteras a obtener su permiso de conducir.</p>
+    </div>
+    <div class="history-photo-wrap">
+      <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" alt="Foto histórica Autoescuela Paco">
+    </div>
+  </div>
+</section>
+
 <!-- FORMACIÓN -->
 <section class="alt" id="formacion">
   <div class="container">
@@ -537,7 +563,7 @@ footer p{
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" style="margin-bottom: 40px;">
+<section id="contacto">
   <div class="container">
     <div class="section-intro">
       <div class="eyebrow">Contacto</div>
