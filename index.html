@@ -8,9 +8,6 @@
 <title>Autoescuela Paco | Desde 1965 en Rota</title>
 
 <style>
-/* =========================
-   ESTILOS GENERALES Y VARIABLES
-   ========================= */
 :root{
   --negro:#000;
   --negro-suave:#0b0b0b;
@@ -45,9 +42,9 @@ body{
   line-height:1.6;
   background:var(--negro);
   overflow-x:hidden;
-  /* Espaciados para las barras superior e inferior fijas */
   padding-top: 105px;
-  padding-bottom: 90px;
+  /* Espacio inferior ampliado para alojar la barra fija completa */
+  padding-bottom: 155px;
 }
 
 a{
@@ -123,7 +120,6 @@ header{
   fill:currentColor;
 }
 
-/* MENÚ HORIZONTAL */
 .nav-bar{
   background:#0a0a0a;
   border-top:1px solid #151515;
@@ -151,7 +147,7 @@ header{
 }
 
 /* =========================
-   BARRA FIJA INFERIOR (BOTONES ROJO Y AZUL)
+   BARRA FIJA INFERIOR (BOTONES + 3 ICONOS DEBAJO)
    ========================= */
 .fixed-bottom-bar{
   position:fixed;
@@ -159,11 +155,19 @@ header{
   left:0;
   width:100%;
   z-index:1000;
-  background:rgba(5,5,5,0.95);
+  background:rgba(5,5,5,0.96);
   backdrop-filter:blur(10px);
   border-top:1px solid #222;
   padding:10px 16px;
-  box-shadow:0 -4px 20px rgba(0,0,0,.7);
+  box-shadow:0 -4px 20px rgba(0,0,0,.8);
+}
+
+.fixed-bottom-content{
+  width:min(1120px, 100%);
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
 
 .cta-buttons{
@@ -172,8 +176,6 @@ header{
   gap:10px;
   justify-content:center;
   align-items:center;
-  width:min(1120px, 100%);
-  margin:0 auto;
 }
 
 .btn{
@@ -181,8 +183,8 @@ header{
   align-items:center;
   justify-content:center;
   gap:4px;
-  padding:12px 10px;
-  border-radius:12px;
+  padding:10px 10px;
+  border-radius:10px;
   font-weight:800;
   font-size:0.75rem;
   cursor:pointer;
@@ -207,8 +209,52 @@ header{
   color:#fff;
 }
 
+/* 3 ICONOS ANCLADOS DEBAJO DE LOS BOTONES */
+.features-bar-bottom{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+  background:#0b0b0b;
+  border:1px solid #1f1f1f;
+  border-radius:12px;
+  padding:8px 6px;
+}
+
+.feature-item-b{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:3px;
+}
+
+.feature-icon-b{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:#181818;
+  border:1px solid #333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.feature-icon-b svg{
+  width:13px;
+  height:13px;
+  fill:currentColor;
+}
+
+.feature-item-b span{
+  font-size:0.58rem;
+  font-weight:700;
+  color:var(--gris-claro);
+  line-height:1.1;
+}
+
 /* =========================
-   PORTADA Y HERO (FOTO DE LOS BOTINAZOS / COCHES NUEVOS)
+   ESTILOS DE CONTENIDO
    ========================= */
 .hero{
   padding:20px 0 30px;
@@ -252,54 +298,6 @@ header{
   font-size:1rem;
 }
 
-/* BARRA DE ICONOS INFERIOR */
-.features-bar{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  background:#0e0e0e;
-  border:1px solid #222;
-  border-radius:var(--radio);
-  padding:14px 8px;
-  box-shadow:var(--sombra);
-}
-
-.feature-item{
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:6px;
-}
-
-.feature-icon{
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  background:#1a1a1a;
-  border:1px solid #333;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-}
-
-.feature-icon svg{
-  width:16px;
-  height:16px;
-  fill:currentColor;
-}
-
-.feature-item span{
-  font-size:.7rem;
-  font-weight:700;
-  color:var(--blanco);
-  line-height:1.2;
-}
-
-/* =========================
-   SECCIÓN HISTORIA (FOTO HISTÓRICA)
-   ========================= */
 section{
   padding:40px 0;
 }
@@ -420,7 +418,6 @@ h2{
   font-weight:700;
 }
 
-/* PIE DE PÁGINA */
 footer{
   background:var(--negro-footer);
   color:#fff;
@@ -435,9 +432,6 @@ footer p{
   font-size:.8rem;
 }
 
-/* =========================
-   MEDIA QUERIES MÓVIL
-   ========================= */
 @media(max-width:768px){
   .two,
   .card-grid,
@@ -471,20 +465,45 @@ footer p{
   </nav>
 </header>
 
-<!-- BARRA FIJA INFERIOR (BOTONES ROJO Y AZUL SIEMPRE FIJOS) -->
+<!-- BARRA FIJA INFERIOR: BOTONES + TUS 3 ICONOS EXACTOS DEBAJO -->
 <div class="fixed-bottom-bar">
-  <div class="cta-buttons">
-    <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn btn-secondary">VER UBICACIÓN &gt;</a>
+  <div class="fixed-bottom-content">
+    <div class="cta-buttons">
+      <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn btn-secondary">VER UBICACIÓN &gt;</a>
+    </div>
+
+    <!-- Los 3 iconos con tus textos exactos -->
+    <div class="features-bar-bottom">
+      <div class="feature-item-b">
+        <div class="feature-icon-b">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <span>Acompañamiento personalizado</span>
+      </div>
+
+      <div class="feature-item-b">
+        <div class="feature-icon-b">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        </div>
+        <span>Últimos avances tecnológicos</span>
+      </div>
+
+      <div class="feature-item-b">
+        <div class="feature-icon-b">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <span>Amplio horario de prácticas</span>
+      </div>
+    </div>
   </div>
 </div>
 
 <main>
 
-<!-- PORTADA / HERO (CON LA FOTO DE LOS COCHES ROJO Y AZUL) -->
+<!-- PORTADA / HERO (FOTO DE LOS COCHES) -->
 <section class="hero" id="inicio">
   <div class="container">
-
     <div class="hero-photo-wrap">
       <div class="hero-photo">
         <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota - Coches">
@@ -495,35 +514,10 @@ footer p{
       <h1>UNA TRAYECTORIA QUE MIRA AL FUTURO</h1>
       <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
     </div>
-
-    <!-- BARRA DE ICONOS INFERIOR -->
-    <div class="features-bar">
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        </div>
-        <span>Clases Prácticas</span>
-      </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-        </div>
-        <span>Seguridad y Confianza</span>
-      </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-        </div>
-        <span>Horarios Flexibles</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- SECCIÓN HISTORIA (CON LA FOTO ANTIGUA) -->
+<!-- SECCIÓN HISTORIA -->
 <section id="historia">
   <div class="container two">
     <div>
@@ -537,7 +531,7 @@ footer p{
   </div>
 </section>
 
-<!-- FORMACIÓN (TARJETAS CON TUS NUEVOS TEXTOS) -->
+<!-- FORMACIÓN (TARJETAS) -->
 <section class="alt" id="formacion">
   <div class="container">
     <div class="section-intro">
@@ -547,16 +541,16 @@ footer p{
     </div>
     <div class="card-grid">
       <article class="card">
-        <h3>Aula + profesor + plataforma 24/7</h3>
-        <p>Formación presencial con profesor titulado y herramientas digitales de apoyo constante.</p>
+        <h3>Acompañamiento personalizado</h3>
+        <p>Formación cercana con atención individualizada y profesor titulado en cada etapa.</p>
       </article>
       <article class="card">
-        <h3>Últimos avances técnicos</h3>
-        <p><strong>Contamos con los últimos avances</strong> y vehículos completamente equipados para una seguridad total al volante.</p>
+        <h3>Últimos avances tecnológicos</h3>
+        <p>Vehículos completamente equipados y herramientas digitales de apoyo constante para una seguridad total.</p>
       </article>
       <article class="card">
         <h3>Amplio horario de prácticas</h3>
-        <p>Disfruta de un <strong>amplio horario de prácticas</strong> totalmente adaptado a tus necesidades y disponibilidad.</p>
+        <p>Disfruta de la máxima flexibilidad adaptada totalmente a tus necesidades y disponibilidad horaria.</p>
       </article>
     </div>
   </div>
