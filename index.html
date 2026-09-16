@@ -45,6 +45,9 @@ body{
   line-height:1.6;
   background:var(--negro);
   overflow-x:hidden;
+  /* Espaciado para que el contenido no quede oculto bajo las barras fijas arriba y abajo */
+  padding-top: 105px;
+  padding-bottom: 85px;
 }
 
 a{
@@ -58,21 +61,24 @@ a{
 }
 
 /* =========================
-   CABECERA
+   CABECERA FIJA SUPERIOR
    ========================= */
 header{
-  position:sticky;
+  position:fixed;
   top:0;
+  left:0;
+  width:100%;
   z-index:1000;
   background:#050505;
   border-bottom:1px solid #1a1a1a;
+  box-shadow:0 4px 12px rgba(0,0,0,.5);
 }
 
 .header-top{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:12px 16px;
+  padding:10px 16px;
   background:#000;
 }
 
@@ -83,15 +89,15 @@ header{
 }
 
 .brand img{
-  width:42px;
-  height:42px;
+  width:38px;
+  height:38px;
   object-fit:contain;
   border-radius:50%;
 }
 
 .brand-text{
   font-weight:800;
-  font-size:1.05rem;
+  font-size:1rem;
   line-height:1.1;
   letter-spacing:-.02em;
   color:var(--blanco);
@@ -103,17 +109,17 @@ header{
   gap:6px;
   background:var(--verde);
   color:#fff;
-  padding:7px 14px;
+  padding:6px 12px;
   border-radius:20px;
   font-weight:700;
-  font-size:.82rem;
+  font-size:.8rem;
   box-shadow:0 2px 8px rgba(37,211,102,.3);
   white-space:nowrap;
 }
 
 .whatsapp-pill svg{
-  width:16px;
-  height:16px;
+  width:15px;
+  height:15px;
   fill:currentColor;
 }
 
@@ -121,11 +127,10 @@ header{
 .nav-bar{
   background:#0a0a0a;
   border-top:1px solid #151515;
-  border-bottom:1px solid #1a1a1a;
-  padding:10px 16px;
+  padding:8px 16px;
   display:flex;
   justify-content:center;
-  gap:22px;
+  gap:20px;
   overflow-x:auto;
   white-space:nowrap;
 }
@@ -136,7 +141,7 @@ header{
 
 .nav-bar a{
   color:var(--blanco);
-  font-size:.88rem;
+  font-size:.85rem;
   font-weight:700;
   letter-spacing:.02em;
 }
@@ -146,59 +151,29 @@ header{
 }
 
 /* =========================
-   PORTADA Y HERO
+   BARRA FIJA INFERIOR (BOTONES DE ACCIÓN)
    ========================= */
-.hero{
-  padding:20px 0 40px;
-  background:var(--negro);
-}
-
-.hero-photo-wrap{
-  border-radius:var(--radio);
-  overflow:hidden;
-  box-shadow:var(--sombra);
-  border:1px solid #222;
-  margin-bottom:24px;
-}
-
-.hero-photo img{
+.fixed-bottom-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
   width:100%;
-  height:auto;
-  display:block;
-  max-height:450px;
-  object-fit:cover;
+  z-index:1000;
+  background:rgba(5,5,5,0.95);
+  backdrop-filter:blur(10px);
+  border-top:1px solid #222;
+  padding:10px 16px;
+  box-shadow:0 -4px 20px rgba(0,0,0,.7);
 }
 
-.hero-content{
-  text-align:center;
-  max-width:750px;
-  margin:0 auto;
-}
-
-.hero-content h1{
-  margin:0 0 10px;
-  font-size:clamp(1.7rem, 4.5vw, 2.6rem);
-  line-height:1.15;
-  font-weight:900;
-  letter-spacing:-.02em;
-  color:#fff;
-}
-
-.hero-content p{
-  margin:0 0 20px;
-  color:var(--gris-claro);
-  font-size:1rem;
-}
-
-/* BOTONES EN HORIZONTAL UNO AL LADO DEL OTRO */
 .cta-buttons{
   display:flex;
   flex-direction:row;
   gap:10px;
   justify-content:center;
   align-items:center;
-  width:100%;
-  margin-bottom:30px;
+  width:min(1120px, 100%);
+  margin:0 auto;
 }
 
 .btn{
@@ -232,6 +207,63 @@ header{
   color:#fff;
 }
 
+/* =========================
+ینس PORTADA Y HERO (ESTILO FOTO 2)
+   ========================= */
+.hero{
+  padding:20px 0 30px;
+  background:var(--negro);
+}
+
+/* SECCIÓN HISTORIA CON ESTILO DE FONDO E INTEGRACIÓN DE LA FOTO 1/2 */
+.hero-history-card {
+  position: relative;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border: 1px solid #222;
+  background: #111;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+}
+
+.hero-history-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.9) 100%);
+  z-index: 1;
+}
+
+.hero-history-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.45;
+}
+
+.hero-history-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.hero-content h1{
+  margin:6px 0 12px;
+  font-size:clamp(1.6rem, 4vw, 2.3rem);
+  line-height:1.15;
+  font-weight:900;
+  letter-spacing:-.02em;
+  color:#fff;
+}
+
+.hero-content p{
+  margin:0 0 20px;
+  color:var(--gris-claro);
+  font-size:0.95rem;
+}
+
 /* BARRA DE ICONOS INFERIOR */
 .features-bar{
   display:grid;
@@ -240,7 +272,7 @@ header{
   background:#0e0e0e;
   border:1px solid #222;
   border-radius:var(--radio);
-  padding:16px 10px;
+  padding:14px 8px;
   box-shadow:var(--sombra);
 }
 
@@ -253,8 +285,8 @@ header{
 }
 
 .feature-icon{
-  width:38px;
-  height:38px;
+  width:36px;
+  height:36px;
   border-radius:50%;
   background:#1a1a1a;
   border:1px solid #333;
@@ -265,13 +297,13 @@ header{
 }
 
 .feature-icon svg{
-  width:18px;
-  height:18px;
+  width:16px;
+  height:16px;
   fill:currentColor;
 }
 
 .feature-item span{
-  font-size:.72rem;
+  font-size:.7rem;
   font-weight:700;
   color:var(--blanco);
   line-height:1.2;
@@ -281,7 +313,7 @@ header{
    SECCIONES Y REJILLAS
    ========================= */
 section{
-  padding:60px 0;
+  padding:40px 0;
 }
 
 section.alt{
@@ -291,7 +323,7 @@ section.alt{
 .section-intro{
   text-align:center;
   max-width:750px;
-  margin:0 auto 35px;
+  margin:0 auto 30px;
 }
 
 .eyebrow{
@@ -304,7 +336,7 @@ section.alt{
 }
 
 h2{
-  font-size:clamp(1.6rem,3.5vw,2.4rem);
+  font-size:clamp(1.5rem,3.2vw,2.2rem);
   line-height:1.15;
   letter-spacing:-.02em;
   margin:0 0 10px;
@@ -312,77 +344,55 @@ h2{
 }
 
 .lead{
-  font-size:1.05rem;
+  font-size:1rem;
   color:var(--gris-claro);
   margin:0;
-}
-
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-
-.history-photo-wrap{
-  border-radius:var(--radio);
-  overflow:hidden;
-  box-shadow:var(--sombra);
-  border:1px solid #222;
-}
-
-.history-photo-wrap img{
-  width:100%;
-  height:auto;
-  display:block;
-  object-fit:cover;
-  max-height:380px;
 }
 
 .card-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:16px;
 }
 
 .card{
   background:var(--negro-card);
   border:1px solid var(--borde);
   border-radius:var(--radio);
-  padding:24px;
+  padding:20px;
   box-shadow:var(--sombra);
 }
 
 .card h3{
-  font-size:1.15rem;
-  margin:10px 0 8px;
+  font-size:1.1rem;
+  margin:8px 0 6px;
   color:var(--blanco);
 }
 
 .card p{
   margin:0;
   color:var(--gris-claro);
-  font-size:.92rem;
+  font-size:.9rem;
 }
 
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:24px;
+  gap:20px;
 }
 
 .contact-box{
   border:1px solid var(--borde);
   border-radius:var(--radio);
-  padding:24px;
+  padding:20px;
   background:var(--negro-card);
 }
 
 .contact-row{
-  padding:12px 0;
+  padding:10px 0;
   border-bottom:1px solid var(--borde);
   color:var(--gris-claro);
-  font-size:.95rem;
+  font-size:.92rem;
 }
 
 .contact-row:last-child{
@@ -392,7 +402,7 @@ h2{
 .contact-row strong{
   display:block;
   color:var(--blanco);
-  margin-bottom:3px;
+  margin-bottom:2px;
 }
 
 .contact-row a{
@@ -405,21 +415,20 @@ footer{
   background:var(--negro-footer);
   color:#fff;
   border-top:1px solid #1a1a1a;
-  padding:35px 0;
+  padding:30px 0;
   text-align:center;
 }
 
 footer p{
-  margin:6px 0;
+  margin:4px 0;
   color:#888;
-  font-size:.85rem;
+  font-size:.8rem;
 }
 
 /* =========================
    MEDIA QUERIES MÓVIL
    ========================= */
 @media(max-width:768px){
-  .two,
   .card-grid,
   .contact-grid{
     grid-template-columns:1fr;
@@ -430,7 +439,7 @@ footer p{
 
 <body>
 
-<!-- CABECERA -->
+<!-- CABECERA FIJA SUPERIOR -->
 <header>
   <div class="header-top">
     <a class="brand" href="#inicio">
@@ -451,68 +460,54 @@ footer p{
   </nav>
 </header>
 
+<!-- BARRA FIJA INFERIOR CON LOS BOTONES DE ACCIÓN -->
+<div class="fixed-bottom-bar">
+  <div class="cta-buttons">
+    <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn btn-secondary">VER UBICACIÓN &gt;</a>
+  </div>
+</div>
+
 <main>
 
-<!-- PORTADA -->
+<!-- PORTADA / HERO CON ESTILO FOTO HISTÓRICA INTEGRADA -->
 <section class="hero" id="inicio">
   <div class="container">
 
-    <div class="hero-photo-wrap">
-      <div class="hero-photo">
-        <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota">
+    <!-- Tarjeta Estilo Foto 2 (Texto sobre fondo de la foto histórica) -->
+    <div class="hero-history-card">
+      <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" class="hero-history-bg" alt="Fondo histórico Autoescuela Paco">
+      <div class="hero-history-content hero-content">
+        <div class="eyebrow">UNA TRAYECTORIA QUE CONTINÚA</div>
+        <h1>Desde 1965, la de toda la vida.</h1>
+        <p>Autoescuela Paco nació en Rota en 1965 y continúa dedicada a la formación vial con una idea clara: ofrecer un servicio profesional, cercano y cuidado, acompañando a generaciones enteras a obtener su permiso de conducir.</p>
       </div>
     </div>
 
-    <div class="hero-content">
-      <h1>UNA TRAYECTORIA QUE MIRA AL FUTURO</h1>
-      <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
-
-      <!-- BOTONES EN HORIZONTAL (EMPIEZA AHORA Y UBICACIÓN) -->
-      <div class="cta-buttons">
-        <a href="tel:+34956811540" class="btn btn-primary">EMPIEZA AHORA &gt;</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn btn-secondary">VER UBICACIÓN &gt;</a>
+    <!-- BARRA DE ICONOS INFERIOR -->
+    <div class="features-bar">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <span>Clases Prácticas</span>
       </div>
 
-      <!-- BARRA DE ICONOS INFERIOR -->
-      <div class="features-bar">
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-          </div>
-          <span>Clases Prácticas</span>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
         </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-          </div>
-          <span>Seguridad y Confianza</span>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-          </div>
-          <span>Horarios Flexibles</span>
-        </div>
+        <span>Seguridad y Confianza</span>
       </div>
 
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <span>Horarios Flexibles</span>
+      </div>
     </div>
 
-  </div>
-</section>
-
-<!-- HISTORIA (CON FOTO HISTÓRICA) -->
-<section id="historia">
-  <div class="container two">
-    <div>
-      <div class="eyebrow">Una trayectoria que continúa</div>
-      <h2>Desde 1965, la de toda la vida.</h2>
-      <p class="lead">Autoescuela Paco nació en Rota en 1965 y continúa dedicada a la formación vial con una idea clara: ofrecer un servicio profesional, cercano y cuidado, acompañando a generaciones enteras a obtener su permiso de conducir.</p>
-    </div>
-    <div class="history-photo-wrap">
-      <img src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg" alt="Foto histórica Autoescuela Paco">
-    </div>
   </div>
 </section>
 
@@ -542,7 +537,7 @@ footer p{
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto">
+<section id="contacto" style="margin-bottom: 40px;">
   <div class="container">
     <div class="section-intro">
       <div class="eyebrow">Contacto</div>
