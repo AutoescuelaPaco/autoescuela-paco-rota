@@ -2,23 +2,12 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Autoescuela Paco Rota | Carnet B y AM desde 1965</title>
-
 <meta name="description" content="Autoescuela Paco Rota, fundada en 1965. Formación para los permisos B y AM, clases teóricas y prácticas, profesores cualificados, tecnología actual y atención personalizada en Rota, Cádiz.">
-
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://autoescuelapaco.github.io/autoescuela-paco-rota/">
-
 <meta name="theme-color" content="#111111">
-
-
-<!-- =====================================================
-     DATOS ESTRUCTURADOS
-     ===================================================== -->
 
 <script type="application/ld+json">
 {
@@ -49,568 +38,722 @@
 }
 </script>
 
-
 <style>
-
 /* =====================================================
-   CONFIGURACIÓN GENERAL
-   ===================================================== -->
+   ESTILOS GENERALES (TEMA OSCURO ORIGINAL)
+   ===================================================== */
+:root {
+  --negro: #000;
+  --negro-suave: #0b0b0b;
+  --negro-card: #141414;
+  --blanco: #fff;
+  --gris-claro: #d1d1d1;
+  --gris: #999;
+  --gris-oscuro: #222;
+  --rojo: #e53935;
+  --azul-btn: #1e3a8a;
+  --verde: #25d366;
+  --borde: #262626;
+}
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-    background: #f2f2f2;
-    line-height: 1.65;
-    padding-bottom: 85px; /* Espacio para la barra fija inferior */
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+  background: var(--negro);
+  line-height: 1.65;
+  padding-top: 85px; /* Espacio para cabecera fija */
+  padding-bottom: 85px; /* Espacio para barra fija inferior */
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .container {
-    width: min(1120px, 92%);
-    margin: auto;
+  width: min(1120px, 92%);
+  margin: auto;
 }
 
 section {
-    padding: 80px 0;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--borde);
 }
 
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-    margin-top: 0;
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-top: 0;
+  color: var(--blanco);
 }
 
 h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
 }
 
 p {
-    margin-top: 0;
+  margin-top: 0;
+  color: var(--gris-claro);
 }
-
 
 /* =====================================================
-   BOTONES GENERALES
-   ===================================================== -->
-
-.btn {
-    display: inline-block;
-    padding: 13px 22px;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.2s ease;
-    border: 1px solid transparent;
-    font-size: 0.9rem;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.btn-light {
-    background: white;
-    color: #111;
-}
-
-.btn-dark {
-    background: #111;
-    color: white;
-}
-
-.btn-outline {
-    border: 1px solid #777;
-    color: #222;
-}
-
-
-/* =====================================================
-   CABECERA (CORREGIDA: AÑADIDO WHATSAPP)
-   ===================================================== -->
-
+   CABECERA FIJA CON WHATSAPP
+   ===================================================== */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(10,10,10,0.96);
-    color: white;
-    border-bottom: 1px solid #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
 }
 
 .header-inner {
-    min-height: 76px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo-area img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #444;
 }
 
 .logo-text {
-    font-weight: bold;
-    font-size: 1.05rem;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .logo-text span {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: normal;
-    color: #bbb;
+  display: block;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--gris);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 
 nav a {
-    font-size: 0.9rem;
-    color: #ddd;
+  font-size: 0.85rem;
+  color: var(--gris-claro);
+  font-weight: 600;
 }
 
 nav a:hover {
-    color: white;
+  color: var(--blanco);
 }
 
-/* ESTILO BOTÓN WHATSAPP CABECERA */
 .header-whatsapp {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #25d366;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--verde);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+  white-space: nowrap;
 }
 
-.header-whatsapp:hover {
-    transform: translateY(-1px);
-    background: #1ebd5b;
+.header-whatsapp svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
-
-.header-whatsapp img {
-    width: 18px;
-    height: 18px;
-}
-
 
 /* =====================================================
-   PORTADA (CORREGIDA: FOTO COMPLETA Y BOTONES ELIMINADOS)
-   ===================================================== -->
-
-.hero {
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: white;
-    padding: 60px 0;
-
-    /* Fondo degradado oscuro */
-    background: linear-gradient(
-        90deg,
-        rgba(0,0,0,0.95),
-        rgba(0,0,0,0.70),
-        rgba(0,0,0,0.45)
-    );
+   BARRA FIJA INFERIOR (BOTONES PERSONALIZADOS)
+   ===================================================== */
+.fixed-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(5, 5, 5, 0.96);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--borde);
+  padding: 12px 16px;
 }
 
-/* Contenedor de la foto (asegura que no se corte) */
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 0;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+.btn-custom svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.btn-red {
+  background: var(--rojo);
+  color: white;
+}
+
+.btn-blue {
+  background: var(--azul-btn);
+  color: white;
+}
+
+/* =====================================================
+   PORTADA (HERO) - LIMPIA SIN BOTONES DEBAJO
+   ===================================================== */
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.95), rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+
 .hero-photo-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Pone la foto detrás del texto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .hero-photo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* La foto ocupa todo el espacio sin deformarse */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-content {
-    max-width: 720px;
+  max-width: 750px;
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    margin-bottom: 20px;
-    letter-spacing: -2px;
-    line-height: 1.1;
-}
-
-.hero h1 span {
-    color: #ddd;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 650px;
-    color: #eee;
-    margin-bottom: 15px;
+  font-size: 1.15rem;
+  max-width: 650px;
+  color: #e0e0e0;
 }
 
-/* SECCIÓN DE BOTONES DE PORTADA ELIMINADA */
-
-
 /* =====================================================
-   HISTORIA
-   ===================================================== -->
-
+   SECCIÓN: HISTORIA
+   ===================================================== */
 .history {
-    background: #242424;
-    color: white;
+  background: var(--negro-suave);
 }
 
 .history-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 50px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
 }
 
 .history-image {
-    border-radius: 18px;
-    overflow: hidden;
-    background: #333;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--gris-oscuro);
+  border: 1px solid var(--borde);
 }
 
 .history-image img {
-    width: 100%;
-    min-height: 330px;
-    object-fit: cover;
-}
-
-.history-text p {
-    color: #ddd;
+  width: 100%;
+  min-height: 330px;
+  object-fit: cover;
 }
 
 .highlight {
-    font-size: 1.35rem;
-    font-weight: bold;
-    color: white !important;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: white !important;
 }
 
-
 /* =====================================================
-   REVISTA
-   ===================================================== -->
-
+   SECCIÓN: REVISTA / PRENSA
+   ===================================================== */
 .magazine {
-    background: #dedede;
-    color: #171717;
+  background: var(--negro);
 }
 
 .magazine-box {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 45px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 45px;
+  align-items: center;
 }
 
 .magazine-cover {
-    min-height: 360px;
-    border-radius: 18px;
-    background: #c5c5c5;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px dashed #888;
-    color: #555;
-    text-align: center;
-    padding: 30px;
+  min-height: 360px;
+  border-radius: 18px;
+  background: var(--negro-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #444;
+  color: var(--gris);
+  text-align: center;
+  padding: 30px;
 }
 
-
 /* =====================================================
-   PERMISOS
-   ===================================================== -->
-
+   SECCIÓN: PERMISOS
+   ===================================================== */
 .permits {
-    background: #f7f7f7;
+  background: var(--negro-suave);
 }
 
 .permit-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 .permit-card {
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
-    border: 1px solid #e4e4e4;
+  background: var(--negro-card);
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid var(--borde);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
 .permit-letter {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
 }
 
-
 /* =====================================================
-   CÓMO TRABAJAMOS
-   ===================================================== -->
-
+   SECCIÓN: CÓMO TRABAJAMOS
+   ===================================================== */
 .training {
-    background: #ececec;
+  background: var(--negro);
 }
 
 .training-intro {
-    max-width: 750px;
-    margin-bottom: 35px;
+  max-width: 750px;
+  margin-bottom: 35px;
 }
 
 .accordion-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 details {
-    background: white;
-    border-radius: 16px;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #ddd;
+  background: var(--negro-card);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
 }
 
 summary {
-    cursor: pointer;
-    list-style: none;
-    padding: 25px;
-    font-weight: bold;
-    font-size: 1.15rem;
-    position: relative;
+  cursor: pointer;
+  list-style: none;
+  padding: 25px;
+  font-weight: bold;
+  font-size: 1.15rem;
+  position: relative;
+  color: white;
 }
 
 summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 summary::after {
-    content: "+";
-    position: absolute;
-    right: 24px;
-    font-size: 1.5rem;
+  content: "+";
+  position: absolute;
+  right: 24px;
+  font-size: 1.5rem;
+  color: var(--gris);
 }
 
 details[open] summary::after {
-    content: "−";
+  content: "−";
 }
 
 .details-content {
-    padding: 0 25px 25px;
-    color: #444;
+  padding: 0 25px 25px;
+  color: var(--gris-claro);
 }
 
-
 /* =====================================================
-   EXÁMENES
-   ===================================================== -->
-
+   SECCIÓN: EXÁMENES
+   ===================================================== */
 .exams {
-    background: #191919;
-    color: white;
+  background: var(--negro-suave);
 }
 
 .exams-box {
-    max-width: 900px;
-}
-
-.exams p {
-    color: #ddd;
+  max-width: 900px;
 }
 
 .exam-points {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 30px 0;
 }
 
 .exam-point {
-    padding: 20px;
-    border: 1px solid #444;
-    border-radius: 14px;
-    background: #242424;
+  padding: 20px;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  background: var(--negro-card);
 }
 
-
 /* =====================================================
-   NUESTROS COCHES
-   ===================================================== -->
-
+   SECCIÓN: NUESTROS COCHES
+   ===================================================== */
 .cars {
-    background: #e2e2e2;
+  background: var(--negro);
 }
 
 .cars-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
 }
 
 .cars-photo {
-    min-height: 350px;
-    border-radius: 18px;
-    overflow: hidden;
-    background: #c5c5c5;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px dashed #888;
-    color: #555;
-    text-align: center;
+  min-height: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--negro-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #444;
+  color: var(--gris);
+  text-align: center;
 }
-
 
 /* =====================================================
-   EQUIPO
-   ===================================================== -->
-
+   SECCIÓN: EQUIPO
+   ===================================================== */
 .team {
-    background: #292929;
-    color: white;
-}
-
-.team p {
-    color: #ddd;
+  background: var(--negro-suave);
 }
 
 .team details {
-    background: #333;
-    border-color: #444;
+  background: var(--negro-card);
+  border-color: var(--borde);
 }
-
-.team .details-content {
-    color: #ddd;
-}
-
 
 /* =====================================================
-   INSTALACIONES Y TECNOLOGÍA
-   ===================================================== -->
-
+   SECCIÓN: INSTALACIONES Y TECNOLOGÍA
+   ===================================================== */
 .facilities {
-    background: #f4f4f4;
+  background: var(--negro);
 }
 
 .facility-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .facility-card {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid #ddd;
+  background: var(--negro-card);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid var(--borde);
 }
 
 .facility-number {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 12px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
 }
-
 
 /* =====================================================
-   INSTALACIONES (FOTOS)
-   ===================================================== -->
-
-.facilities-photo {
-    background: #ededed;
-}
-
-.placeholder-box {
-    margin-top: 30px;
-    padding: 30px;
-    border-radius: 16px;
-    border: 2px dashed #888;
-    background: #e6e6e6;
-}
-
-
-/* =====================================================
-   BLOG
-   ===================================================== -->
-
+   SECCIÓN: BLOG Y ARTÍCULOS
+   ===================================================== */
 .blog {
-    background: #d5d5d5;
+  background: var(--negro-suave);
 }
 
 .blog-box {
-    max-width: 800px;
+  max-width: 800px;
 }
-
 
 /* =====================================================
-   REDES SOCIALES
-   ===================================================== -->
-
+   SECCIÓN: REDES SOCIALES
+   ===================================================== */
 .social {
-    background: #222;
-    color: white;
-}
-
-.social p {
-    color: #ccc;
+  background: var(--negro);
 }
 
 .social-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
 }
 
-.social
+/* =====================================================
+   PIE DE PÁGINA (FOOTER)
+   ===================================================== */
+footer {
+  background: #030303;
+  color: var(--gris);
+  border-top: 1px solid var(--borde);
+  padding: 40px 0;
+  text-align: center;
+}
 
+footer p {
+  margin: 6px 0;
+  font-size: 0.85rem;
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVO (MÓVILES)
+   ===================================================== */
+@media (max-width: 900px) {
+  .history-grid,
+  .magazine-box,
+  .cars-layout,
+  .permit-grid,
+  .accordion-grid,
+  .facility-grid,
+  .exam-points,
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  nav {
+    display: none; /* Menú colapsado en móvil para mantener limpio */
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CABECERA FIJA SUPERIOR CON BOTÓN WHATSAPP -->
+<header>
+  <div class="header-inner">
+    <a class="logo-area" href="#inicio">
+      <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Logo Autoescuela Paco">
+      <div class="logo-text">
+        AUTOESCUELA PACO
+        <span>Desde 1965 • Rota</span>
+      </div>
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#permisos">Permisos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <!-- Botón WhatsApp en cabecera -->
+      <a class="header-whatsapp" href="https://wa.me/34672046418" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M20 3.9A10 10 0 0 0 4.3 16.4L3 21l4.7-1.2A10 10 0 0 0 20 3.9zm-8 16.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.8.7-.8-2.7-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5-.2-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.9-.1.2-.2.2-.4.1-1.2-.6-2.1-1.5-2.8-2.7-.1-.2 0-.3.1-.4l.4-.5c.1-.1.2-.4.2-.4s0-.3-.1-.5l-.6-1.4c-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.7.7-.7 1.7s.7 2 .8 2.1c.1.1 1.4 2.2 3.4 3 .5.2.9.3 1.2.4.5.2 1 .2 1.4.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- BARRA FIJA INFERIOR CON LOS DOS NUEVOS BOTONES -->
+<div class="fixed-bottom-bar">
+  <div class="cta-buttons">
+    <!-- Botón Rojo: Empieza ahora (Llama por teléfono) -->
+    <a href="tel:+34956811540" class="btn-custom btn-red">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2z"/></svg>
+      Empieza ahora
+    </a>
+    <!-- Botón Azul: Ver ubicación (Abre Google Maps) -->
+    <a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn-custom btn-blue">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Ver ubicación
+    </a>
+  </div>
+</div>
+
+<main>
+  <!-- PORTADA / HERO (Limpia, sin los botones de llamar/ven a conocernos) -->
+  <section class="hero" id="inicio">
+    <div class="hero-photo-container">
+      <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Autoescuela Paco Rota - Coches">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>UNA TRAYECTORIA QUE MIRA AL FUTURO</h1>
+        <p>Desde 1965, enseñando a conducir en Rota con experiencia, cercanía y total confianza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="history" id="historia">
+    <div class="container">
+      <div class="history-grid">
+        <div class="history-text">
+          <h2>Más de 60 años al volante en Rota</h2>
+          <p class="highlight">Fundada en 1965, Autoescuela Paco ha sido testigo y partícipe de la evolución vial de nuestra localidad.</p>
+          <p>Generaciones enteras de roteños y roteñas han confiado en nosotros para sacarse su carnet de conducir. Nuestra filosofía siempre ha sido la misma: paciencia, profesionalidad y una enseñanza adaptada a cada alumno.</p>
+        </div>
+        <div class="history-image">
+          <img src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg" alt="Historia Autoescuela Paco">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERMISOS -->
+  <section class="permits" id="permisos">
+    <div class="container">
+      <h2>Nuestros Permisos</h2>
+      <div class="permit-grid">
+        <div class="permit-card">
+          <div class="permit-letter">Permiso B</div>
+          <p>El carnet de coche de toda la vida. Clases teóricas dinámicas con test actualizados y prácticas eficaces por las rutas de examen de la zona.</p>
+        </div>
+        <div class="permit-card">
+          <div class="permit-letter">Permiso AM</div>
+          <p>Consigue tu licencia de ciclomotor desde los 15 años. Aprende a circular con total seguridad desde el primer día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJAMOS -->
+  <section class="training">
+    <div class="container">
+      <div class="training-intro">
+        <h2>Cómo trabajamos</h2>
+        <p>Métodos depurados durante décadas para garantizar tu aprobado a la primera.</p>
+      </div>
+      <div class="accordion-grid">
+        <details>
+          <summary>Teórica ágil y sin rodeos</summary>
+          <div class="details-content">
+            <p>Explicaciones claras, resolución de dudas en tiempo real y acceso a plataformas de test inteligentes para estudiar desde cualquier lugar.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Prácticas adaptadas a ti</summary>
+          <div class="details-content">
+            <p>Planificamos las clases según tu disponibilidad y nivel de evolución, recorriendo los escenarios reales de prueba.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Trato directo y familiar</summary>
+          <div class="details-content">
+            <p>Aquí no eres un número. Te acompañamos y asesoramos de manera totalmente personalizada durante todo el proceso.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALACIONES Y CONTACTO -->
+  <section class="facilities" id="contacto">
+    <div class="container">
+      <h2>Visítanos o ponte en contacto</h2>
+      <div class="facility-grid">
+        <div class="facility-card">
+          <div class="facility-number">📍</div>
+          <h3>Dirección</h3>
+          <p>Avenida San Fernando, 63<br>11520 Rota (Cádiz)</p>
+        </div>
+        <div class="facility-card">
+          <div class="facility-number">📞</div>
+          <h3>Teléfono</h3>
+          <p>Llámanos directamente para resolver cualquier duda o matricularte.<br><strong>956 81 15 40</strong></p>
+        </div>
+        <div class="facility-card">
+          <div class="facility-number">✉️</div>
+          <h3>Correo</h3>
+          <p>Escríbenos a:<br><strong>autoescuela.paco@hotmail.com</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 1965 - 2026 Autoescuela Paco Rota. Todos los derechos reservados.</p>
+    <p>Avenida San Fernando, 63, Rota (Cádiz)</p>
+  </div>
+</footer>
+
+</body>
+</html>
