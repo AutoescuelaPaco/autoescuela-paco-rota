@@ -54,7 +54,7 @@
 
 /* =====================================================
    CONFIGURACIÓN GENERAL
-   ===================================================== */
+   ===================================================== -->
 
 * {
     box-sizing: border-box;
@@ -110,7 +110,7 @@ p {
 
 /* =====================================================
    BOTONES
-   ===================================================== */
+   ===================================================== -->
 
 .btn {
     display: inline-block;
@@ -143,7 +143,7 @@ p {
 
 /* =====================================================
    CABECERA
-   ===================================================== */
+   ===================================================== -->
 
 header {
     position: sticky;
@@ -205,7 +205,7 @@ nav a:hover {
 
 /* =====================================================
    PORTADA LIMPIA Y ACTUALIZADA
-   ===================================================== */
+   ===================================================== -->
 
 .hero {
     background: #000000;
@@ -253,7 +253,7 @@ nav a:hover {
 
 /* =====================================================
    HISTORIA
-   ===================================================== */
+   ===================================================== -->
 
 .history {
     background: #242424;
@@ -292,7 +292,7 @@ nav a:hover {
 
 /* =====================================================
    REVISTA
-   ===================================================== */
+   ===================================================== -->
 
 .magazine {
     background: #dedede;
@@ -324,7 +324,7 @@ nav a:hover {
 
 /* =====================================================
    PERMISOS
-   ===================================================== */
+   ===================================================== -->
 
 .permits {
     background: #f7f7f7;
@@ -354,7 +354,7 @@ nav a:hover {
 
 /* =====================================================
    CÓMO TRABAJAMOS
-   ===================================================== */
+   ===================================================== -->
 
 .training {
     background: #ececec;
@@ -411,7 +411,7 @@ details[open] summary::after {
 
 /* =====================================================
    EXÁMENES
-   ===================================================== */
+   ===================================================== -->
 
 .exams {
     background: #191919;
@@ -443,7 +443,7 @@ details[open] summary::after {
 
 /* =====================================================
    NUESTROS COCHES
-   ===================================================== */
+   ===================================================== -->
 
 .cars {
     background: #e2e2e2;
@@ -474,7 +474,7 @@ details[open] summary::after {
 
 /* =====================================================
    EQUIPO
-   ===================================================== */
+   ===================================================== -->
 
 .team {
     background: #292929;
@@ -497,7 +497,7 @@ details[open] summary::after {
 
 /* =====================================================
    INSTALACIONES Y TECNOLOGÍA
-   ===================================================== */
+   ===================================================== -->
 
 .facilities {
     background: #f4f4f4;
@@ -525,7 +525,7 @@ details[open] summary::after {
 
 /* =====================================================
    BLOG
-   ===================================================== */
+   ===================================================== -->
 
 .blog {
     background: #d5d5d5;
@@ -546,7 +546,7 @@ details[open] summary::after {
 
 /* =====================================================
    REDES SOCIALES
-   ===================================================== */
+   ===================================================== -->
 
 .social {
     background: #222;
@@ -593,7 +593,7 @@ details[open] summary::after {
 
 /* =====================================================
    CONTACTO
-   ===================================================== */
+   ===================================================== -->
 
 .contact {
     background: #f7f7f7;
@@ -631,7 +631,7 @@ details[open] summary::after {
 
 /* =====================================================
    MAPA
-   ===================================================== */
+   ===================================================== -->
 
 .map-section {
     background: #dedede;
@@ -647,1263 +647,7 @@ details[open] summary::after {
 
 /* =====================================================
    FOOTER
-   ===================================================== */
-
-footer {
-    background: #0d0d0d;
-    color: #aaa;
-    padding: 50px 0 90px;
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-footer strong {
-    color: white;
-}
-
-
-/* =====================================================
-   BOTONES FIJOS INFERIORES Y WHATSAPP CONTROLADO
-   ===================================================== */
-
-.bottom-actions {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-
-    padding: 10px;
-
-    background: rgba(10,10,10,0.95);
-    border-top: 1px solid #333;
-}
-
-.bottom-actions a {
-    flex: 1;
-    max-width: 220px;
-    text-align: center;
-
-    background: white;
-    color: #111;
-
-    padding: 11px 10px;
-    border-radius: 30px;
-
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 850px) {
-
-    nav {
-        display: none;
-    }
-
-    .history-grid,
-    .magazine-box,
-    .cars-layout,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .accordion-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .permit-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .exam-points {
-        grid-template-columns: 1fr;
-    }
-
-    .facility-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .social-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    section {
-        padding: 65px 0;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .social-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .bottom-actions a {
-        font-size: 0.8rem;
-        padding: 10px 5px;
-    }
-
-    .logo-area img {
-        width: 48px;
-        height: 48px;
-    }
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-     CABECERA
-     ===================================================== -->
-
-<header>
-
-<div class="container header-inner">
-
-    <a href="#inicio" class="logo-area">
-
-        <img
-            src="Screenshot_2026-08-26-18-26-26-723_com.miui.gallery-edit.jpg"
-            alt="Logo de Autoescuela Paco Rota">
-
-        <div class="logo-text">
-            Autoescuela Paco
-            <span>Rota · Cádiz · Desde 1965</span>
-        </div>
-
-    </a>
-
-
-    <nav>
-
-        <a href="#historia">Historia</a>
-        <a href="#permisos">Permisos</a>
-        <a href="#formacion">Formación</a>
-        <a href="#coches">Coches</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#contacto">Contacto</a>
-
-    </nav>
-
-</div>
-
-</header>
-
-
-
-<!-- =====================================================
-     PORTADA LIMPIA (CON FOTO Y TÍTULO EXACTO)
-     ===================================================== -->
-
-<section class="hero" id="inicio">
-    <div class="hero-container">
-
-        <div class="hero-image-box">
-            <img src="Screenshot_2026-09-15-11-59-43-282_com.miui.gallery-edit.jpg" alt="Coches y fachada de Autoescuela Paco en Rota">
-        </div>
-
-        <h1>UNA TRAYECTORIA QUE MIRA AL FUTURO</h1>
-
-        <p>Desde 1965, enseñando a conducir con experiencia y confianza.</p>
-
-    </div>
-</section>
-
-
-
-<!-- =====================================================
-     HISTORIA
-     ===================================================== -->
-
-<section class="history" id="historia">
-
-<div class="container">
-
-<div class="history-grid">
-
-
-<div class="history-text">
-
-    <h2>Una historia que empezó en 1965</h2>
-
-    <p class="highlight">
-        Más de 60 años formando conductores en Rota.
-    </p>
-
-    <p>
-        Autoescuela Paco forma parte de la historia de Rota.
-        Desde 1965 hemos acompañado a generaciones de alumnos
-        durante su aprendizaje para obtener el permiso de conducir.
-    </p>
-
-    <p>
-        Con el paso de los años hemos evolucionado junto a
-        nuestros alumnos, incorporando nuevas tecnologías,
-        renovando nuestras instalaciones y adaptando nuestra
-        forma de enseñar.
-    </p>
-
-    <p>
-        Lo que permanece es nuestra forma de entender la
-        autoescuela: formación profesional, atención cercana
-        y acompañamiento durante todo el proceso.
-    </p>
-
-</div>
-
-
-<div class="history-image">
-
-    <img
-        src="Screenshot_2026-08-26-18-34-56-620_com.miui.gallery-edit.jpg"
-        alt="Historia de Autoescuela Paco en Rota">
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     REVISTA
-     ===================================================== -->
-
-<section class="magazine">
-
-<div class="container">
-
-<div class="magazine-box">
-
-
-<div class="magazine-cover">
-
-    <strong>
-        ESPACIO PARA LA REVISTA
-    </strong>
-
-</div>
-
-
-<div>
-
-    <h2>Conoce nuestra historia</h2>
-
-    <p>
-        Nuestra historia también forma parte de la historia
-        de muchas generaciones de conductores de Rota.
-    </p>
-
-    <p>
-        Hemos preparado una revista en la que contamos parte
-        de nuestro recorrido, nuestra evolución y algunos
-        momentos importantes de Autoescuela Paco.
-    </p>
-
-    <p>
-        <strong>
-            Descubre cómo hemos llegado hasta aquí.
-        </strong>
-    </p>
-
-    <a class="btn btn-dark" href="#">
-        Ver nuestra revista
-    </a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PERMISOS
-     ===================================================== -->
-
-<section class="permits" id="permisos">
-
-<div class="container">
-
-<h2>Permisos de conducir</h2>
-
-<p>
-    En Autoescuela Paco te preparamos para los permisos
-    que actualmente ofrecemos en Rota.
-</p>
-
-
-<div class="permit-grid">
-
-
-<div class="permit-card">
-
-    <div class="permit-letter">B</div>
-
-    <h3>Permiso B</h3>
-
-    <p>
-        Formación teórica y práctica para obtener el permiso
-        de conducir turismos.
-    </p>
-
-    <a href="#formacion" class="btn btn-dark">
-        Cómo trabajamos
-    </a>
-
-</div>
-
-
-<div class="permit-card">
-
-    <div class="permit-letter">AM</div>
-
-    <h3>Permiso AM</h3>
-
-    <p>
-        Formación para obtener el permiso AM, con preparación
-        teórica y práctica adaptada al alumno.
-    </p>
-
-    <a href="#formacion" class="btn btn-dark">
-        Cómo trabajamos
-    </a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FORMACIÓN
-     ===================================================== -->
-
-<section class="training" id="formacion">
-
-<div class="container">
-
-<h2>Cómo trabajamos</h2>
-
-<div class="training-intro">
-
-<p>
-    En Autoescuela Paco no entendemos la formación como
-    simplemente hacer test y dar clases de conducir.
-</p>
-
-<p>
-    Organizamos el aprendizaje buscando que el alumno
-    entienda lo que está haciendo y tenga siempre a un
-    profesional al que acudir cuando lo necesite.
-</p>
-
-</div>
-
-
-<div class="accordion-grid">
-
-
-<!-- TEÓRICA -->
-
-<details>
-
-<summary>
-    Formación teórica
-</summary>
-
-<div class="details-content">
-
-<p>
-    Nuestra formación teórica combina clases presenciales,
-    explicación de contenidos y trabajo con test.
-</p>
-
-<p>
-    Disponemos de horarios de formación para facilitar que
-    el alumno pueda organizar sus clases.
-</p>
-
-<p>
-    Además, contamos con una plataforma online disponible
-    las <strong>24 horas del día, los 7 días de la semana</strong>,
-    para que puedas continuar estudiando cuando quieras.
-</p>
-
-<p>
-    Durante las clases siempre hay un
-    <strong>profesional cualificado</strong> presente en el
-    aula para resolver las dudas de los alumnos.
-</p>
-
-<p>
-    Utilizamos una <strong>pantalla táctil</strong> y tecnología
-    actual para facilitar las explicaciones y hacer que los
-    contenidos sean más fáciles de comprender.
-</p>
-
-</div>
-
-</details>
-
-
-
-<!-- PRÁCTICAS -->
-
-<details>
-
-<summary>
-    Clases prácticas
-</summary>
-
-<div class="details-content">
-
-<p>
-    Las clases prácticas se organizan con una amplia
-    disponibilidad horaria para adaptarnos, dentro de nuestras
-    posibilidades, a las necesidades de cada alumno.
-</p>
-
-<p>
-    Durante las clases trabajamos de forma progresiva,
-    buscando que el alumno gane seguridad y autonomía.
-</p>
-
-<p>
-    Y la comunicación con el profesor no termina cuando acaba
-    la clase: el alumno puede mantener el contacto con su
-    profesor para resolver dudas relacionadas con su formación.
-</p>
-
-</div>
-
-</details>
-
-
-
-<!-- ATENCIÓN -->
-
-<details>
-
-<summary>
-    Atención personalizada
-</summary>
-
-<div class="details-content">
-
-<p>
-    Cada alumno tiene unas necesidades y un ritmo de aprendizaje
-    diferentes.
-</p>
-
-<p>
-    Por eso mantenemos una comunicación cercana durante la
-    formación y procuramos orientar al alumno en cada etapa.
-</p>
-
-<p>
-    Nuestro objetivo es que el alumno sepa en todo momento
-    qué está trabajando, qué necesita mejorar y cómo continuar
-    avanzando.
-</p>
-
-</div>
-
-</details>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     DÍA DEL EXAMEN
-     ===================================================== -->
-
-<section class="exams">
-
-<div class="container">
-
-<div class="exams-box">
-
-<h2>También estamos contigo el día del examen</h2>
-
-<p>
-    Para nosotros el acompañamiento no termina con las clases.
-    El día del examen también queremos que el alumno se sienta
-    acompañado.
-</p>
-
-
-<div class="exam-points">
-
-
-<div class="exam-point">
-
-<strong>Traslado a la zona de examen</strong>
-
-<p>
-    Autoescuela Paco se encarga del traslado de los alumnos
-    a la zona de examen, sin coste adicional para ellos.
-</p>
-
-</div>
-
-
-<div class="exam-point">
-
-<strong>Antes del examen</strong>
-
-<p>
-    Acompañamos a los alumnos antes de la prueba para que
-    puedan llegar con tranquilidad y conociendo el entorno.
-</p>
-
-</div>
-
-
-<div class="exam-point">
-
-<strong>Después del examen</strong>
-
-<p>
-    También permanecemos pendientes de los alumnos una vez
-    finalizada la prueba.
-</p>
-
-</div>
-
-
-<div class="exam-point">
-
-<strong>Siempre que sea posible</strong>
-
-<p>
-    Procuramos que el acompañamiento pueda realizarse con
-    un profesor cualificado, siempre que sea posible.
-</p>
-
-</div>
-
-
-</div>
-
-<p>
-    Este acompañamiento se realiza tanto en el
-    <strong>examen teórico como en el práctico</strong>.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     NUESTROS COCHES
-     ===================================================== -->
-
-<section class="cars" id="coches">
-
-<div class="container">
-
-<div class="cars-layout">
-
-
-<div>
-
-    <h2>Nuestros coches</h2>
-
-    <p>
-        La formación práctica se realiza con vehículos
-        preparados para el aprendizaje y adaptados a las
-        necesidades de nuestros alumnos.
-    </p>
-
-    <p>
-        Queremos que durante las clases el alumno pueda
-        concentrarse en aprender, ganar seguridad y
-        familiarizarse progresivamente con la conducción.
-    </p>
-
-    <p>
-        <strong>
-            Próximamente mostraremos aquí nuestros vehículos.
-        </strong>
-    </p>
-
-</div>
-
-
-<div class="cars-photo">
-
-    <strong>
-        ESPACIO RESERVADO<br>
-        PARA LA FOTO DE NUESTROS COCHES
-    </strong>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EQUIPO
-     ===================================================== -->
-
-<section class="team" id="equipo">
-
-<div class="container">
-
-<h2>Un equipo que trabaja contigo</h2>
-
-<p>
-    Detrás de Autoescuela Paco hay un equipo de
-    <strong>4 profesores cualificados</strong>.
-</p>
-
-
-<details>
-
-<summary>
-    Nuestro equipo y nuestra forma de trabajar
-</summary>
-
-<div class="details-content">
-
-<p>
-    Contamos con cuatro profesores cualificados que forman
-    parte de la formación diaria de nuestros alumnos.
-</p>
-
-<p>
-    Nuestro equipo cuenta con
-    <strong>más de 20 años de experiencia demostrable</strong>
-    en la enseñanza de la conducción.
-</p>
-
-<p>
-    Además de la experiencia individual de cada profesor,
-    damos importancia a la comunicación entre nosotros.
-</p>
-
-<p>
-    Mantenemos una comunicación directa para comentar la
-    evolución de los alumnos, resolver situaciones que puedan
-    surgir y ayudarnos entre nosotros a encontrar la mejor
-    manera de explicar cada contenido.
-</p>
-
-<p>
-    El objetivo es que el alumno reciba una formación
-    coherente y pueda contar con un equipo detrás de su
-    aprendizaje.
-</p>
-
-</div>
-
-</details>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     INSTALACIONES Y TECNOLOGÍA
-     ===================================================== -->
-
-<section class="facilities">
-
-<div class="container">
-
-<h2>Instalaciones y tecnología</h2>
-
-<p>
-    Hemos renovado nuestras instalaciones para ofrecer un
-    entorno más cómodo y adecuado tanto para aprender como
-    para esperar antes o después de las clases.
-</p>
-
-
-<div class="facility-grid">
-
-
-<div class="facility-card">
-
-    <div class="facility-number">01</div>
-
-    <h3>Instalaciones renovadas</h3>
-
-    <p>
-        Un espacio cuidado y renovado para que la formación
-        se desarrolle en un entorno cómodo y agradable.
-    </p>
-
-</div>
-
-
-<div class="facility-card">
-
-    <div class="facility-number">02</div>
-
-    <h3>Sala de espera</h3>
-
-    <p>
-        Disponemos de una zona de recepción y espera pensada
-        para la comodidad de nuestros alumnos.
-    </p>
-
-</div>
-
-
-<div class="facility-card">
-
-    <div class="facility-number">03</div>
-
-    <h3>Tecnología actual</h3>
-
-    <p>
-        Utilizamos tecnología actual, incluida pantalla táctil,
-        para facilitar las explicaciones durante la formación.
-    </p>
-
-</div>
-
-
-<div class="facility-card">
-
-    <div class="facility-number">04</div>
-
-    <h3>Plataforma 24/7</h3>
-
-    <p>
-        Los alumnos disponen de una plataforma online para
-        continuar su preparación cualquier día y a cualquier hora.
-    </p>
-
-</div>
-
-
-<div class="facility-card">
-
-    <div class="facility-number">05</div>
-
-    <h3>Un espacio pensado para aprender</h3>
-
-    <p>
-        Tecnología y comodidad se combinan con una formación
-        impartida por profesionales.
-    </p>
-
-</div>
-
-
-<div class="facility-card">
-
-    <div class="facility-number">06</div>
-
-    <h3>Preparados para el alumno</h3>
-
-    <p>
-        Nuestro objetivo es que el entorno acompañe a la
-        calidad de la formación.
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOTOS FUTURAS
-     ===================================================== -->
-
-<section style="background:#ededed;">
-
-<div class="container">
-
-<h2>Autoescuela Paco por dentro</h2>
-
-<p>
-    Próximamente incorporaremos fotografías de nuestras
-    instalaciones para que puedas conocer nuestro espacio
-    antes de venir a visitarnos.
-</p>
-
-
-<div class="placeholder-box">
-
-    <strong>
-        ESPACIO RESERVADO PARA FOTOGRAFÍAS
-    </strong>
-
-    <p>
-        Aquí podremos colocar posteriormente fotografías de:
-    </p>
-
-    <ul>
-        <li>Recepción</li>
-        <li>Sala de espera</li>
-        <li>Aula</li>
-        <li>Pantalla táctil</li>
-        <li>Instalaciones</li>
-        <li>Otros detalles de la autoescuela</li>
-    </ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     BLOG
-     ===================================================== -->
-
-<section class="blog">
-
-<div class="container">
-
-<div class="blog-box">
-
-<h2>Consejos y formación en nuestro blog</h2>
-
-<p>
-    También compartimos información relacionada con la
-    formación de conductores, los permisos de conducir,
-    las clases y diferentes aspectos que pueden ayudarte
-    durante tu preparación.
-</p>
-
-<p>
-    Puedes consultar todos nuestros artículos en el
-    blog de Autoescuela Paco Rota.
-</p>
-
-
-<a
-    class="btn btn-dark"
-    href="https://autoescuelapacorota.blogspot.com/"
-    target="_blank"
-    rel="noopener">
-    Visitar nuestro blog
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     REDES SOCIALES
-     ===================================================== -->
-
-<section class="social">
-
-<div class="container">
-
-<h2>Síguenos</h2>
-
-<p>
-    Si quieres conocer el día a día de Autoescuela Paco,
-    nuestros alumnos y las novedades de la autoescuela,
-    también puedes encontrarnos en redes sociales.
-</p>
-
-<p>
-    <strong>
-        Primero, descubre nuestro blog y después síguenos
-        en nuestras redes.
-    </strong>
-</p>
-
-
-<div class="social-grid">
-
-
-<!-- INSTAGRAM -->
-
-<a
-    class="social-card"
-    href="https://www.instagram.com/autoescuelapaco"
-    target="_blank"
-    rel="noopener">
-
-    <div class="social-icon">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-
-            <rect
-                x="3"
-                y="3"
-                width="18"
-                height="18"
-                rx="5"
-                fill="none"
-                stroke="white"
-                stroke-width="2"/>
-
-            <circle
-                cx="12"
-                cy="12"
-                r="4"
-                fill="none"
-                stroke="white"
-                stroke-width="2"/>
-
-            <circle
-                cx="17.5"
-                cy="6.5"
-                r="1"
-                fill="white"/>
-
-        </svg>
-
-    </div>
-
-    Instagram
-
-</a>
-
-
-
-<!-- FACEBOOK -->
-
-<a
-    class="social-card"
-    href="#"
-    target="_blank"
-    rel="noopener">
-
-    <div class="social-icon">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-
-            <path
-                d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"/>
-
-        </svg>
-
-    </div>
-
-    Facebook
-
-</a>
-
-
-
-<!-- TIKTOK -->
-
-<a
-    class="social-card"
-    href="#"
-    target="_blank"
-    rel="noopener">
-
-    <div class="social-icon">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-
-            <path
-                d="M15 3c.3 2.3 1.7 3.7 4 4v3.5c-1.5 0-2.8-.4-4-1.2v6.1a5.6 5.6 0 1 1-5-5.5v3.6a2.1 2.1 0 1 0 1.5 2V3H15z"/>
-
-        </svg>
-
-    </div>
-
-    TikTok
-
-</a>
-
-
-
-<!-- X -->
-
-<a
-    class="social-card"
-    href="#"
-    target="_blank"
-    rel="noopener">
-
-    <div class="social-icon">
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-
-            <path
-                d="M4 3h4.5l4.1 5.5L17.5 3H20l-6.2 7.1L20.5 21H16l-4.6-6.2L6.5 21H4l6.7-7.7L4 3zm3.3 2 9.8 14h.9L8.2 5h-.9z"/>
-
-        </svg>
-
-    </div>
-
-    X
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACTO
-     ===================================================== -->
-
-<section class="contact" id="contacto">
-
-<div class="container">
-
-<h2>Ven a conocernos</h2>
-
-<p>
-    Estamos en Rota. Si quieres conocernos, resolver tus
-    dudas o recibir información, puedes visitarnos
-    directamente en nuestra autoescuela.
-</p>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-
-<div class="contact-item">
-
-<strong>Dirección</strong>
-
-<p>
-    Avenida San Fernando, 63<br>
-    11520 Rota, Cádiz
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Teléfono</strong>
-
-<p>
-    <a href="tel:+34956811540">
-        956 811 540
-    </a>
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Teléfono móvil</strong>
-
-<p>
-    <a href="tel:+34672046418">
-        672 046 418
-    </a>
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Email</strong>
-
-<p>
-    <a href="mailto:autoescuela.paco@hotmail.com">
-        autoescuela.paco@hotmail.com
-    </a>
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>Horario de atención en la autoescuela</strong>
-
-<p>
-    Lunes a viernes<br>
-    9:30–13:30<br>
-    17:00–21:00
-</p>
-
-</div>
-
-
-<div class="contact-actions">
-
-    <a
-        class="btn btn-dark"
-        href="tel:+34956811540">
-        Llamar
-    </a>
-
-    <a
-        class="btn btn-outline"
-        href="mailto:autoescuela.paco@hotmail.com">
-        Enviar email
-    </a>
-
-    <a
-        class="btn btn-outline"
-        href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz"
-        target="_blank"
-        rel="noopener">
-        Cómo llegar
-    </a>
-
-</div>
-
-
-</div>
-
-
-
-<div class="contact-card">
-
-<h3>
-    Ven a conocernos
-</h3>
-
-<p>
-    Autoescuela Paco
-</p>
-
-<p>
-    Avenida San Fernando, 63<br>
-    Rota, Cádiz
-</p>
-
-<p>
-    <strong>
-        Te esperamos.
-    </strong>
-</p>
-
-
-<a
-    class="btn btn-dark"
-    href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz"
-    target="_blank"
-    rel="noopener">
-
-    Ver ubicación en Google Maps
-
-</a>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     MAPA
-     ===================================================== -->
-
-<section class="map-section">
-
-<div class="container">
-
-<h2>Dónde estamos</h2>
-
-<p>
-    Encuentra Autoescuela Paco en Avenida San Fernando, 63,
-    Rota.
-</p>
-
-
-<iframe
-    class="map"
-    src="https://www.google.com/maps?q=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz&output=embed"
-    loading="lazy"
-    allowfullscreen
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
+   ===================================================== -->
 
 <footer>
 
@@ -1952,27 +696,101 @@ footer strong {
 
 
 <!-- =====================================================
-     BOTONES FIJOS
+     BOTÓN FLOTANTE DE WHATSAPP
+     ===================================================== -->
+
+<a href="https://wa.me/34672046418?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20permisos." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener" 
+   aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="#ffffff" d="M16 2C8.28 2 2 8.28 2 16c0 2.83.84 5.46 2.29 7.68L2.5 29.5l6.04-1.74C10.7 29.12 13.28 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.4c-2.34 0-4.52-.66-6.38-1.81l-.46-.28-3.9 1.13 1.14-3.8-.3-.48C5.46 20.2 4.6 18.17 4.6 16c0-6.28 5.12-11.4 11.4-11.4s11.4 5.12 11.4 11.4-5.12 11.4-11.4 11.4zm6.25-8.52c-.34-.17-2.01-.99-2.32-1.1-.31-.11-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.55-.28-.67-.57-.58-.78-.59h-.67c-.23 0-.6.09-.92.43-.32.34-1.22 1.19-1.22 2.91s1.25 3.38 1.42 3.61c.17.23 2.45 3.74 5.94 5.24.83.36 1.48.58 1.99.74.84.27 1.6.23 2.21.14.67-.1 2.01-.82 2.29-1.61.28-.79.28-1.47.2-1.61-.08-.14-.31-.23-.65-.4z"/>
+    </svg>
+</a>
+
+
+
+<!-- =====================================================
+     BOTONES FIJOS INFERIORES (EMPIEZA AHORA / UBICACIÓN)
      ===================================================== -->
 
 <div class="bottom-actions">
 
-<a href="tel:+34956811540">
-    📞 Llamar
+<a href="#contacto" class="btn-start">
+    🔴 Empieza ahora
 </a>
 
-<a
-    href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz"
-    target="_blank"
-    rel="noopener">
-    📍 Cómo llegar
-</a>
-
-<a href="#contacto">
-    ✉ Contacto
+<a href="https://www.google.com/maps/search/?api=1&query=Autoescuela+Paco+Avenida+San+Fernando+63+Rota+Cádiz" target="_blank" rel="noopener" class="btn-location">
+    📍 Ubicación
 </a>
 
 </div>
+
+
+<style>
+/* Estilos específicos para WhatsApp flotante y barra inferior fija */
+.whatsapp-float {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 998;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+}
+
+.bottom-actions {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 15px;
+    background: rgba(15,15,15,0.95);
+    border-top: 1px solid #333;
+}
+
+.bottom-actions a {
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bottom-actions .btn-start {
+    background: #d32f2f;
+    color: white;
+}
+
+.bottom-actions .btn-location {
+    background: #1976d2;
+    color: white;
+}
+</style>
 
 
 </body>
