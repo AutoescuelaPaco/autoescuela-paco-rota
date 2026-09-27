@@ -503,30 +503,23 @@ section{
    ===================================================== */
 
 .permit-card{
-    position:relative;
-    overflow:hidden;
-    min-height:270px;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
+    position: relative;
+    overflow: hidden;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .permit-mark{
-    position:absolute;
-    top:15px;
-    right:12px;
-    font-size:72px;
-    font-weight:900;
-    opacity:.07;
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    font-size: clamp(55px, 7.5vw, 72px);
+    font-weight: 900;
+    opacity: .07;
 }
 
-@media (max-width: 480px) {
-    .permit-mark{
-        top: 10px;
-        right: 10px;
-        font-size: 88px;
-    }
-}
 
 .permit-card h3{
     font-size:38px;
