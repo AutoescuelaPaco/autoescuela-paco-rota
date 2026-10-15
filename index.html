@@ -2475,6 +2475,17 @@ const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
 function establecerMenu(abierto) {
+    const esOrdenador = window.matchMedia("(min-width: 900px)").matches;
+
+    if (esOrdenador) {
+        mobileMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        mobileMenu.inert = false;
+        return;
+    }
+
     mobileMenu.classList.toggle("open", abierto);
 
     menuToggle.setAttribute("aria-expanded", String(abierto));
@@ -2512,6 +2523,10 @@ if (menuToggle && mobileMenu) {
             menuToggle.focus();
         }
     });
+
+    window.addEventListener("resize", function () {
+        establecerMenu(false);
+    });
 }
 
 document.querySelectorAll(".accordion-header").forEach(function (boton) {
@@ -2520,12 +2535,6 @@ document.querySelectorAll(".accordion-header").forEach(function (boton) {
     });
 });
 </script>
-
-
-});
-
-</script>
-
 
 </body>
 </html>
