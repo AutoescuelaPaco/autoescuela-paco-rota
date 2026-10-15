@@ -2517,14 +2517,69 @@ if (menuToggle && mobileMenu) {
         if (
             evento.key === "Escape" &&
             menuToggle.getAttribute("aria-expanded") === "true"
-        ) {
-            establecerMenu(false);
-            menuToggle.focus();
-        }
+            
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+function actualizarMenu(abierto) {
+    const esOrdenador = window.matchMedia("(min-width: 900px)").matches;
+
+    if (!menuToggle || !mobileMenu) return;
+
+    if (esOrdenador) {
+        mobileMenu.classList.add("open");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        mobileMenu.inert = false;
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+        return;
+    }
+
+    mobileMenu.classList.toggle("open", abierto);
+    mobileMenu.setAttribute("aria-hidden", String(!abierto));
+    mobileMenu.inert = !abierto;
+    menuToggle.setAttribute("aria-expanded", String(abierto));
+    menuToggle.setAttribute(
+        "aria-label",
+        abierto ? "Cerrar menú" : "Abrir menú"
+    );
+}
+
+if (menuToggle && mobileMenu) {
+    actualizarMenu(false);
+
+    menuToggle.addEventListener("click", function () {
+        const abierto =
+            menuToggle.getAttribute("aria-expanded") === "true";
+        actualizarMenu(!abierto);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function (enlace) {
+        enlace.addEventListener("click", function () {
+            if (window.matchMedia("(max-width: 899px)").matches) {
+                actualizarMenu(false);
+            }
+        });
     });
 
     window.addEventListener("resize", function () {
-        establecerMenu(false);
+        actualizarMenu(false);
+    });
+
+    document.addEventListener("keydown", function (evento) {
+        if (
+            evento.key === "Escape" &&
+            window.matchMedia("(max-width: 899px)").matches &&
+            menuToggle.getAttribute("aria-expanded") === "true"
+        ) {
+            actualizarMenu(false);
+            menuToggle.focus();
+        }
     });
 }
 
@@ -2534,6 +2589,6 @@ document.querySelectorAll(".accordion-header").forEach(function (boton) {
     });
 });
 </script>
-
+    
 </body>
 </html>
