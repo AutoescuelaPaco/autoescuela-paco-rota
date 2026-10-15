@@ -2503,7 +2503,7 @@ if (menuToggle && mobileMenu) {
   <!-- =====================================================
      JAVASCRIPT
 ===================================================== -->
-
+            
 <script>
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -2534,13 +2534,10 @@ function actualizarMenu(abierto) {
 }
 
 if (menuToggle && mobileMenu) {
-    actualizarMenu(false);
+    actualizarMenu(esOrdenador());
 
     menuToggle.addEventListener("click", function () {
-        const abierto =
-            menuToggle.getAttribute("aria-expanded") === "true";
-
-        actualizarMenu(!abierto);
+        actualizarMenu(!mobileMenu.classList.contains("open"));
     });
 
     mobileMenu.querySelectorAll("a").forEach(function (enlace) {
@@ -2552,14 +2549,14 @@ if (menuToggle && mobileMenu) {
     });
 
     window.addEventListener("resize", function () {
-        actualizarMenu(false);
+        actualizarMenu(esOrdenador());
     });
 
     document.addEventListener("keydown", function (evento) {
         if (
             evento.key === "Escape" &&
             !esOrdenador() &&
-            menuToggle.getAttribute("aria-expanded") === "true"
+            mobileMenu.classList.contains("open")
         ) {
             actualizarMenu(false);
             menuToggle.focus();
@@ -2572,7 +2569,8 @@ document.querySelectorAll(".accordion-header").forEach(function (boton) {
         boton.parentElement.classList.toggle("active");
     });
 });
-</script>  
+</script>
+ 
     
 </body>
 </html>
