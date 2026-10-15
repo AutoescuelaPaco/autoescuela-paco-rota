@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -344,55 +344,7 @@ section{
         max-height: calc(100vh - 66px);
     }
 }
-/* =====================================================
-   MENÚ HORIZONTAL PARA ORDENADOR
-===================================================== */
 
-@media (min-width: 900px) {
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .mobile-menu,
-    .mobile-menu[aria-hidden="true"] {
-        display: block !important;
-        position: static;
-        width: 100%;
-        max-height: none;
-        overflow: visible;
-        border-top: 1px solid #292929;
-        background: #101010;
-        visibility: visible !important;
-        opacity: 1 !important;
-        pointer-events: auto;
-    }
-
-    .mobile-menu-inner {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 10px 14px;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 8px 18px;
-    }
-
-    .mobile-menu a {
-        display: block;
-        color: #fff;
-        padding: 8px 0;
-        border-bottom: none;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 700;
-        white-space: nowrap;
-    }
-
-}
 
 /* =====================================================
    PORTADA
@@ -1297,14 +1249,18 @@ footer p{
 }
 
 /* =====================================================
-   AJUSTES DE ESCRITORIO
+   ESCRITORIO
    ===================================================== */
 
-@media (min-width: 801px) {
+@media(min-width:801px){
 
-    .header-row {
-        padding-left: 22px;
-        padding-right: 22px;
+    .mobile-menu{
+        display:none!important;
+    }
+
+    .header-row{
+        padding-left:22px;
+        padding-right:22px;
     }
 
 }
@@ -1421,24 +1377,26 @@ footer p{
 
     </div>
 
-        <nav
+    <nav
         class="mobile-menu"
         id="mobileMenu"
         aria-label="Menú principal"
-        aria-hidden="false"
+        aria-hidden="true"
+        inert
     >
-                <div class="mobile-menu-inner">
+        <div class="mobile-menu-inner">
 
             <a href="#inicio">Inicio</a>
+            <a href="#historia">Nuestra historia</a>
             <a href="#permisos">Permisos AM y B</a>
             <a href="#teorica">Formación teórica</a>
             <a href="#practicas">Clases prácticas</a>
-            <a href="#historia">Nuestra historia</a>
-            <a href="#instalaciones">Centro y equipo</a>
+            <a href="#examen">El día del examen</a>
+            <a href="#instalaciones">Instalaciones y tecnología</a>
+            <a href="#redes">Redes sociales</a>
             <a href="#contacto">Contacto</a>
 
         </div>
-
     </nav>
 
 </header>
@@ -2455,17 +2413,6 @@ const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
 function establecerMenu(abierto) {
-    const esOrdenador = window.matchMedia("(min-width: 900px)").matches;
-
-    if (esOrdenador) {
-        mobileMenu.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Abrir menú");
-        mobileMenu.setAttribute("aria-hidden", "false");
-        mobileMenu.inert = false;
-        return;
-    }
-
     mobileMenu.classList.toggle("open", abierto);
 
     menuToggle.setAttribute("aria-expanded", String(abierto));
@@ -2498,68 +2445,8 @@ if (menuToggle && mobileMenu) {
         if (
             evento.key === "Escape" &&
             menuToggle.getAttribute("aria-expanded") === "true"
-            
-
-  <!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-
-function esOrdenador() {
-    return window.matchMedia("(min-width: 900px)").matches;
-}
-
-function actualizarMenu(abierto) {
-    if (!menuToggle || !mobileMenu) return;
-
-    if (esOrdenador()) {
-        mobileMenu.classList.add("open");
-        mobileMenu.setAttribute("aria-hidden", "false");
-        mobileMenu.inert = false;
-        return;
-    }
-
-    mobileMenu.classList.toggle("open", abierto);
-    mobileMenu.setAttribute("aria-hidden", String(!abierto));
-    mobileMenu.inert = !abierto;
-
-    menuToggle.setAttribute("aria-expanded", String(abierto));
-    menuToggle.setAttribute(
-        "aria-label",
-        abierto ? "Cerrar menú" : "Abrir menú"
-    );
-}
-
-if (menuToggle && mobileMenu) {
-    actualizarMenu(false);
-
-    menuToggle.addEventListener("click", function () {
-        const abierto = mobileMenu.classList.contains("open");
-        actualizarMenu(!abierto);
-    });
-
-    mobileMenu.querySelectorAll("a").forEach(function (enlace) {
-        enlace.addEventListener("click", function () {
-            if (!esOrdenador()) {
-                actualizarMenu(false);
-            }
-        });
-    });
-
-    window.addEventListener("resize", function () {
-        actualizarMenu(esOrdenador());
-    });
-
-    document.addEventListener("keydown", function (evento) {
-        if (
-            evento.key === "Escape" &&
-            !esOrdenador() &&
-            mobileMenu.classList.contains("open")
         ) {
-            actualizarMenu(false);
+            establecerMenu(false);
             menuToggle.focus();
         }
     });
@@ -2572,5 +2459,11 @@ document.querySelectorAll(".accordion-header").forEach(function (boton) {
 });
 </script>
 
-    </body>
+
+});
+
+</script>
+
+
+</body>
 </html>
