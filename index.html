@@ -2503,7 +2503,7 @@ if (menuToggle && mobileMenu) {
   <!-- =====================================================
      JAVASCRIPT
 ===================================================== -->
-            
+
 <script>
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -2534,16 +2534,12 @@ function actualizarMenu(abierto) {
 }
 
 if (menuToggle && mobileMenu) {
-    actualizarMenu(esOrdenador());
+    actualizarMenu(false);
 
     menuToggle.addEventListener("click", function () {
-    actualizarMenu(!mobileMenu.classList.contains("open"));
-
-    alert(
-        "Menú: " +
-        (mobileMenu.classList.contains("open") ? "ABIERTO" : "CERRADO")
-    );
-});
+        const abierto = mobileMenu.classList.contains("open");
+        actualizarMenu(!abierto);
+    });
 
     mobileMenu.querySelectorAll("a").forEach(function (enlace) {
         enlace.addEventListener("click", function () {
@@ -2554,7 +2550,7 @@ if (menuToggle && mobileMenu) {
     });
 
     window.addEventListener("resize", function () {
-        actualizarMenu(esOrdenador());
+        actualizarMenu(false);
     });
 
     document.addEventListener("keydown", function (evento) {
@@ -2575,7 +2571,6 @@ document.querySelectorAll(".accordion-header").forEach(function (boton) {
     });
 });
 </script>
- 
-    
-</body>
+
+    </body>
 </html>
