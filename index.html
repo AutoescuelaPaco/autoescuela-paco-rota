@@ -345,7 +345,49 @@ section{
     }
 }
 
+/* =====================================================
+   MENÚ HORIZONTAL PARA ORDENADOR
+===================================================== */
 
+@media (min-width: 900px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: static;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        border-top: 1px solid #292929;
+        background: #101010;
+    }
+
+    .mobile-menu-inner {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 14px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 18px;
+    }
+
+    .mobile-menu a {
+        display: block;
+        color: #fff;
+        padding: 8px 0;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+}
 /* =====================================================
    PORTADA
    ===================================================== */
