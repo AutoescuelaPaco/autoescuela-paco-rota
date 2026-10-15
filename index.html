@@ -2537,8 +2537,13 @@ if (menuToggle && mobileMenu) {
     actualizarMenu(esOrdenador());
 
     menuToggle.addEventListener("click", function () {
-        actualizarMenu(!mobileMenu.classList.contains("open"));
-    });
+    actualizarMenu(!mobileMenu.classList.contains("open"));
+
+    alert(
+        "Menú: " +
+        (mobileMenu.classList.contains("open") ? "ABIERTO" : "CERRADO")
+    );
+});
 
     mobileMenu.querySelectorAll("a").forEach(function (enlace) {
         enlace.addEventListener("click", function () {
