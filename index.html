@@ -364,7 +364,14 @@ section{
         border-top: 1px solid #292929;
         background: #101010;
     }
-
+    
+.mobile-menu[aria-hidden="true"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto;
+    }
+    
     .mobile-menu-inner {
         width: 100%;
         max-width: 1200px;
