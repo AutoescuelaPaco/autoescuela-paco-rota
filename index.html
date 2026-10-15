@@ -2501,75 +2501,72 @@ if (menuToggle && mobileMenu) {
             
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-
-function esOrdenador() {
-    return window.matchMedia("(min-width: 900px)").matches;
-}
-
-function actualizarMenu(abierto) {
-    if (!menuToggle || !mobileMenu) return;
-
-    if (esOrdenador()) {
-        mobileMenu.classList.add("open");
-        mobileMenu.setAttribute("aria-hidden", "false");
-        mobileMenu.inert = false;
-        return;
-    }
-
-    mobileMenu.classList.toggle("open", abierto);
-    mobileMenu.setAttribute("aria-hidden", String(!abierto));
-    mobileMenu.inert = !abierto;
-
-    menuToggle.setAttribute("aria-expanded", String(abierto));
-    menuToggle.setAttribute(
-        "aria-label",
-        abierto ? "Cerrar menú" : "Abrir menú"
-    );
-}
-
-if (menuToggle && mobileMenu) {
-    actualizarMenu(esOrdenador());
-
-    menuToggle.addEventListener("click", function () {
-        actualizarMenu(!mobileMenu.classList.contains("open"));
-    });
-
-    mobileMenu.querySelectorAll("a").forEach(function (enlace) {
-        enlace.addEventListener("click", function () {
-            if (!esOrdenador()) {
-                actualizarMenu(false);
-            }
-        });
-    });
-
-    window.addEventListener("resize", function () {
-        actualizarMenu(esOrdenador());
-    });
-
-    document.addEventListener("keydown", function (evento) {
-        if (
-            evento.key === "Escape" &&
-            !esOrdenador() &&
-            mobileMenu.classList.contains("open")
-        ) {
-            actualizarMenu(false);
-            menuToggle.focus();
-        }
-    });
-}
-
-document.querySelectorAll(".accordion-header").forEach(function (boton) {
-    boton.addEventListener("click", function () {
-        boton.parentElement.classList.toggle("active");
-    });
-});
+<!-- =====================================================  
+     JAVASCRIPT  
+     ===================================================== -->  <script>  
+const menuToggle = document.getElementById("menuToggle");  
+const mobileMenu = document.getElementById("mobileMenu");  
+  
+function establecerMenu(abierto) {  
+    const esOrdenador = window.matchMedia("(min-width: 900px)").matches;  
+  
+    if (esOrdenador) {  
+        mobileMenu.classList.remove("open");  
+        menuToggle.setAttribute("aria-expanded", "false");  
+        menuToggle.setAttribute("aria-label", "Abrir menú");  
+        mobileMenu.setAttribute("aria-hidden", "false");  
+        mobileMenu.inert = false;  
+        return;  
+    }  
+  
+    mobileMenu.classList.toggle("open", abierto);  
+  
+    menuToggle.setAttribute("aria-expanded", String(abierto));  
+    menuToggle.setAttribute(  
+        "aria-label",  
+        abierto ? "Cerrar menú" : "Abrir menú"  
+    );  
+  
+    mobileMenu.setAttribute("aria-hidden", String(!abierto));  
+    mobileMenu.inert = !abierto;  
+}  
+  
+if (menuToggle && mobileMenu) {  
+    establecerMenu(false);  
+  
+    menuToggle.addEventListener("click", function () {  
+        const abierto =  
+            menuToggle.getAttribute("aria-expanded") === "true";  
+  
+        establecerMenu(!abierto);  
+    });  
+  
+    mobileMenu.querySelectorAll("a").forEach(function (enlace) {  
+        enlace.addEventListener("click", function () {  
+            establecerMenu(false);  
+        });  
+    });  
+  
+    document.addEventListener("keydown", function (evento) {  
+        if (  
+            evento.key === "Escape" &&  
+            menuToggle.getAttribute("aria-expanded") === "true"  
+        ) {  
+            establecerMenu(false);  
+            menuToggle.focus();  
+        }  
+    });  
+  
+    window.addEventListener("resize", function () {  
+        establecerMenu(false);  
+    });  
+}  
+  
+document.querySelectorAll(".accordion-header").forEach(function (boton) {  
+    boton.addEventListener("click", function () {  
+        boton.parentElement.classList.toggle("active");  
+    });  
+});  
 </script>
     
 </body>
