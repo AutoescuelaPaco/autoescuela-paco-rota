@@ -344,7 +344,42 @@ section{
         max-height: calc(100vh - 66px);
     }
 }
+/* MENÚ HORIZONTAL EN ORDENADOR */
+@media (min-width: 900px) {
+    .menu-toggle {
+        display: none;
+    }
 
+    .mobile-menu {
+        display: block;
+        position: static;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        border-top: 1px solid #292929;
+        background: #101010;
+    }
+
+    .mobile-menu-inner {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 14px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 18px;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 8px 0;
+        border-bottom: none;
+        white-space: nowrap;
+    }
+}
 
 /* =====================================================
    PORTADA
