@@ -2444,7 +2444,16 @@ footer p{
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
+function esOrdenador() {
+    return window.matchMedia("(min-width: 900px)").matches;
+}
+
 function establecerMenu(abierto) {
+    if (!menuToggle || !mobileMenu) return;
+
+    const ordenador = esOrdenador();
+    const menuAbierto = ordenador || abierto;
+
     mobileMenu.classList.toggle("open", abierto);
 
     menuToggle.setAttribute("aria-expanded", String(abierto));
@@ -2453,8 +2462,8 @@ function establecerMenu(abierto) {
         abierto ? "Cerrar menú" : "Abrir menú"
     );
 
-    mobileMenu.setAttribute("aria-hidden", String(!abierto));
-    mobileMenu.inert = !abierto;
+    mobileMenu.setAttribute("aria-hidden", String(!menuAbierto));
+    mobileMenu.inert = !menuAbierto;
 }
 
 if (menuToggle && mobileMenu) {
@@ -2469,18 +2478,27 @@ if (menuToggle && mobileMenu) {
 
     mobileMenu.querySelectorAll("a").forEach(function (enlace) {
         enlace.addEventListener("click", function () {
-            establecerMenu(false);
+            if (!esOrdenador()) {
+                establecerMenu(false);
+            }
         });
     });
 
     document.addEventListener("keydown", function (evento) {
         if (
             evento.key === "Escape" &&
+            !esOrdenador() &&
             menuToggle.getAttribute("aria-expanded") === "true"
         ) {
             establecerMenu(false);
             menuToggle.focus();
         }
+    });
+
+    window.addEventListener("resize", function () {
+        establecerMenu(
+            menuToggle.getAttribute("aria-expanded") === "true"
+        );
     });
 }
 
@@ -2488,11 +2506,8 @@ document.querySelectorAll(".accordion-header").forEach(function (boton) {
     boton.addEventListener("click", function () {
         boton.parentElement.classList.toggle("active");
     });
-
 });
-
 </script>
-
-
+    
 </body>
 </html>
